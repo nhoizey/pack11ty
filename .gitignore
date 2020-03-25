@@ -1,4 +1,4 @@
 node_modules
 
-dist
-src/_includes/dist
+dist/*
+src/_includes/generated/*
