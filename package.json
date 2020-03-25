@@ -8,7 +8,7 @@
     "prebuild": "npm run clean",
     "js:build": "rollup --config ./conf/rollup-js.config.js",
     "js:watch": "rollup --config ./conf/rollup-js.config.js --watch",
-    "css-task:sass-critical": "node-sass ./assets/sass/critical.scss src/_includes/dist/critical.css",
+    "css-task:sass-critical": "node-sass ./assets/sass/critical.scss ./src/_includes/generated/critical.css",
     "css-task:sass-additional": "node-sass ./assets/sass/async.scss dist/ui/async.css --output-style compressed",
     "css:build": "npm-run-all -p css-task:*",
     "css:watch": "chokidar './assets/sass/**/*.scss' -c 'npm run css:build'",
