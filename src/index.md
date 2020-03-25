@@ -1,0 +1,3 @@
+# {{ pkg.name }}
+
+{{ pkg.description }}
