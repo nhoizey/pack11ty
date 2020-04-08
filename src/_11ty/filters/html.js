@@ -6,14 +6,6 @@ module.exports = {
     const regex = / <a class="deeplink"((?!(<\/a>)).|\n)+<\/a>/gm;
     return content.replace(regex, '');
   },
-  stripFootnotes: (content) => {
-    // TODO: Use BasicHTML?
-    const $ = cheerio.load(content);
-    $(
-      'a.footnote, a.footnotes, div.footnote, div.footnotes, sup.footnote, sup.footnotes'
-    ).remove();
-    return $.html();
-  },
   excerpt: (content) => {
     if (content === undefined) {
       return '';
@@ -34,18 +26,6 @@ module.exports = {
 
     return excerpt;
   },
-  absoluteImagePath: (content, url) => {
-    let imagesAbsoluteUrl = content.replace(
-      /<img src="([^"]+)"/,
-      (correspondance, imagePath) => {
-        if (!imagePath.match(/^(\/|https?:\/\/)/)) {
-          return `<img src="${url}${imagePath}"`;
-        }
-      }
-    );
-    return imagesAbsoluteUrl;
-  },
-  removeImages: (html) => html.replace(/<img [^>]+>/, ''),
   truncateHtml: (html, length) => {
     return truncateHtml(html, length, {
       reserveLastWord: true,
