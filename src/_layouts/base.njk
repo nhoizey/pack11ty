@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include "head.njk" %}
+
+  <body
+    data-img-src="{{ page.inputPath | dirname }}/"
+    data-img-dist="{{ page.outputPath | dirname }}/"
+  >
+    {% include "components/header.njk" %}
+
+    <main id="main" role="main">
+      {{ content | safe }}
+    </main>
+
+    {% include "components/footer.njk" %}
+
+    <link rel="stylesheet" href="/ui/css/{{ hashes_css['additional.css'] }}" />
+
+    {#
+    https://buzut.net/configurer-rollup-bundles-esm-cjs/
+    https://v8.dev/features/modules#browser
+    #}
+    <script async type="module" src="/ui/js/{{ hashes_additional_es['src/_assets/js/additional.js']}}"></script>
+    <script async nomodule src="/ui/js/{{ hashes_additional_iife['src/_assets/js/additional.js']}}"></script>
+  </body>
+
+</html>
