@@ -1,9 +1,9 @@
 module.exports = {
-  size: (array) => {
-    return !array ? 0 : array.length;
-  },
   split: (string, separator) => {
     return string.split(separator);
+  },
+  length: (array) => {
+    return !array ? 0 : array.length;
   },
   limit: (array, limit) => {
     return array.slice(0, limit);
