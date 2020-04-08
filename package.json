@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "title": "Pack11ty",
   "description": "Template for Eleventy projects",
+  "url": "https://nicolas-hoizey.com/",
   "author": {
     "name": "Nicolas Hoizey",
     "email": "nicolas@hoizey.com",
@@ -83,7 +84,7 @@
     "prettier": "2.0.4",
     "require-dir": "^1.2.0",
     "rimraf": "^3.0.2",
-    "rollup": "^2.3.3",
+    "rollup": "^2.3.4",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-entrypoint-hashmanifest": "^0.1.2",
