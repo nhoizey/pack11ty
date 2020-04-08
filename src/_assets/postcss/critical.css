@@ -1,0 +1,80 @@
+@import '_variables.css';
+
+html {
+  box-sizing: border-box;
+  text-size-adjust: 100%;
+  // https://twitter.com/TimVereecke/status/1239454788116533248
+  // https://twitter.com/lfredolo/status/1240301405325361152
+  overflow-y: scroll;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body > header,
+body > main,
+body > footer {
+  width: 90vw;
+  max-width: 40em;
+
+  margin: 0 auto;
+}
+
+body > main {
+  flex: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure,
+img {
+  &.logo {
+    margin: $baseline auto;
+    max-width: 50%;
+
+    @media (min-width: 20em) {
+      max-width: 33%;
+      float: right;
+      margin: 0 0 $baseline $baseline;
+    }
+
+    @media (min-width: 30em) {
+      max-width: 25%;
+    }
+  }
+}
+
+.logo {
+  display: block;
+  margin: $baseline auto;
+}
+
+figcaption {
+  // http://nocode.in/aligning-text-smartly-in-css/
+  display: inline-block;
+  text-align: left;
+
+  font-size: var(--font-size-s);
+  font-style: italic;
+  margin: 0.1em 1em;
+  padding: 0.3em 0;
+  color: #666;
+
+  p {
+    margin: 0;
+  }
+}
