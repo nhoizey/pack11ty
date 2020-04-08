@@ -2,6 +2,10 @@ import babel from 'rollup-plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import { terser } from 'rollup-plugin-terser';
 
+const BROWSER_TARGET = {
+  browsers: ['chrome >= 71'],
+};
+
 export default [
   {
     input: 'src/service-worker.js',
@@ -12,9 +16,7 @@ export default [
           [
             '@babel/preset-env',
             {
-              targets: {
-                browsers: ['chrome >= 71'],
-              },
+              targets: BROWSER_TARGET,
               modules: false,
             },
           ],
@@ -23,7 +25,7 @@ export default [
       terser(),
     ],
     output: {
-      file: 'dist/service-worker.js',
+      file: '_site/service-worker.js',
       format: 'iife',
     },
   },
