@@ -1,4 +1,9 @@
+# npp modules
 node_modules
 
-dist/*
-src/_includes/generated/*
+# generated files
+_site
+hashes_*.json
+
+# secret data
+.env
