@@ -1,0 +1,27 @@
+---
+layout: null
+permalink: /feeds/all.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ pkg.title }} - All contents</title>
+  <link href="{{ pkg.url }}/feeds/all.xml" rel="self"/>
+  <link href="{{ pkg.url }}/"/>
+  <updated>{{ collections.contents | rssLastUpdatedDate }}</updated>
+  <id>{{ pkg.url }}</id>
+  <author>
+    <name>{{ pkg.author.name }}</name>
+    <email>{{ pkg.author.email }}</email>
+  </author>
+  {% for entry in collections.contents | limit(50) %}
+    {% set absoluteEntryUrl %}{{ entry.url | url | absoluteUrl(pkg.url) }}{% endset %}
+    {% set readableDate = entry.date | date("Do MMMM YYYY") %}
+    <entry>
+      <title>{{ entry.data.title or entry.data.layout + ' from ' + readableDate }}</title>
+      <link href="{{ absoluteEntryUrl }}"/>
+      <updated>{{ entry.date | rssDate }}</updated>
+      <id>{{ absoluteEntryUrl }}</id>
+      <content type="html">{{ entry.templateContent | cleanDeepLinks | htmlToAbsoluteUrls(absoluteEntryUrl) }}</content>
+    </entry>
+  {% endfor %}
+</feed>

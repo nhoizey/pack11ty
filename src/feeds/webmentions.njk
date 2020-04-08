@@ -1,0 +1,28 @@
+---
+layout: null
+permalink: /feeds/webmentions.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ pkg.title }} - Webmentions</title>
+  <link href="{{ pkg.url }}/feeds/webmentions.xml" rel="self"/>
+  <updated>{{ build.timestamp }}</updated>
+  <id>{{ pkg.url }}/feeds/webmentions.xml</id>
+  <author>
+    <name>{{ pkg.author.name }}</name>
+    <email>{{ pkg.author.email }}</email>
+  </author>
+  {% for webmention in webmentions | reverse | limit(100) %}
+    <entry>
+      <title>{{ webmention['wm-target'] }}</title>
+      <link href="{{ webmention['wm-target'] }}"/>
+      <updated>{{ webmention.published }}</updated>
+      <id>{{ webmention['wm-target'] }}</id>
+      <content type="html">
+        &lt;p&gt;&lt;a href="{{ webmention.url }}"&gt;{{ webmention.url }}&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;Type: {{ webmention['wm-property'] }}&lt;/p&gt;
+        &lt;p&gt;{{ webmention.content.text }}&lt;/p&gt;
+      </content>
+    </entry>
+  {% endfor %}
+</feed>
