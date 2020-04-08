@@ -1,5 +1,5 @@
 const pkg = require('../../../package.json');
-const rootUrl = pkg.homepage;
+const rootUrl = pkg.url;
 const twitterUrl = `https://twitter.com/${pkg.author.twitter}`;
 
 function isSelf(entry) {
