@@ -6,9 +6,9 @@ module.exports = function (eleventyConfig) {
   // ------------------------------------------------------------------------
 
   glob.sync('src/_11ty/collections/*.js').forEach((file) => {
-    let collection = require('./' + file);
-    Object.keys(collection).forEach((name) => {
-      eleventyConfig.addCollection(name, collection[name]);
+    let collectionList = require('./' + file);
+    Object.keys(collectionList).forEach((name) => {
+      eleventyConfig.addCollection(name, collectionList[name]);
     });
   });
 
