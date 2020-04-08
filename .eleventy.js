@@ -74,7 +74,7 @@ module.exports = function (eleventyConfig) {
 
   const markdownItFootnote = require('markdown-it-footnote');
 
-  const slugify = require('@sindresorhus/slugify');
+  const slugify = require('./src/_utils/slugify.js');
   const markdownItAnchor = require('markdown-it-anchor');
   const markdownItAnchorOptions = {
     permalink: true,

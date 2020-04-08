@@ -1,4 +1,4 @@
-const slugify = require('@sindresorhus/slugify');
+const slugify = require('../_utils/slugify');
 const fs = require('fs');
 
 module.exports = function (collection) {
