@@ -1,3 +1,5 @@
-# {{ pkg.name }}
+---
+title: About
+---
 
 {{ pkg.description }}
