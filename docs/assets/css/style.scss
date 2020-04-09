@@ -11,3 +11,10 @@ body {
 header li {
   height: auto;
 }
+
+code.language-plaintext {
+  padding: 0.1em 0.3em;
+  border-radius: 0.3em;
+  background-color: #fff4d1;
+  color: currentColor;
+}
