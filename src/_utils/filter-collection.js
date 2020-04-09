@@ -4,7 +4,7 @@ const getFilteredCollection = (collection, type) => {
     return filteredCollectionsMemoization[type];
   } else {
     let filteredCollection = collection
-      .getFilteredByGlob(`src/content/${type}/**/*.md`)
+      .getFilteredByGlob(`src/${type}/**/*.md`)
       .sort((a, b) => b.date - a.date);
     if (process.env.NODE_ENV !== 'production') {
       filteredCollection = filteredCollection.slice(0, 10);

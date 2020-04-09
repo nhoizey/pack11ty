@@ -2,11 +2,11 @@ const fs = require('fs');
 const contentTypes = [];
 
 const getContentTypes = () => {
-  fs.readdirSync('./src/content', {
+  fs.readdirSync('./src', {
     encoding: 'utf8',
     withFileTypes: true,
   }).forEach((item) => {
-    if (item.isDirectory()) {
+    if (item.isDirectory() && !item.name.match(/^_/)) {
       contentTypes.push(item.name);
     }
   });

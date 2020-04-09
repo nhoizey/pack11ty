@@ -3,7 +3,7 @@ title: Feeds
 eleventyExcludeFromCollections: true
 ---
 
-![Feed logo](/assets/images/feed.png){.logo}
+![Feed logo](/images/feed.png){.logo}
 
 You can follow my publications with my Atom feed:
 
