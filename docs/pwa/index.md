@@ -1,4 +1,4 @@
-[← back home](../)
+**[← back home](../)**
 
 # PWA: Service Worker and Manifest
 

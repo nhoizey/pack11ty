@@ -1,4 +1,4 @@
-[← back home](../)
+**[← back home](../)**
 
 # Collections
 

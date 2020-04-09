@@ -1,3 +1,3 @@
-[← back home](../)
+**[← back home](../)**
 
 # Responsive images
