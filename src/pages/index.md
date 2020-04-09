@@ -5,9 +5,10 @@ This is [Nicolas Hoizey](https://nicolas-hoizey.com/)'s heavily opinionated [Ele
 
 **WARNING: This is Work In Progress, not ready for production!**
 
-Feel free to use it, enhance it, and share your ideas/comments with [issues](https://github.com/nhoizey/pack11ty/issues/new/choose), or (even better) [pull requests](https://github.com/nhoizey/pack11ty/compare)!
-
 [![GitHub stars](https://img.shields.io/github/stars/nhoizey/pack11ty.svg?style=social)](https://github.com/nhoizey/pack11ty/stargazers)
+See [Pack11ty on Github](https://github.com/nhoizey/pack11ty).
+
+Feel free to use it, enhance it, and share your ideas/comments with [issues](https://github.com/nhoizey/pack11ty/issues/new/choose), or (even better) [pull requests](https://github.com/nhoizey/pack11ty/compare)!
 
 # Key features
 
