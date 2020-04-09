@@ -1,19 +1,19 @@
 ---
 layout: null
-permalink: /feeds/all.xml
+permalink: /feeds/news.xml
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ pkg.title }} - All contents</title>
-  <link href="{{ pkg.url }}/feeds/all.xml" rel="self"/>
+  <title>News from {{ pkg.title }}</title>
+  <link href="{{ pkg.url }}/feeds/news.xml" rel="self"/>
   <link href="{{ pkg.url }}/"/>
-  <updated>{{ collections.contents | rssLastUpdatedDate }}</updated>
+  <updated>{{ collections.news | rssLastUpdatedDate }}</updated>
   <id>{{ pkg.url }}</id>
   <author>
     <name>{{ pkg.author.name }}</name>
     <email>{{ pkg.author.email }}</email>
   </author>
-  {% for entry in collections.contents | limit(50) %}
+  {% for entry in collections.news | limit(20) %}
     {% set absoluteEntryUrl %}{{ entry.url | url | absoluteUrl(pkg.url) }}{% endset %}
     {% set readableDate = entry.date | date("Do MMMM YYYY") %}
     <entry>
@@ -21,7 +21,7 @@ permalink: /feeds/all.xml
       <link href="{{ absoluteEntryUrl }}"/>
       <updated>{{ entry.date | rssDate }}</updated>
       <id>{{ absoluteEntryUrl }}</id>
-      <content type="html">{{ entry.templateContent | cleanDeepLinks | htmlToAbsoluteUrls(absoluteEntryUrl) }}</content>
+      <content type="html">{{ entry.content | cleanDeepLinks | htmlToAbsoluteUrls(absoluteEntryUrl) }}</content>
     </entry>
   {% endfor %}
 </feed>
