@@ -24,7 +24,7 @@ const runBeforeHook = (image, document) => {
     if (imageSrc[0] === '/') {
       // TODO: get "src/" from Eleventy config
       imageDimensions = imageSize('./src' + imageSrc);
-      imageUrl = pkg.url + imageSrc;
+      imageUrl = pkg.url + imageSrc.replace('_images', 'images');
     } else {
       // This is a relative URL
       imageDimensions = imageSize(srcPath + imageSrc);
