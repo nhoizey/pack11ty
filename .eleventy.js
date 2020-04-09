@@ -161,13 +161,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/_assets/images', 'images');
 
   eleventyConfig.setDataDeepMerge(true);
-  // eleventyConfig.addWatchTarget('./_site/ui/*');
   // eleventyConfig.setQuietMode(true);
 
   eleventyConfig.setBrowserSyncConfig({
     ui: false,
     ghostMode: false,
-    files: ['_site/ui'],
   });
 
   return {
