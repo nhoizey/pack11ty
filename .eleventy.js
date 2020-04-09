@@ -79,7 +79,7 @@ module.exports = function (eleventyConfig) {
   const markdownItAnchorOptions = {
     permalink: true,
     permalinkClass: 'deeplink',
-    permalinkSymbol: '<svg><use xlink:href="#symbol-link"/></svg>',
+    permalinkSymbol: '🔗',
     level: [2, 3, 4],
     slugify: function (s) {
       return slugify(s);
