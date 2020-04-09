@@ -21,7 +21,3 @@ Feel free to use it, enhance it, and share your ideas/comments with [issues](htt
   - Atom feed for all collections combined
 - Extensive set of Markdow-it plugins for enhanced contribution: footnotes, attributes, headings anchors, abbreviations, containers
 - A set of Eleventy filters and shortcodes are provided, including a better `slugify`
-
-## Documentation
-
-Read the full doc here: <https://nhoizey.github.io/pack11ty/>
