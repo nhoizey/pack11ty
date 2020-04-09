@@ -1,18 +1,18 @@
-# [Pack11ty](../)
+[← back home](../)
 
-## Collections
+# Collections
 
 Every root folder in `src/` which name doesn't start with an `_` automaticaly becomes a collection, as well as pagination for their archives.
 
 The `pages` collection has a special behavior regarding permalinks.
 
-### Permalinks and layouts
+## Permalinks and layouts
 
 Any `permalink` and `layout` properties set directly in a content Front Matter will not be overriden by the global ones shown above.
 
 There are 3 cases to consider for permalink and layout:
 
-#### Pages
+### Pages
 
 Contents in the `pages` collection have:
 
@@ -28,7 +28,7 @@ Examples:
 | `src/pages/about/index.md` | `/about/index.html` | `pages` |
 | `src/pages/about/other.md` | `/about/other.html` | `pages` |
 
-#### Other collections
+### Other collections
 
 Other collections have:
 
@@ -46,7 +46,7 @@ Examples:
 
 _**Note:** default behavior of Eleventy without permalink definition is to transform `src/articles/first-article.md` into `/articles/first-article/index.html`, which leads to unnecessary abundance of folders._
 
-#### Other content
+### Other content
 
 Files directly in `src/` or in folder prefixed with `_` have:
 

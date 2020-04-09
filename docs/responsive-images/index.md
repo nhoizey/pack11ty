@@ -1,3 +1,3 @@
-# [Pack11ty](../)
+[← back home](../)
 
-## Responsive images
+# Responsive images

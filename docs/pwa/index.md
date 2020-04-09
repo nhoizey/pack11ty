@@ -1,12 +1,12 @@
-# [Pack11ty](../)
+[← back home](../)
 
-## PWA: Service Worker and Manifest
+# PWA: Service Worker and Manifest
 
-### Service Worker with offline support
+## Service Worker with offline support
 
 - Built with Workbox 5
 - Pre-caching of UI assets
 - Automatic caching of visited pages
 - Offline fallback with index of available contents
 
-### Manifest
+## Manifest
