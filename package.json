@@ -38,7 +38,7 @@
     "debug:start": "DEBUG=Eleventy* npm start"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0-beta.3",
+    "@11ty/eleventy": "11ty/eleventy#master",
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "@babel/core": "^7.9.0",
