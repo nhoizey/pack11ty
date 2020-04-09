@@ -1,17 +1,15 @@
-# pack11ty
+# pack11ty, an opinionated template for Eleventy projects.
 
-A template repository for Eleventy projects.
-
-Key features:
+## Key features
 
 - Collections
-  - built automatically from the subfolders of `src/content/`
+  - built automatically from the subfolders of `src/`
   - Pagination for archives are built automatically for months and years
 - JavaScript and CSS assets
   - split in inline critical and external additional parts, with hashes for cache busting
   - JavaScript, CSS and HTML built separately
   - Dev mode with live reload
-- PWA:
+- PWA
   - Service Worker with pre-caching of UI assets, auto caching of visited pages and offline fallback
   - Manifest for installation
 - Images written as simple Markdown are automatically responsive
@@ -22,23 +20,60 @@ Key features:
 
 ## Collections
 
-### Permalinks
+Every root folder in `src/` which name doesn't start with an `_` automaticaly becomes a collection, as well as pagination for their archives.
 
-Permalinks for contents in the `pages` collections are relative to the site root:
+The `pages` collection has a special behavior regarding permalinks.
 
-| source                         | destination         |
-| ------------------------------ | ------------------- |
-| `content/pages/index.md`       | `/index.html`       |
-| `content/pages/about.md`       | `/about.html`       |
-| `content/pages/about/index.md` | `/about/index.html` |
+### Permalinks and layouts
 
-Permalinks for other contents are mapped to their source folders hierarchy, including the content type (aka "collection") folder:
+Any `permalink` and `layout` properties set directly in a content Front Matter will not be overriden by the global ones shown above.
 
-| source                                            | destination                                  |
-| ------------------------------------------------- | -------------------------------------------- |
-| `content/articles/index.md`                       | `/articles/index.html`                       |
-| `content/articles/2020/04/first-article/index.md` | `/articles/2020/04/first-article/index.html` |
-| `content/articles/first-article.md`               | `/articles/first-article.html`               |
+There are 3 cases to consider for permalink and layout:
+
+#### Pages
+
+Contents in the `pages` collection have:
+
+- permalinks relative to the site root
+- the `pages` layout
+
+Examples:
+
+| source                     | permalink           | layout  |
+| -------------------------- | ------------------- | ------- |
+| `src/pages/index.md`       | `/index.html`       | `pages` |
+| `src/pages/about.md`       | `/about.html`       | `pages` |
+| `src/pages/about/index.md` | `/about/index.html` | `pages` |
+| `src/pages/about/other.md` | `/about/other.html` | `pages` |
+
+#### Other collections
+
+Other collections have:
+
+- permalinks mapped to their source folders hierarchy, including the content type (aka "collection") folder
+- the content type as layout, if it exists, or the `pages` layout
+
+| source                                        | permalink                                    | layout     |
+| --------------------------------------------- | -------------------------------------------- | ---------- |
+| `src/articles/index.md`                       | `/articles/index.html`                       | `articles` |
+| `src/articles/2020/04/first-article/index.md` | `/articles/2020/04/first-article/index.html` | `articles` |
+| `src/articles/first-article.md`               | `/articles/first-article.html`               | `articles` |
+| `src/notes/2020/0001/first-note.md`           | `/notes/2020/0001/first-note.html`           | `notes`    |
+
+_**Note:** default behavior of Eleventy without permalink definition is to transform `src/articles/first-article.md` into `/articles/first-article/index.html`, which leads to unnecessary abundance of folders._
+
+#### Other content
+
+Files directly in `src/` or in folder prefixed with `_` have:
+
+- permalinks mapped to their source folders hierarchy
+- no layout
+
+| source                       | permalink                   | layout |
+| ---------------------------- | --------------------------- | ------ |
+| `src/index.md`               | `/index.html`               | `null` |
+| `src/index.njk`              | `/index.html`               | `null` |
+| `src/_should/not/be/here.md` | `/_should/not/be/here.html` | `null` |
 
 ### Pagination
 
