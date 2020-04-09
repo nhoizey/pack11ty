@@ -1,4 +1,6 @@
-# CSS and JavaScript assets
+# Pack11ty
+
+## CSS and JavaScript assets
 
 Both CSS and JavaScript are split (manually) in two parts:
 

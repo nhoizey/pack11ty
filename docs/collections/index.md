@@ -1,4 +1,6 @@
-# Collections
+# Pack11ty
+
+## Collections
 
 Every root folder in `src/` which name doesn't start with an `_` automaticaly becomes a collection, as well as pagination for their archives.
 
