@@ -43,6 +43,7 @@ Examples:
 | `src/articles/2020/04/first-article/index.md` | `/articles/2020/04/first-article/index.html` | `articles` |
 | `src/articles/first-article.md`               | `/articles/first-article.html`               | `articles` |
 | `src/notes/2020/0001/first-note.md`           | `/notes/2020/0001/first-note.html`           | `notes`    |
+| `src/no/layout.md`                            | `/no/layout.html`                            | `pages`    |
 
 _**Note:** default behavior of Eleventy without permalink definition is to transform `src/articles/first-article.md` into `/articles/first-article/index.html`, which leads to unnecessary abundance of folders._
 
