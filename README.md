@@ -2,9 +2,11 @@
 
 ## An opinionated template for Eleventy projects
 
-This is how I, [Nicolas Hoizey](https://nicolas-hoizey.com/), plan to start all my new [Eleventy](https://www.11ty.dev/) projects.
+This is [Nicolas Hoizey](https://nicolas-hoizey.com/)'s heavily opinionated [Eleventy](https://www.11ty.dev/) template project.
 
-Feel free to use it, enhance it, and share your ideas/comments with [issues](https://github.com/nhoizey/pack11ty/issues/new/choose), or (even better) [pull requests](https://github.com/nhoizey/pack11ty/compare)!
+**WARNING: This is Work In Progress, not ready for production!**
+
+Feel free to use it, enhance it, and share your ideas/comments with [issues](https://github.com/nhoizey/pack11ty/issues/new/choose), or (even better) [pull requests](https://github.com/nhoizey/pack11ty/compare).
 
 ## Key features
 
