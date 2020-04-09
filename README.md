@@ -21,7 +21,7 @@ Feel free to use it, enhance it, and share your ideas/comments with [issues](htt
 - **Indieweb**
   - Support for receiving Webmentions
   - Atom feed for all collections combined
-- Extensive set of Markdow-it plugins for enhanced contribution: footnotes, attributes, headings anchors, abbreviations, containers
+- Extensive set of Markdown-it plugins for enhanced contribution: footnotes, attributes, headings anchors, abbreviations, containers
 - A set of Eleventy filters and shortcodes are provided, including a better `slugify`
 
 ## Documentation
