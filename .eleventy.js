@@ -158,7 +158,7 @@ module.exports = function (eleventyConfig) {
   // Eleventy configuration
   // ------------------------------------------------------------------------
 
-  eleventyConfig.addPassthroughCopy('src/ui');
+  eleventyConfig.addPassthroughCopy('src/_assets/images', 'images');
 
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.setQuietMode(true);
