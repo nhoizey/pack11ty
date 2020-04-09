@@ -26,4 +26,4 @@ Feel free to use it, enhance it, and share your ideas/comments with [issues](htt
 
 ## Documentation
 
-Read the full doc here: <https://nhoizey.github.io/pack11ty/>
+Would you like to know more? Read the [full documentation](https://pack11ty.netlify.app/)!

@@ -1,12 +1,12 @@
-**[← back home](../)**
+---
+title: PWA with Service Worker and Manifest
+---
 
-# PWA: Service Worker and Manifest
-
-## Service Worker with offline support
+# Service Worker for performance and offline support
 
 - Built with Workbox 5
 - Pre-caching of UI assets
 - Automatic caching of visited pages
 - Offline fallback with index of available contents
 
-## Manifest
+# Manifest

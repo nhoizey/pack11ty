@@ -1,12 +1,8 @@
-# Pack11ty
+---
+title: Documentation
+---
 
-## An opinionated template for Eleventy projects
-
-This is how I, [Nicolas Hoizey](https://nicolas-hoizey.com/), plan to start all my new [Eleventy](https://www.11ty.dev/) projects.
-
-Feel free to use it, enhance it, and share your ideas/comments with [issues](https://github.com/nhoizey/pack11ty/issues/new/choose), or (even better) [pull requests](https://github.com/nhoizey/pack11ty/compare)!
-
-## Key features
+Pack11ty provides many features out of the box:
 
 - [Collections](collections/) built automatically from subfolders of `src/`
 - Pagination for yearly and monthly archives
