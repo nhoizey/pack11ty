@@ -1,0 +1,28 @@
+{
+  "env": {
+    "esm": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "browsers": ["since 2018"]
+            }
+          }
+        ]
+      ]
+    },
+    "iife": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "browsers": ["defaults"]
+            }
+          }
+        ]
+      ]
+    }
+  }
+}
