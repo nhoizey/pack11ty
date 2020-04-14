@@ -1,0 +1,10 @@
+<ul>
+  {% for item in navigation %}
+    <li
+      {% if item.url == '/' and page.url == '/' or (item.url != '/' and item.url in page.url) %}
+        class="current"
+      {% endif %}>
+      <a href="{{ item.url }}">{{ item.name }}</a>
+    </li>
+  {% endfor %}
+</ul>
