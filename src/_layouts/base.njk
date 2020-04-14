@@ -8,7 +8,9 @@
     data-img-src="{{ page.inputPath | dirname }}/"
     data-img-dist="{{ page.outputPath | dirname }}/"
   >
-    {% include "components/header.njk" %}
+    <header role="banner">
+      {% include "components/header.njk" %}
+    </header>
 
     <main id="main" role="main">
       {{ content | safe }}
