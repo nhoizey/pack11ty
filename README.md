@@ -12,10 +12,10 @@ Feel free to use it, enhance it, and share your ideas/comments with [issues](htt
 
 ## Key features
 
-- **Collections** built automatically from subfolders of `src/`
-- Pagination for yearly and monthly archives
+- **Collections** built automatically from root folders, with pagination for yearly and monthly archives
 - **JavaScript and CSS assets**
-  - split in inline critical and external additional parts, with hashes for cache busting
+  - inline critical JavaScript and CSS for performance
+  - external and asynchronous JavaScript and CSS, with hashes for cache busting
   - JavaScript, CSS and HTML built separately
   - Dev mode with live reload
 - **Responsive images** built from simple Markdown and presets
