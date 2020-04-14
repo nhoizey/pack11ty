@@ -12,11 +12,14 @@
       {% include "components/header.njk" %}
     </header>
 
-    <main id="main" role="main">
     <nav role="navigation">
       {% include "components/navigation.njk" %}
     </nav>
+
+    <main role="main">
+      {% block content %}
       {{ content | safe }}
+      {% endblock %}
     </main>
 
     <footer>
