@@ -11,6 +11,7 @@ navorder: 2
   - external and asynchronous JavaScript and CSS, with hashes for cache busting
   - JavaScript, CSS and HTML built separately
   - Dev mode with live reload
+- [Responsive Layout](layout/) without any Media Query, thanks to CSS Flexible Box Layout (Flexbox) and layouts from Every Layout
 - [Responsive images](responsive-images/) built from simple Markdown and presets
 - [PWA](pwa/) for performance and offline support
   - Service Worker with pre-caching of UI assets, auto caching of visited pages and offline fallback

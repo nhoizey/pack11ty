@@ -16,6 +16,7 @@ Feel free to use it, enhance it, and share your ideas/comments with [issues](htt
   - external and asynchronous JavaScript and CSS, with hashes for cache busting
   - JavaScript, CSS and HTML built separately
   - Dev mode with live reload
+- **Responsive Layout** without any Media Query, thanks to CSS Flexible Box Layout (Flexbox) and layouts from [Every Layout](https://every-layout.dev/)
 - **Responsive images** built from simple Markdown and presets
 - **PWA** for performance and offline support
   - Service Worker with pre-caching of UI assets, auto caching of visited pages and offline fallback
