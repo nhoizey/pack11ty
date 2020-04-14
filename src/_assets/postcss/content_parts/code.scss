@@ -1,0 +1,71 @@
+// ************************************************************
+// Source code
+// ************************************************************
+
+pre {
+  padding: 0;
+  margin: var(--gap) 0;
+  overflow-x: auto;
+}
+
+code {
+  margin: 0;
+  padding: 0.1em 0.3em;
+  border-radius: 0.3em;
+  background-color: #fff4d1;
+  color: currentColor;
+}
+
+pre code {
+  min-width: 100%;
+  padding: 0.5em;
+  background-color: #282c34;
+  color: #abb2bf;
+}
+
+kbd {
+  color: #444d56;
+  background-color: #f3f3f3;
+  border: solid 1px #c6cbd1;
+  border-bottom-color: #959da5;
+  box-shadow: inset 0 -1px 0 #959da5;
+}
+
+kbd,
+code {
+  font-size: 0.9rem;
+  display: inline-block;
+  padding: 0 0.2em;
+  border-radius: 0.2em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  kbd,
+  code {
+    font-size: 1em;
+    font-weight: normal;
+  }
+}
+
+a:link,
+a:visited {
+  kbd,
+  code {
+    text-decoration-line: underline;
+    // text-decoration-color: ;
+  }
+}
+
+a:hover,
+a:focus,
+a:active {
+  kbd,
+  code {
+    color: inherit;
+    background-color: transparent;
+  }
+}

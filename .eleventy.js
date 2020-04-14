@@ -45,6 +45,9 @@ module.exports = function (eleventyConfig) {
   // Plugins
   // ------------------------------------------------------------------------
 
+    const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+    eleventyConfig.addPlugin(syntaxHighlight);
+
     const rss = require('@11ty/eleventy-plugin-rss');
     eleventyConfig.addPlugin(rss);
 

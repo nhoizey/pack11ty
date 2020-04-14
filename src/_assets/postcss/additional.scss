@@ -2,6 +2,8 @@
 @import 'content_parts/figures.scss';
 @import 'content_parts/lists.scss';
 @import 'content_parts/tables.scss';
+@import 'content_parts/prism-onedark.scss';
+@import 'content_parts/code.scss';
 
 /* external links */
 a[href^="http://"]:not([href^="https://pack11ty.dev"]):after,
