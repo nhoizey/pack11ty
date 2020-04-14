@@ -16,6 +16,11 @@
 
   p:first-child {
     margin: 0;
+
+    &::before {
+      font-size: 1.5em;
+      line-height: 1;
+    }
   }
 }
 
@@ -28,6 +33,10 @@
   a:visited {
     color: #2b2c54;
   }
+
+  p:first-child::before {
+    content: 'ℹ️ ';
+  }
 }
 
 .success {
@@ -38,6 +47,10 @@
   a:link,
   a:visited {
     color: #2b542c;
+  }
+
+  p:first-child::before {
+    content: '🎉 ';
   }
 }
 
@@ -50,6 +63,10 @@
   a:visited {
     color: #66512c;
   }
+
+  p:first-child::before {
+    content: '⚠️ ';
+  }
 }
 
 .error {
@@ -60,5 +77,9 @@
   a:link,
   a:visited {
     color: #843534;
+  }
+
+  p:first-child::before {
+    content: '🚨 ';
   }
 }
