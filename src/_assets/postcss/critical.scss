@@ -1,8 +1,7 @@
 @import '_global_properties.scss';
 @import '_layout.scss';
-@import '_header.scss';
-@import '_figures.scss';
-@import '_notifications.scss';
+@import 'components/header.scss';
+@import 'components/notifications.scss';
 
 body {
   line-height: 1.5;

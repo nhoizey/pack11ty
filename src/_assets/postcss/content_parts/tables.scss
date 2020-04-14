@@ -1,0 +1,29 @@
+// ************************************************************
+// Tables
+// ************************************************************
+
+table {
+  border-collapse: collapse;
+  font-feature-settings: 'tnum' 1;
+
+  @supports (font-variant-numeric: tabular-nums) {
+    font-feature-settings: normal;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+thead {
+  background-color: #eee;
+
+  th {
+    text-align: left;
+    vertical-align: bottom;
+  }
+}
+
+th,
+td {
+  padding: 0.3em 0.5em;
+  border: 1px solid #ccc;
+  vertical-align: top;
+}

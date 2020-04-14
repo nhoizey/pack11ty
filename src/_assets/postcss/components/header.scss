@@ -25,6 +25,10 @@ nav {
     padding: 0;
   }
 
+  li {
+    flex-grow: 1;
+  }
+
   a {
     display: block;
     padding: 0.1em 0.5em;
