@@ -163,7 +163,9 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig
     .addPassthroughCopy({ 'src/_assets/images': 'images/' })
-    .addPassthroughCopy({ 'src/_assets/ui': 'ui/' });
+    .addPassthroughCopy({ 'src/_assets/ui': 'ui/' })
+    .addPassthroughCopy('src/robots.txt')
+    .addPassthroughCopy('src/favicon.ico');
 
   eleventyConfig.setDataDeepMerge(true);
   // eleventyConfig.setQuietMode(true);
