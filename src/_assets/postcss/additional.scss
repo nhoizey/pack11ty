@@ -2,3 +2,15 @@
 @import 'content_parts/figures.scss';
 @import 'content_parts/lists.scss';
 @import 'content_parts/tables.scss';
+
+/* external links */
+a[href^="http://"]:not([href^="https://pack11ty.dev"]):after,
+a[href^="https://"]:not([href^="https://pack11ty.dev"]):after
+{
+  content: ' ↗️';
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  top: -0.5em;
+  vertical-align: baseline;
+}
