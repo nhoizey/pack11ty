@@ -1,5 +1,6 @@
 ---
 title: Feeds
+navorder: 3
 ---
 
 ![RSS logo](/images/feed.png){.logo}

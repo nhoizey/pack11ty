@@ -1,5 +1,6 @@
 ---
 title: Home
+navorder: 1
 ---
 
 This is [Nicolas Hoizey](https://nicolas-hoizey.com/)'s heavily opinionated [Eleventy](https://www.11ty.dev/) template project.
