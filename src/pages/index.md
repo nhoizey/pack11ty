@@ -1,4 +1,5 @@
 ---
+title: Home
 ---
 
 This is [Nicolas Hoizey](https://nicolas-hoizey.com/)'s heavily opinionated [Eleventy](https://www.11ty.dev/) template project.
