@@ -16,8 +16,9 @@
       {{ content | safe }}
     </main>
 
-    {% include "components/footer.njk" %}
-
+    <footer>
+      {% include "components/footer.njk" %}
+    </footer>
     <link rel="stylesheet" href="/ui/css/{{ hashes_css['additional.css'] }}" />
 
     {#
