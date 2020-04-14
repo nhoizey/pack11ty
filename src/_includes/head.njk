@@ -12,8 +12,13 @@
 <script>{{ criticalJs | safe }}</script>
 
 {% block title %}
-<title>{{ title or pkg.title }}</title>
-<meta property="og:title" content="{{ title }} — {{ site.title }}" />
+  {% if page.url == '/' %}
+    <title>{{ pkg.title }}, {{ pkg.description }}</title>
+    <meta property="og:title" content="{{ pkg.title }}, {{ pkg.description }}" />
+  {% else %}
+    <title>{{ title }} — {{ pkg.title }}</title>
+    <meta property="og:title" content="{{ title }} — {{ pkg.title }}" />
+  {% endif %}
 {% endblock %}
 
 {% block description %}
