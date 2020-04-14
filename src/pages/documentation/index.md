@@ -1,8 +1,9 @@
 ---
 title: Documentation
+navorder: 2
 ---
 
-Pack11ty provides many features out of the box:
+[Pack11ty]{.pack11ty} provides many features out of the box:
 
 - [Collections](collections/) built automatically from subfolders of `src/`
 - Pagination for yearly and monthly archives
