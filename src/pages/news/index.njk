@@ -1,8 +1,0 @@
-<ul>
-  {% for entry in collections.news %}
-    <li>
-      <h2><a href="{{ absoluteEntryUrl }}">{{ entry.data.title or entry.data.layout }}</a> ({{ entry.date | date("Do MMMM YYYY") }})</h2>
-      {{ entry.content | cleanDeepLinks | htmlToAbsoluteUrls(absoluteEntryUrl) }}
-    </li>
-  {% endfor %}
-</ul>
