@@ -1,6 +1,6 @@
 ---
 title: Documentation
-navorder: 1
+navorder: 2
 ---
 
 [Pack11ty]{.pack11ty} provides many features out of the box:

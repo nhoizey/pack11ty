@@ -1,5 +1,7 @@
 ---
 title: Welcome to Pack11ty!
+navtitle: Home
+navorder: 1
 ---
 
 ::: warning

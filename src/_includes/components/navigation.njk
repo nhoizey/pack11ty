@@ -5,7 +5,7 @@
         {% if item.url == '/' and page.url == '/' or (item.url != '/' and item.url in page.url) %}
           class="current"
         {% endif %}>
-        <a href="{{ item.url }}">{{ item.data.title }}</a>
+        <a href="{{ item.data.redirect or item.url }}">{{ item.data.navtitle or item.data.title }}</a>
       </li>
     {% endfor %}
   </ul>
