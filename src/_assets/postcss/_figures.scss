@@ -1,0 +1,56 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure,
+img {
+  clear: both;
+  display: block;
+  margin: var(--gap) auto;
+}
+
+img.logo {
+  max-width: 50%;
+
+  @media (min-width: 20em) {
+    max-width: 33%;
+    float: right;
+    margin: 0 0 var(--gap) var(--gap);
+  }
+
+  @media (min-width: 30em) {
+    max-width: 25%;
+  }
+}
+
+figure {
+  text-align: center;
+
+  img {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+
+.logo {
+  display: block;
+  margin: var(--gap) auto;
+}
+
+figcaption {
+  // http://nocode.in/aligning-text-smartly-in-css/
+  display: inline-block;
+  text-align: left;
+
+  font-size: smaller;
+  font-style: italic;
+  margin: 0.1em 1em;
+  padding: 0.3em 0;
+  color: #666;
+
+  p {
+    margin: 0;
+  }
+}

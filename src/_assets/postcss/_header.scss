@@ -1,0 +1,50 @@
+.sitelogo {
+  margin: 0;
+  padding: 0.2rem 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  background-color: rebeccapurple;
+  border-bottom: 2px solid rebeccapurple;
+
+  a {
+    // text-decoration: none;
+    color: white;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+nav {
+  --gap: 0.5rem;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  a {
+    display: block;
+    padding: 0.1em 0.5em;
+    color: rebeccapurple;
+    background-color: #ddd;
+  }
+
+  .githubstars {
+    padding: 0.1em;
+    line-height: 1;
+  }
+
+  a:hover {
+    color: white;
+    background-color: rebeccapurple;
+  }
+
+  .current {
+    a {
+      text-decoration: underline;
+    }
+  }
+}

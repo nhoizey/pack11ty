@@ -1,0 +1,30 @@
+@import '_global_properties.scss';
+@import '_layout.scss';
+@import '_header.scss';
+@import '_figures.scss';
+@import '_notifications.scss';
+
+body {
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.pack11ty {
+  margin: 0 0.1em;
+  padding: 0 0.2em;
+  color: white;
+  background-color: rebeccapurple;
+}
+
+.deeplink {
+  font-size: smaller;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0;
+  padding: 0.2rem 0;
+  font-size: 2rem;
+  border-bottom: 2px solid rebeccapurple;
+}
