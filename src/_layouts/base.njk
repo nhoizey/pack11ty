@@ -13,6 +13,9 @@
     </header>
 
     <main id="main" role="main">
+    <nav role="navigation">
+      {% include "components/navigation.njk" %}
+    </nav>
       {{ content | safe }}
     </main>
 
