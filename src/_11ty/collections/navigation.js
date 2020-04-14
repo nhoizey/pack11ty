@@ -5,6 +5,6 @@ module.exports = {
       .getAll()
       .filter((item) => 'navorder' in item.data)
       .sort(
-        (a, b) => parseInt(b.data.navorder, 10) - parseInt(a.data.navorder, 10)
+        (a, b) => parseInt(a.data.navorder, 10) - parseInt(b.data.navorder, 10)
       ),
 };
