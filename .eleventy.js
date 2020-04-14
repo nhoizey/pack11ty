@@ -158,7 +158,7 @@ module.exports = function (eleventyConfig) {
   // Eleventy configuration
   // ------------------------------------------------------------------------
 
-  eleventyConfig.addPassthroughCopy('src/_assets/images', '_site/images/');
+  eleventyConfig.addPassthroughCopy({ 'src/_assets/images': 'images/' });
 
   eleventyConfig.setDataDeepMerge(true);
   // eleventyConfig.setQuietMode(true);
@@ -169,7 +169,7 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
-    templateFormats: ['md', 'njk', 'jpg', 'png', 'gif'],
+    templateFormats: ['md', 'njk'],
 
     markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
