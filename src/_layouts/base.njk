@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  {% include "head.njk" %}
-  </head>
+<head>
+{% include "head.njk" %}
+</head>
 
-  <body
-    data-img-src="{{ page.inputPath | dirname }}/"
-    data-img-dist="{{ page.outputPath | dirname }}/"
-  >
-    <header role="banner">
-      {% include "components/header.njk" %}
-    </header>
+<body
+  data-img-src="{{ page.inputPath | dirname }}/"
+  data-img-dist="{{ page.outputPath | dirname }}/"
+>
+<div class="page">
+  {# 
+  Use Every Layout's sidebar layout:
+  https://absolutely.every-layout.dev/layouts/sidebar/
+  #}
+  <div class="with-sidebar">
+    <div>
+      <div class="sidebar">
 
-    <nav role="navigation">
-      {% include "components/navigation.njk" %}
-    </nav>
+        <header role="banner" class="cluster">
+          <div>
+            <div>
+              {% if page.url == '/' %}
+                <h1 class="sitelogo">{{ pkg.title }}</h1>
+              {% else %}
+                <p class="sitelogo"><a href="/">{{ pkg.title }}</a></p>
+              {% endif %}
+            </div>
+            <div>
+              {% include "components/navigation.njk" %}
+            </div>
+          </div>
+        </header>
 
-    <main role="main">
-      {% block content %}
-      {{ content | safe }}
-      {% endblock %}
-    </main>
+      </div>
+      <div class="not-sidebar">
+        <main role="main">
+          {% block content %}
+          {{ content | safe }}
+          {% endblock %}
+        </main>
+      </div>
+    </div>
+  </div>
+  {% include "components/footer.njk" %}
+</div>
 
-    <footer>
-      {% include "components/footer.njk" %}
-    </footer>
-    <link rel="stylesheet" href="/ui/css/{{ hashes_css['additional.css'] }}" />
+<link rel="stylesheet" href="/ui/css/{{ hashes_css['additional.css'] }}" />
 
-    {#
-    https://buzut.net/configurer-rollup-bundles-esm-cjs/
-    https://v8.dev/features/modules#browser
-    #}
-    <script async type="module" src="/ui/js/{{ hashes_additional_es['src/_assets/js/additional.js']}}"></script>
-    <script async nomodule src="/ui/js/{{ hashes_additional_iife['src/_assets/js/additional.js']}}"></script>
-  </body>
+{#
+https://buzut.net/configurer-rollup-bundles-esm-cjs/
+https://v8.dev/features/modules#browser
+#}
+<script async type="module" src="/ui/js/{{ hashes_additional_es['src/_assets/js/additional.js']}}"></script>
+<script async nomodule src="/ui/js/{{ hashes_additional_iife['src/_assets/js/additional.js']}}"></script>
+</body>
 
 </html>
