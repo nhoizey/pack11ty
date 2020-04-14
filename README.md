@@ -2,11 +2,10 @@
 
 ## An opinionated template for Eleventy projects
 
-This is [Nicolas Hoizey](https://nicolas-hoizey.com/)'s heavily opinionated [Eleventy](https://www.11ty.dev/) template project.
+Pack11ty is an heavily opinionated [Eleventy](https://www.11ty.dev/) template project created by [Nicolas Hoizey](https://nicolas-hoizey.com/).
 
 **WARNING: This is Work In Progress, not ready for production!**
 
-See [Pack11ty on Github](https://github.com/nhoizey/pack11ty).
 [![GitHub stars](https://img.shields.io/github/stars/nhoizey/pack11ty.svg?style=social)](https://github.com/nhoizey/pack11ty/stargazers)
 
 Feel free to use it, enhance it, and share your ideas/comments with [issues](https://github.com/nhoizey/pack11ty/issues/new/choose), or (even better) [pull requests](https://github.com/nhoizey/pack11ty/compare).
