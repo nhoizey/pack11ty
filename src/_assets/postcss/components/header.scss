@@ -35,6 +35,7 @@ nav {
     padding: 0.1em 0.5em;
     color: rebeccapurple;
     background-color: #ddd;
+    border: 2px solid #ddd;
   }
 
   .githubstars {
@@ -45,11 +46,14 @@ nav {
   a:hover {
     color: white;
     background-color: rebeccapurple;
+    border-color: rebeccapurple;
   }
 
   .current {
     a {
-      text-decoration: underline;
+      text-decoration: none;
+      font-weight: bold;
+      border-color: rebeccapurple;
     }
   }
 }
