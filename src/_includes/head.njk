@@ -12,8 +12,8 @@
 <script>{{ criticalJs | safe }}</script>
 
 {% block title %}
-<title>{{ title or pkg.name }}</title>
-<meta property="og:title" content="{{ title }} — {{ site.name }}" />
+<title>{{ title or pkg.title }}</title>
+<meta property="og:title" content="{{ title }} — {{ site.title }}" />
 {% endblock %}
 
 {% block description %}
