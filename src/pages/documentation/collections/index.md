@@ -63,3 +63,5 @@ Examples:
 | `src/_should/not/be/here.md` | `/_should/not/be/here.html` | `null` |
 
 ## Pagination
+
+_To be continued…_

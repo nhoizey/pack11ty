@@ -10,3 +10,5 @@ title: PWA with Service Worker and Manifest
 - Offline fallback with index of available contents
 
 # Manifest
+
+_To be continued…_
