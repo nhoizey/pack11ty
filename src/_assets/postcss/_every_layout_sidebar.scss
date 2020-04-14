@@ -1,0 +1,33 @@
+/*
+Every Layout's sidebar layout:
+https://absolutely.every-layout.dev/layouts/sidebar/
+*/
+
+.with-sidebar {
+  /* ↓ Expand vertically to push footer in the bottom */
+  flex: 1;
+}
+
+/* ↓ targets the intermediary wrapper */
+.with-sidebar > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(-1 * var(--gap, 1.5rem) / 2);
+}
+
+.with-sidebar > * > * {
+  /* ↓ applies to both elements */
+  margin: calc(var(--gap, 1.5rem) / 2);
+}
+
+.sidebar {
+  flex-basis: var(--sidebar, 20rem);
+  flex-grow: 1;
+}
+
+.not-sidebar {
+  /* ↓ grow from nothing */
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(var(--notsidebar, 66%) - var(--gap, 1.5rem));
+}

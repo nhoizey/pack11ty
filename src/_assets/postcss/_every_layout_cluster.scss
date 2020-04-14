@@ -1,0 +1,20 @@
+/*
+Every Layout's cluster layout:
+https://absolutely.every-layout.dev/layouts/cluster/
+*/
+
+.cluster {
+  overflow: hidden;
+}
+
+.cluster > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: calc(var(--gap, 1.5rem) / 2 * -1);
+}
+
+.cluster > * > * {
+  margin: calc(var(--gap, 1.5rem) / 2);
+}

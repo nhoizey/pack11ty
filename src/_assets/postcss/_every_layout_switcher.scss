@@ -1,0 +1,16 @@
+/*
+Every Layout's switcher layout:
+https://absolutely.every-layout.dev/layouts/switcher/
+*/
+
+.switcher > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc((var(--gap, 1.5rem) / 2) * -1);
+}
+
+.switcher > * > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--switch, 15rem) - (100% - var(--gap, 1.5rem))) * 999);
+  margin: calc(var(--gap, 1.5rem) / 2);
+}
