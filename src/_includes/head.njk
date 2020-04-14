@@ -1,94 +1,87 @@
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  {% set criticalCss %}
-  {% include_raw "_site/ui/css/" + hashes_css['critical.css'] %}
-  {% endset %}
-  <style>{{ criticalCss | safe }}</style>
+{% set criticalCss %}
+{% include_raw "_site/ui/css/" + hashes_css['critical.css'] %}
+{% endset %}
+<style>{{ criticalCss | safe }}</style>
 
-  {% set criticalJs %}
-  {% include_raw "_site/ui/js/" + hashes_critical['src/_assets/js/critical.js'] %}
-  {% endset %}
-  <script>{{ criticalJs | safe }}</script>
+{% set criticalJs %}
+{% include_raw "_site/ui/js/" + hashes_critical['src/_assets/js/critical.js'] %}
+{% endset %}
+<script>{{ criticalJs | safe }}</script>
 
-  {# opengraph and Twitter #}
-  <meta property="og:site_name" content="{{ pkg.title }}" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:creator" content="@{{ pkg.author.twitter }}" />
-  <meta name="twitter:site" content="@{{ pkg.author.twitter }}" />
+{% block title %}
+<title>{{ title or pkg.name }}</title>
+<meta property="og:title" content="{{ title }} — {{ site.name }}" />
+{% endblock %}
 
-  {# https://dev.twitter.com/web/overview/widgets-webpage-properties#csp #}
-  <meta name="twitter:widgets:csp" content="on" />
+{% block description %}
+<meta name="description" content="{{ page.description or page.content | excerpt }}" />
+<meta property="og:description" content="{{ page.description or page.content | excerpt }}" />
+{% endblock %}
 
-  {% set ogType = "website" %}
-  {% if page.url == "/" %}
-    {% set ogTitle = pkg.title %}
-    {% set ogDescription = pkg.description %}
-    <title itemprop="name">{{ ogTitle }}</title>
-  {% elif layout == "note" %}
-    {% set plainDate = page.date | date("Do MMMM YYYY") %}
-    {% set ogTitle %}Note from {{ page.date | date("Do MMMM YYYY") }}{% endset %}
-    {% set ogDescription = pageExcerpt | striptags | truncate(290) | escape %}
-    {% set ogType = "article" %}
-    <title>{{ ogTitle }} - {{ pkg.author.name }}</title>
-  {% else %}
-    {% set ogTitle = renderData.title or title %}
-    {% if layout == "article" or layout == "link" %}
-      {% set ogDescription = pageExcerpt | striptags | truncate(290) | escape %}
-      {% set ogType = "article" %}
-    {% elif page.inputPath == "./src/tag-page.njk" %}
-      {% set ogDescription = ogTitle %}
-    {% endif %}
-    <title>{{ ogTitle }} - {{ pkg.author.name }}</title>
-  {% endif %}
+<link rel="canonical" href="{{ pkg.url + page.url }}" itemprop="url" />
+<meta property="og:url" content="{{ pkg.url + page.url }}" />
 
-  <meta property="og:title" content="{{ ogTitle }}" />
-  <meta name="description" content="{{ ogDescription }}" />
-  <meta property="og:description" content="{{ ogDescription }}" />
+{% if page.layout != "pages" %}
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="{{ page.date | attributeDate }}" />
+  <meta property="article:author" content="https://www.facebook.com/{{ pkg.author.facebook }}" />
+  {% for tag in tags %}
+    <meta property="article:tag" content="{{ tag }}" />
+  {% endfor %}
+{% endif %}
 
-  <link rel="canonical" href="{{ pkg.url + page.url }}" itemprop="url" />
-  <meta property="og:url" content="{{ pkg.url + page.url }}" />
+{# webmentions with webmention.io #}
+<link rel="pingback" href="https://webmention.io/nicolas-hoizey.com/xmlrpc" />
+<link rel="webmention" href="https://webmention.io/nicolas-hoizey.com/webmention" />
 
-  <meta property="og:type" content="{{ ogType }}" />
-  {% if ogType == "article" %}
-    <meta property="article:published_time" content="{{ page.date | attributeDate }}" />
-    <meta property="article:author" content="https://www.facebook.com/nhoizey" />
-    {% for tag in tags %}
-      <meta property="article:tag" content="{{ tag }}" />
-    {% endfor %}
-  {% endif %}
+<link rel="alternate" type="application/rss+xml" title="Feed for all content on {{ pkg.name }}" href="/feeds/all.xml" />
+<link rel="icon" type="image/jpeg" href="/favicon.jpg" />
 
-  {#
-  https://developers.facebook.com/docs/sharing/best-practices?locale=fr_FR#images
-  https://developers.facebook.com/tools/debug/sharing/
-  #}
-  <meta property="og:image" content="{% ogImage ogTitle %}" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+{# ########################################################
+ # opengraph and Twitter 
+ # ########################################################}
+<meta property="og:site_name" content="{{ pkg.name }}" />
+<meta name="twitter:creator" content="@{{ pkg.author.twitter }}" />
+<meta name="twitter:site" content="@{{ pkg.author.twitter }}" />
+{# https://dev.twitter.com/web/overview/widgets-webpage-properties#csp #}
+<meta name="twitter:widgets:csp" content="on" />
+{#
+https://developers.facebook.com/docs/sharing/best-practices?locale=fr_FR#images
+https://developers.facebook.com/tools/debug/sharing/
+#}
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:image" content="{% ogImage ogTitle %}" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 
-  <link rel="alternate" type="application/rss+xml" title="Feed for articles only" href="/feeds/articles.xml" />
-  <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
+{# ########################################################
+ # webmentions with webmention.io
+ # ########################################################}
+<link rel="pingback" href="https://webmention.io/nicolas-hoizey.com/xmlrpc" />
+<link rel="webmention" href="https://webmention.io/nicolas-hoizey.com/webmention" />
 
-  {# webmentions with webmention.io #}
-  <link rel="pingback" href="https://webmention.io/nicolas-hoizey.com/xmlrpc" />
-  <link rel="webmention" href="https://webmention.io/nicolas-hoizey.com/webmention" />
+{# iOS features #}
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="apple-touch-icon" href="/favicon.jpg" />
+<meta name="apple-mobile-web-app-title" content="{{ pkg.name }}" />
+{# https://timkadlec.com/remembers/2018-06-06-web-watch/ #}
+<meta name="disabled-adaptations" content="watch" />
 
-  {# iOS features #}
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <link rel="apple-touch-icon" href="/favicon.jpg" />
-  <meta name="apple-mobile-web-app-title" content="{{ pkg.title }}" />
-  {# https://timkadlec.com/remembers/2018-06-06-web-watch/ #}
-  <meta name="disabled-adaptations" content="watch" />
+{#
+Theme color: https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+#}
+<meta name="theme-color" content="#663399">
 
-  {# Theme color: https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android #}
-  <meta name="theme-color" content="#663399">
+{# web app manifest #}
+{# crossorigin: https://twitter.com/TimVereecke/status/1225547620791341062 #}
+<link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials" />
 
-  {# web app manifest #}
-  {# crossorigin: https://twitter.com/TimVereecke/status/1225547620791341062 #}
-  <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials" />
+{# rel-me (should be in visible links) #}
+<link rel="me" href="https://twitter.com/{{ pkg.author.twitter }}" />
 
-  {# rel-me (should be in visible links) #}
-  <link rel="me" href="https://twitter.com/{{ pkg.author.twitter }}" />
-</head>
+{% block morehead %}
+{% endblock %}
