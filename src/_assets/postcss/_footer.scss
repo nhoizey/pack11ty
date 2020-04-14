@@ -1,0 +1,14 @@
+footer {
+  margin: calc(2 * var(--gap)) calc(-1 * var(--gap)) calc(-1 * var(--gap));
+  padding: 0 var(--gap);
+  background-color: rebeccapurple;
+  color: white;
+
+  a {
+    color: white;
+  }
+
+  img {
+    margin: 0;
+  }
+}
