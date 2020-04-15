@@ -5,10 +5,14 @@ navorder: 2
 
 These are latest news from [Pack11ty]{.pack11ty} :
 
+<div class="stack">
+
 {% for entry in collections.news %}
 
-  <article>
-    <h2><a href="{{ entry.url }}">{{ entry.data.title }}</a> ({{ entry.date | date("Do MMMM YYYY") }})</h2>
-    {{ entry.templateContent | safe }}
+  <article class="news">
+    <h2 class="news__title"><a href="{{ entry.url }}">{{ entry.data.title }}</a></h2>
+    <p class="news__meta">{{ entry.date | date("Do MMMM YYYY") }}</p>
   </article>
 {% endfor %}
+
+</div>
