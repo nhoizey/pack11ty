@@ -3,25 +3,13 @@ title: Documentation
 navorder: 2
 ---
 
-# Installation
+If you're in a hurry, install your own version of [Pack11ty]{.pack11ty} for free on Netlify:
 
-Click this green button to **create a new repository in your own account** with the same files and folders as in [Pack11ty]{.pack11ty}:
+[Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.netlify-button}{.center}
 
-[Use this template](https://github.com/nhoizey/pack11ty/generate){.github-button}{.center}
+Take some time to read [detailled installation documentation](installation.html).
 
-Then clone your repository to your computer.
-
-# Local development
-
-If you first want to try [Pack11ty]{.pack11ty} on your local machine, run this command:
-
-```bash
-npm start
-```
-
-You'll be able to open the site in your browser at <http://localhost:8080>
-
-# Build for production deployement
+You can then [develop your site](development.html) and [create content](content.html).
 
 # Detailed features
 
@@ -43,7 +31,3 @@ You'll be able to open the site in your browser at <http://localhost:8080>
   - Atom feed for all collections combined
 - Extensive set of Markdown-it plugins for enhanced contribution: footnotes, attributes, headings anchors, abbreviations, containers
 - A set of Eleventy filters and shortcodes are provided, including a better `slugify`
-
-```
-
-```
