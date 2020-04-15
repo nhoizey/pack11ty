@@ -3,6 +3,28 @@ title: Documentation
 navorder: 2
 ---
 
+# Installation
+
+Click this green button to **create a new repository in your own account** with the same files and folders as in [Pack11ty]{.pack11ty}:
+
+[Use this template](https://github.com/nhoizey/pack11ty/generate){.github-button}{.center}
+
+Then clone your repository to your computer.
+
+# Local development
+
+If you first want to try [Pack11ty]{.pack11ty} on your local machine, run this command:
+
+```bash
+npm start
+```
+
+You'll be able to open the site in your browser at <http://localhost:8080>
+
+# Build for production deployement
+
+# Detailed features
+
 [Pack11ty]{.pack11ty} provides many features out of the box:
 
 - [Collections](collections/) built automatically from root folders, with pagination for yearly and monthly archives
@@ -21,3 +43,7 @@ navorder: 2
   - Atom feed for all collections combined
 - Extensive set of Markdown-it plugins for enhanced contribution: footnotes, attributes, headings anchors, abbreviations, containers
 - A set of Eleventy filters and shortcodes are provided, including a better `slugify`
+
+```
+
+```

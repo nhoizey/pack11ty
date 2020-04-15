@@ -12,6 +12,8 @@ navorder: 1
 
 Feel free to use it, enhance it, and share your ideas/comments with [issues](https://github.com/nhoizey/pack11ty/issues/new/choose), or (even better) [pull requests](https://github.com/nhoizey/pack11ty/compare)!
 
+[Use this template](https://github.com/nhoizey/pack11ty/generate){.github-button}{.center}
+
 # Key features
 
 - **Collections** built automatically from root folders, with pagination for yearly and monthly archives
