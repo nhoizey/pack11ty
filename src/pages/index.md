@@ -4,15 +4,13 @@ navtitle: Home
 navorder: 1
 ---
 
+[Pack11ty]{.pack11ty} is an heavily opinionated [Eleventy](https://www.11ty.dev/) template project created by [Nicolas Hoizey](https://nicolas-hoizey.com/).
+
 ::: warning
 **WARNING: This is Work In Progress, not ready for production!**
 :::
 
-[Pack11ty]{.pack11ty} is an heavily opinionated [Eleventy](https://www.11ty.dev/) template project created by [Nicolas Hoizey](https://nicolas-hoizey.com/).
-
 Feel free to use it, enhance it, and share your ideas/comments with [issues](https://github.com/nhoizey/pack11ty/issues/new/choose), or (even better) [pull requests](https://github.com/nhoizey/pack11ty/compare)!
-
-[Use this template](https://github.com/nhoizey/pack11ty/generate){.github-button}{.center}
 
 # Key features
 
@@ -33,4 +31,12 @@ Feel free to use it, enhance it, and share your ideas/comments with [issues](htt
 - Extensive set of Markdown-it plugins for enhanced contribution: footnotes, attributes, headings anchors, abbreviations, containers
 - A set of Eleventy filters and shortcodes are provided, including a better `slugify`
 
-Would you like to know more? Read the [full documentation](documentation/)!
+# Want to try it?
+
+If you're in a hurry, try this:
+
+[Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.netlify-button}{.center}
+
+# Would you like to know more?
+
+Read the [full documentation](documentation/)!

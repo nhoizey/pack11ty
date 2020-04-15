@@ -1,7 +1,5 @@
 # Pack11ty
 
-## An opinionated template for Eleventy projects
-
 Pack11ty is an heavily opinionated [Eleventy](https://www.11ty.dev/) template project created by [Nicolas Hoizey](https://nicolas-hoizey.com/).
 
 **WARNING: This is Work In Progress, not ready for production!**
@@ -27,6 +25,12 @@ Feel free to use it, enhance it, and share your ideas/comments with [issues](htt
 - Extensive set of Markdown-it plugins for enhanced contribution: footnotes, attributes, headings anchors, abbreviations, containers
 - A set of Eleventy filters and shortcodes are provided, including a better `slugify`
 
-## Documentation
+# Want to try it?
 
-Would you like to know more? Read the [full documentation](https://pack11ty.netlify.app/)!
+If you're in a hurry, try this:
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms)
+
+# Would you like to know more?
+
+Read the full documentation on [pack11ty.dev](https://pack11ty.dev/)!
