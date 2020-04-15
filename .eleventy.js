@@ -79,10 +79,11 @@ module.exports = function (eleventyConfig) {
 
   const slugify = require('./src/_utils/slugify.js');
   const markdownItAnchor = require('markdown-it-anchor');
+  // https://www.toptal.com/designers/htmlarrows/punctuation/section-sign/
   const markdownItAnchorOptions = {
     permalink: true,
     permalinkClass: 'deeplink',
-    permalinkSymbol: '🔗',
+    permalinkSymbol: '&#xa7;&#xFE0E;',
     level: [2, 3, 4],
     slugify: function (s) {
       return slugify(s);

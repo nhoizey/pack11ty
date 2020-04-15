@@ -10,7 +10,7 @@
 a[href^="http://"]:not([href^="https://pack11ty.dev"]):after,
 a[href^="https://"]:not([href^="https://pack11ty.dev"]):after
 {
-  content: ' ↗️';
+  content: ' \2197\FE0E';
   font-size: 75%;
   line-height: 0;
   position: relative;
