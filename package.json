@@ -82,7 +82,6 @@
     "postcss-nested": "^4.2.1",
     "postcss-preset-env": "^6.7.0",
     "postcss-scss": "^2.0.0",
-    "postcss-simple-vars": "^5.0.2",
     "prettier": "2.0.5",
     "require-dir": "^1.2.0",
     "rimraf": "^3.0.2",

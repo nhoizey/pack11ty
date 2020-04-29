@@ -25,7 +25,6 @@ CSS is compiled with [postcss](https://postcss.org/) with a few plugins:
 - `scss` for syntax
 - `import` to include other files with `@import` syntax
 - `nested` for nested rules
-- `simple-vars` for Sass-like `$varname` vars
 
 # Dev mode with Live Reload
 

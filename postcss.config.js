@@ -2,7 +2,6 @@ module.exports = {
   syntax: 'postcss-scss',
   plugins: {
     'postcss-import': {},
-    'postcss-simple-vars': {},
     'postcss-nested': {},
     'postcss-preset-env': {},
     'postcss-clean': {
