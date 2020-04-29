@@ -27,6 +27,10 @@ body {
   background-color: $theme-color-main;
 }
 
+main > * + * {
+  margin-bottom: $gap;
+}
+
 .deeplink {
   font-size: 0.8em;
   padding: 0 0.2em;
