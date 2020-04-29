@@ -1,4 +1,5 @@
 const fs = require('fs');
+const config = require('./_data/config.js');
 
 const type = (data) => {
   let type = null;
@@ -24,7 +25,12 @@ module.exports = {
         // A permalink has been set in the content Front Matter
         return data.permalink;
       }
-      return `${data.page.filePathStem}.html`;
+      if (config.permalinkFolders) {
+        // Keep Eleventy default behavior for permalinks
+        return data.page.filePathStem.replace(/\/index$/, '') + '/index.html';
+      } else {
+        return data.page.filePathStem + '.html';
+      }
     },
   },
 };
