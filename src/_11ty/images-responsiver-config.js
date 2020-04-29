@@ -26,11 +26,11 @@ const runBeforeHook = (image, document) => {
       imageDimensions = imageSize(
         './src' + imageSrc.replace('/images/', '/_assets/images/')
       );
-      imageUrl = pkg.url + imageSrc;
+      imageUrl = pkg.url.replace(/\/$/, '') + imageSrc;
     } else {
       // This is a relative URL
       imageDimensions = imageSize(srcPath + imageSrc);
-      imageUrl = pkg.url + distPath + imageSrc;
+      imageUrl = pkg.url.replace(/\/$/, '') + distPath + imageSrc;
     }
     image.setAttribute('width', imageDimensions.width);
     image.setAttribute('height', imageDimensions.height);
