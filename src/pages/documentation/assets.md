@@ -9,7 +9,9 @@ Both CSS and JavaScript are split (manually) in two parts:
 
 # JavaScript
 
-Additional JavaScript is loaded as ES6 module in modern browsers, and as IIFE in older ones, using the `module`/`nomodule` pattern for [differential serving](https://css-tricks.com/differential-serving/).
+Additional JavaScript is loaded as ES6 module in modern browsers, and as IIFE in older ones, using the `module`/`nomodule` pattern for [differential serving](https://css-tricks.com/differential-serving/)[^modules].
+
+[^modules]: You can also watch [this hilarious video](https://www.youtube.com/watch?v=dAIckpwW9ds) by Heydon Pickering, about ES modules, for a few minutes of fun.
 
 JavaScript is compiled with [rollup.js](https://rollupjs.org/), with a few plugins:
 
