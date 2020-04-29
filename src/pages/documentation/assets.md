@@ -26,6 +26,10 @@ CSS is compiled with [postcss](https://postcss.org/) with a few plugins:
 - `import` to include other files with `@import` syntax
 - `nested` for nested rules
 
+::: info
+`postcss` might be replaced by Sass in the future. [Discuss here](https://github.com/nhoizey/pack11ty/issues/6).
+:::
+
 # Dev mode with Live Reload
 
 _To be continued…_
