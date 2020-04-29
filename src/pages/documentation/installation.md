@@ -2,6 +2,8 @@
 title: Installation
 ---
 
+There are multiple ways you can use [Pack11ty]{.pack11ty}, depending on where you want to host your site.
+
 # Repository creation
 
 ## Fast creation and deployment with Netlify
