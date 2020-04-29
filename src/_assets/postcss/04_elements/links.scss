@@ -1,0 +1,21 @@
+.deeplink {
+  font-size: 0.8em;
+  padding: 0 0.2em;
+  border-radius: 0.1em;
+  text-decoration: none;
+  color: #bbb;
+}
+
+.deeplink:hover {
+  background-color: var(--theme-color);
+  color: var(--theme-color-contrast);
+}
+
+h2,
+h3,
+h4 {
+  &:hover .deeplink {
+    background-color: var(--theme-color);
+    color: var(--theme-color-contrast);
+  }
+}

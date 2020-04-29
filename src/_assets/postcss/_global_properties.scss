@@ -1,7 +1,12 @@
 :root {
   --gap: 1.5rem;
+  --page-padding: var(--gap);
+
   --sidebar: 15ch;
   --notsidebar: 75%;
+
   --maxcontent: 60ch;
+
   --theme-color: rebeccapurple;
+  --theme-color-contrast: white;
 }

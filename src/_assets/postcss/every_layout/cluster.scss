@@ -12,9 +12,9 @@ https://absolutely.every-layout.dev/layouts/cluster/
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  margin: calc(var(--gap, 1.5rem) / 2 * -1);
+  margin: calc(var(--gap) / 2 * -1);
 }
 
 .cluster > * > * {
-  margin: calc(var(--gap, 1.5rem) / 2);
+  margin: calc(var(--gap) / 2);
 }

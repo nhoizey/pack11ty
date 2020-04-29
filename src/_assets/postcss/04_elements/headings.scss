@@ -1,6 +1,7 @@
 h1 {
-  margin: 0 0 var(--gap) 0;
-  padding: 0.2rem 0;
+  margin-bottom: var(--gap);
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
   font-size: 2rem;
   border-bottom: 2px solid var(--theme-color);
 }

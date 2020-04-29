@@ -2,11 +2,23 @@
 @import 'every_layout/cluster.scss';
 @import 'every_layout/stack.scss';
 
-body {
-  margin: 0;
-  padding: 0;
+// Box sizing:
+// http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+html {
+  box-sizing: border-box;
+  text-size-adjust: 100%;
+  // https://twitter.com/TimVereecke/status/1239454788116533248
+  // https://twitter.com/lfredolo/status/1240301405325361152
+  overflow-y: scroll;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+// container for the whole page
 .page {
   margin: var(--gap);
 
@@ -18,6 +30,29 @@ body {
 
 main {
   max-width: var(--maxcontent);
+}
+
+// Lobotomized owl vs the reset
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+p,
+pre,
+dl,
+dd,
+ol,
+ul,
+figure,
+hr,
+fieldset,
+legend {
+  main > * + & {
+    margin-top: var(--gap);
+  }
 }
 
 header > * {

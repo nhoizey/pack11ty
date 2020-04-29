@@ -12,12 +12,12 @@ https://absolutely.every-layout.dev/layouts/sidebar/
 .with-sidebar > * {
   display: flex;
   flex-wrap: wrap;
-  margin: calc(-1 * var(--gap, 1.5rem) / 2);
+  margin: calc(-1 * var(--gap) / 2);
 }
 
 .with-sidebar > * > * {
   /* ↓ applies to both elements */
-  margin: calc(var(--gap, 1.5rem) / 2);
+  margin: calc(var(--gap) / 2);
 }
 
 .sidebar {
@@ -29,5 +29,5 @@ https://absolutely.every-layout.dev/layouts/sidebar/
   /* ↓ grow from nothing */
   flex-basis: 0;
   flex-grow: 999;
-  min-width: calc(var(--notsidebar, 66%) - var(--gap, 1.5rem));
+  min-width: calc(var(--notsidebar, 66%) - var(--gap));
 }

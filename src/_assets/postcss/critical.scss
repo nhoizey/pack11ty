@@ -1,54 +1,24 @@
-@import '01_settings/global.scss';
-@import '01_settings/colors.scss';
+@import '_global_properties.scss';
 
-@import '03_generic/box-sizing.scss';
 @import '03_generic/reset.scss';
 
-@import '04_elements/headings.scss';
-@import '04_elements/paragraphs.scss';
-
-@import '_global_properties.scss';
 @import '_layout.scss';
-@import 'components/header.scss';
-@import 'components/notifications.scss';
-@import 'components/news.scss';
+
+@import '04_elements/headings.scss';
+@import '04_elements/links.scss';
+@import '04_elements/lists.scss';
+@import '04_elements/tables.scss';
+@import '04_elements/figures.scss';
+
+@import '05_objects/pack11ty-logo.scss';
+
+@import '06_components/header.scss';
+@import '06_components/notifications.scss';
+@import '06_components/news.scss';
 
 body {
   font-size: calc(0.9em + 0.3vw);
   line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.pack11ty {
-  margin: 0 0.1em;
-  padding: 0 0.2em;
-  color: white;
-  background-color: $theme-color-main;
-}
-
-main > * + * {
-}
-
-.deeplink {
-  font-size: 0.8em;
-  padding: 0 0.2em;
-  border-radius: 0.1em;
-  text-decoration: none;
-  color: #bbb;
-}
-
-.deeplink:hover {
-  background-color: $theme-color-main;
-  color: white;
-}
-
-h2,
-h3,
-h4 {
-  &:hover .deeplink {
-    background-color: $theme-color-main;
-    color: white;
-  }
-  margin-top: var(--gap);
 }

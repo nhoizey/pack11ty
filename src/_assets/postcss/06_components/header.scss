@@ -3,13 +3,13 @@
   padding: 0.2rem 1rem;
   font-size: 2rem;
   font-weight: bold;
-  color: white;
-  background-color: $theme-color-main;
-  border-bottom: 2px solid $theme-color-main;
+  color: var(--theme-color-contrast);
+  background-color: var(--theme-color);
+  border-bottom: 2px solid var(--theme-color);
 
   a {
     // text-decoration: none;
-    color: white;
+    color: var(--theme-color-contrast);
   }
 
   a:hover {
@@ -33,7 +33,7 @@ nav {
   a {
     display: block;
     padding: 0.1em 0.5em;
-    color: $theme-color-main;
+    color: var(--theme-color);
     background-color: #ddd;
     border: 2px solid #ddd;
   }
@@ -44,16 +44,16 @@ nav {
   }
 
   a:hover {
-    color: white;
-    background-color: $theme-color-main;
-    border-color: $theme-color-main;
+    color: var(--theme-color-contrast);
+    background-color: var(--theme-color);
+    border-color: var(--theme-color);
   }
 
   .current {
     a {
       text-decoration: none;
       font-weight: bold;
-      border-color: $theme-color-main;
+      border-color: var(--theme-color);
     }
 
     a:hover {

@@ -1,0 +1,7 @@
+ul {
+  padding-left: 1rem;
+
+  ul {
+    padding-left: calc(1rem + 1vw);
+  }
+}

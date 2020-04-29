@@ -1,7 +1,3 @@
-// ************************************************************
-// Figures and images
-// ************************************************************
-
 img {
   max-width: 100%;
   height: auto;
@@ -14,20 +10,6 @@ img {
   margin: var(--gap) auto;
 }
 
-img.logo {
-  max-width: 50%;
-
-  @media (min-width: 20em) {
-    max-width: 33%;
-    float: right;
-    margin: 0 0 var(--gap) var(--gap);
-  }
-
-  @media (min-width: 30em) {
-    max-width: 25%;
-  }
-}
-
 figure {
   text-align: center;
 
@@ -36,11 +18,6 @@ figure {
     margin-bottom: 0;
     padding: 0;
   }
-}
-
-.logo {
-  display: block;
-  margin: var(--gap) auto;
 }
 
 figcaption {
