@@ -12,6 +12,10 @@ navorder: 1
 
 Feel free to use it, enhance it, and share your ideas/comments with [issues](https://github.com/nhoizey/pack11ty/issues/new/choose), or (even better) [pull requests](https://github.com/nhoizey/pack11ty/compare)!
 
+If you're in a hurry, install your own version of [Pack11ty]{.pack11ty} for free on Netlify:
+
+[Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.netlify-button}{.center}
+
 # Key features
 
 - **Collections** built automatically from root folders, with pagination for yearly and monthly archives
@@ -30,12 +34,6 @@ Feel free to use it, enhance it, and share your ideas/comments with [issues](htt
   - Atom feed for all collections combined
 - Extensive set of Markdown-it plugins for enhanced contribution: footnotes, attributes, headings anchors, abbreviations, containers
 - A set of Eleventy filters and shortcodes are provided, including a better `slugify`
-
-# Want to try it?
-
-If you're in a hurry, try this:
-
-[Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.netlify-button}{.center}
 
 # Would you like to know more?
 
