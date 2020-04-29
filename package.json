@@ -21,7 +21,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "clean": "rimraf _site src/_generated",
+    "clean": "rimraf _site",
     "js:build": "rollup -c",
     "js:watch": "chokidar 'src/_assets/**/*.js' --command 'npm run js:build'",
     "css:critical:build": "postcss src/_assets/postcss/critical.scss -o _site/ui/css/critical.css",
