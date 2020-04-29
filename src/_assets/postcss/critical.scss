@@ -28,7 +28,6 @@ body {
 }
 
 main > * + * {
-  margin-bottom: $gap;
 }
 
 .deeplink {
@@ -51,4 +50,5 @@ h4 {
     background-color: $theme-color-main;
     color: white;
   }
+  margin-top: var(--gap);
 }
