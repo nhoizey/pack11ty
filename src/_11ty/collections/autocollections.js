@@ -1,5 +1,5 @@
-const getFilteredCollection = require('../../_utils/filter-collection');
-const folders = require('../../_utils/folders');
+const getFilteredCollection = require('../_utils/filter-collection');
+const folders = require('../_utils/folders');
 const collections = {};
 
 folders.forEach((folder) => {

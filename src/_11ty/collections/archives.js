@@ -2,8 +2,8 @@
 // https://github.com/11ty/eleventy/issues/502#issuecomment-498234424
 
 const moment = require('moment');
-const folders = require('../../_utils/folders');
-const getFilteredCollection = require('../../_utils/filter-collection');
+const folders = require('../_utils/folders');
+const getFilteredCollection = require('../_utils/filter-collection');
 
 const titleCase = (word) => word.charAt(0).toUpperCase() + word.substr(1);
 

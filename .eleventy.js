@@ -60,7 +60,7 @@ module.exports = function (eleventyConfig) {
     const imagesResponsiverConfig = require('./src/_11ty/images-responsiver-config.js');
     eleventyConfig.addPlugin(imagesResponsiver, imagesResponsiverConfig);
 
-    const htmlMinTransform = require('./src/_transforms/html-min-transform.js');
+    const htmlMinTransform = require('./src/_11ty/transforms/html-min-transform.js');
     eleventyConfig.addTransform('htmlmin', htmlMinTransform);
   }
 
@@ -77,7 +77,7 @@ module.exports = function (eleventyConfig) {
 
   const markdownItFootnote = require('markdown-it-footnote');
 
-  const slugify = require('./src/_utils/slugify.js');
+  const slugify = require('./src/_11ty/_utils/slugify.js');
   const markdownItAnchor = require('markdown-it-anchor');
   // https://www.toptal.com/designers/htmlarrows/punctuation/section-sign/
   const markdownItAnchorOptions = {
