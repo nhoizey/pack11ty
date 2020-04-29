@@ -1,3 +1,12 @@
+@import '01_settings/global.scss';
+@import '01_settings/colors.scss';
+
+@import '03_generic/box-sizing.scss';
+@import '03_generic/reset.scss';
+
+@import '04_elements/headings.scss';
+@import '04_elements/paragraphs.scss';
+
 @import '_global_properties.scss';
 @import '_layout.scss';
 @import 'components/header.scss';
@@ -11,26 +20,11 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-h1 {
-  margin: 0;
-  padding: 0.2rem 0;
-  font-size: 2rem;
-  border-bottom: 2px solid rebeccapurple;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  border-bottom: 1px solid rebeccapurple;
-}
-
 .pack11ty {
   margin: 0 0.1em;
   padding: 0 0.2em;
   color: white;
-  background-color: rebeccapurple;
+  background-color: $theme-color-main;
 }
 
 .deeplink {
@@ -42,7 +36,7 @@ h6 {
 }
 
 .deeplink:hover {
-  background-color: rebeccapurple;
+  background-color: $theme-color-main;
   color: white;
 }
 
@@ -50,7 +44,7 @@ h2,
 h3,
 h4 {
   &:hover .deeplink {
-    background-color: rebeccapurple;
+    background-color: $theme-color-main;
     color: white;
   }
 }

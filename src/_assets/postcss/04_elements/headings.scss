@@ -1,0 +1,14 @@
+h1 {
+  margin: 0;
+  padding: 0.2rem 0;
+  font-size: 2rem;
+  border-bottom: 2px solid $theme-color-main;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  border-bottom: 1px solid $theme-color-main;
+}

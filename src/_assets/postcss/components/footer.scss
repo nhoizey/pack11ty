@@ -1,7 +1,7 @@
 footer {
-  margin: calc(2 * var(--gap)) calc(-1 * var(--gap)) calc(-1 * var(--gap));
-  padding: 0 var(--gap);
-  background-color: rebeccapurple;
+  margin: calc(2 * $gap) calc(-1 * $gap) calc(-1 * $gap);
+  padding: 0 $gap;
+  background-color: $theme-color-main;
   color: white;
 
   a {

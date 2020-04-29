@@ -4,8 +4,8 @@
   font-size: 2rem;
   font-weight: bold;
   color: white;
-  background-color: rebeccapurple;
-  border-bottom: 2px solid rebeccapurple;
+  background-color: $theme-color-main;
+  border-bottom: 2px solid $theme-color-main;
 
   a {
     // text-decoration: none;
@@ -33,7 +33,7 @@ nav {
   a {
     display: block;
     padding: 0.1em 0.5em;
-    color: rebeccapurple;
+    color: $theme-color-main;
     background-color: #ddd;
     border: 2px solid #ddd;
   }
@@ -45,15 +45,15 @@ nav {
 
   a:hover {
     color: white;
-    background-color: rebeccapurple;
-    border-color: rebeccapurple;
+    background-color: $theme-color-main;
+    border-color: $theme-color-main;
   }
 
   .current {
     a {
       text-decoration: none;
       font-weight: bold;
-      border-color: rebeccapurple;
+      border-color: $theme-color-main;
     }
 
     a:hover {
