@@ -7,9 +7,9 @@ If you're in a hurry, install your own version of [Pack11ty]{.pack11ty} for free
 
 [Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.netlify-button}{.center}
 
-Take some time to read [detailled installation documentation](installation.html).
+Take some time to read [detailled installation documentation](installation/).
 
-You can then [develop your site](development.html) and [create content](content.html).
+You can then [develop your site](development/) and [create content](content/).
 
 # Detailed features
 
