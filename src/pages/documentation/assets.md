@@ -20,14 +20,12 @@ JavaScript is compiled with [rollup.js](https://rollupjs.org/), with a few plugi
 
 # CSS
 
-CSS is compiled with [postcss](https://postcss.org/) with a few plugins:
+CSS is compiled from Sass code with Rollup and the [rollup-plugin-scss](https://github.com/thgh/rollup-plugin-scss) plugin.
 
-- `scss` for syntax
-- `import` to include other files with `@import` syntax
-- `nested` for nested rules
+Critical and additional CSS are thus a little tied to their JavaScript counterparts, which are entries for Rollup.
 
-::: info
-`postcss` might be replaced by Sass in the future. [Discuss here](https://github.com/nhoizey/pack11ty/issues/6).
+::: note
+[Pack11ty]{.pack11ty} initialy used `postcss` and a few plugins to generate CSS, but it was not as complete as full Sass, and the npm scripts were a mess. Look at the Pull Request that changed this to Rollup and Sass if you want to compare.
 :::
 
 # Dev mode with Live Reload
