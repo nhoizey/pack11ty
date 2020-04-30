@@ -1,5 +1,6 @@
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
+import replace from '@rollup/plugin-replace';
 import resolve from '@rollup/plugin-node-resolve';
 import { terser } from 'rollup-plugin-terser';
 import scss from 'rollup-plugin-scss';
@@ -140,5 +141,32 @@ export default [
       sourcemap: true,
     },
     plugins: plugins_additional_es,
+  },
+  {
+    input: 'src/service-worker.js',
+    plugins: [
+      resolve(),
+      replace({
+        'process.env.NODE_ENV': JSON.stringify('production'),
+      }),
+      babel({
+        presets: [
+          [
+            '@babel/preset-env',
+            {
+              targets: {
+                browsers: ['chrome >= 71'],
+              },
+              modules: false,
+            },
+          ],
+        ],
+      }),
+      terser(),
+    ],
+    output: {
+      file: '_site/service-worker.js',
+      format: 'iife',
+    },
   },
 ];
