@@ -24,8 +24,8 @@ CSS is compiled from Sass code with Rollup and the [rollup-plugin-scss](https://
 
 Critical and additional CSS are thus a little tied to their JavaScript counterparts, which are entries for Rollup.
 
-::: note
-[Pack11ty]{.pack11ty} initialy used `postcss` and a few plugins to generate CSS, but it was not as complete as full Sass, and the npm scripts were a mess. Look at the Pull Request that changed this to Rollup and Sass if you want to compare.
+::: info
+[Pack11ty]{.pack11ty} initialy used `postcss` and a few plugins to generate CSS, but it was not as complete as full Sass, and the npm scripts were a mess. Look at [the Pull Request that changed this to Rollup and Sass](https://github.com/nhoizey/pack11ty/pull/13) if you want to compare.
 :::
 
 # Dev mode with Live Reload
