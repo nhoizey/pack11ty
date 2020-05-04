@@ -1,0 +1,64 @@
+---
+title: Page not available while offline
+permalink: offline-fallback.html
+---
+
+<p><strong>It looks like the connection is lost</strong>, and the page you're trying to get in not in your cache.</p>
+<p>While waiting for connexion, you can still read some pages available offline:</p>
+<ul id="cached"></ul>
+
+<script>
+  const cachedElement = document.querySelector('#cached');
+
+  window.caches
+    .open("pages")
+    .then(cache => {
+      return cache.keys();
+    })
+    .then(requests => {
+      requests.forEach(request => {
+        const requestUrl = new URL(request.url);
+        const requestPath = requestUrl.pathname;
+        addRequestToList(request);
+      });
+    });
+
+  function addRequestToList(request) {
+    const requestUrl = new URL(request.url);
+    const requestPath = requestUrl.pathname;
+
+    window.caches.open("pages").then(cache => {
+      cache.match(request).then(item => {
+        item.text().then(pageHtml => {
+          let pageDom = document.createElement("html");
+          pageDom.innerHTML = pageHtml;
+
+          let pageTitle = pageDom.querySelector("h1").innerText;
+
+          let linkElement = document.createElement("a");
+          linkElement.href = request.url;
+          linkElement.className = "u-url";
+          linkElement.textContent = pageTitle;
+
+          let pElement = document.createElement("p");
+          pElement.className = "card__title p-name";
+          pElement.appendChild(linkElement);
+
+          let liElement = document.createElement("li");
+          liElement.className = "list__item list__item--large";
+          liElement.appendChild(pElement);
+
+          if (pageDom.querySelector(".main footer")) {
+            let pageMeta = document.createElement("footer");
+            pageMeta.innerHTML = pageDom.querySelector(
+              ".main footer"
+            ).innerHTML;
+            liElement.appendChild(pageMeta);
+          }
+
+          cachedElement.appendChild(liElement);
+        });
+      });
+    });
+  }
+</script>
