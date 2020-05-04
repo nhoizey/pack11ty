@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}">
 <head>
 {% include "head.njk" %}
 </head>
@@ -45,14 +45,14 @@
   {% include "components/footer.njk" %}
 </div>
 
-<link rel="stylesheet" href="/ui/css/{{ hashes_css['additional.css'] }}" />
+<link rel="stylesheet" href="/css/{{ hashes_css['additional.css'] }}" />
 
 {#
 https://buzut.net/configurer-rollup-bundles-esm-cjs/
 https://v8.dev/features/modules#browser
 #}
-<script async type="module" src="/ui/js/{{ hashes_additional_es['src/_assets/js/additional.js']}}"></script>
-<script async nomodule src="/ui/js/{{ hashes_additional_iife['src/_assets/js/additional.js']}}"></script>
+<script async type="module" src="/js/{{ hashes_additional_es['src/_assets/js/additional.js']}}"></script>
+<script async nomodule src="/js/{{ hashes_additional_iife['src/_assets/js/additional.js']}}"></script>
 </body>
 
 </html>
