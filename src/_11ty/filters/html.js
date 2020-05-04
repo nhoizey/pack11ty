@@ -3,6 +3,9 @@ const truncateHtml = require('truncate-html');
 
 module.exports = {
   cleanDeepLinks: (content) => {
+    if (content === undefined) {
+      return '';
+    }
     const regex = / <a class="deeplink"((?!(<\/a>)).|\n)+<\/a>/gm;
     return content.replace(regex, '');
   },
