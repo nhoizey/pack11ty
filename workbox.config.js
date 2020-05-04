@@ -1,16 +1,15 @@
 const path = require('path');
-
-const BUILD_DIR = '_site';
+const config = require('./pack11ty.config.js');
 
 module.exports = {
-  globDirectory: BUILD_DIR,
+  globDirectory: config.dir.dist,
   globPatterns: [
     './ui/**/*.*',
     './',
     './offline-fallback.html',
     './manifest.webmanifest',
   ],
-  swSrc: path.join(BUILD_DIR, 'service-worker.js'),
-  swDest: path.join(BUILD_DIR, 'service-worker.js'),
+  swSrc: path.join(config.dir.dist, 'service-worker.js'),
+  swDest: path.join(config.dir.dist, 'service-worker.js'),
   mode: 'production',
 };

@@ -1,5 +1,4 @@
 const fs = require('fs');
-const config = require('./_data/config.js');
 
 const type = (data) => {
   let type = null;
@@ -15,6 +14,7 @@ const type = (data) => {
   }
   return type;
 };
+const config = require('../pack11ty.config.js');
 
 module.exports = {
   lang: 'en',

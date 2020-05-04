@@ -8,12 +8,14 @@ import entrypointHashmanifest from 'rollup-plugin-entrypoint-hashmanifest';
 import path from 'path';
 import fs from 'fs';
 import crypto from 'crypto';
+const config = require('./pack11ty.config.js');
 
-const SRC_PATH_JS = 'src/_assets/js';
-const DEST_PATH_JS = '_site/ui/js';
-const SRC_PATH_CSS = 'src/_assets/sass';
-const DEST_PATH_CSS = '_site/ui/css';
-const HASH_PATH = 'src/_data';
+const SRC_PATH_JS = path.join(config.dir.src, '_assets/js');
+const SRC_PATH_CSS = path.join(config.dir.src, '_assets/sass');
+const HASH_PATH = path.join(config.dir.src, '_data');
+
+const DEST_PATH_JS = path.join(config.dir.dist, 'js');
+const DEST_PATH_CSS = path.join(config.dir.dist, 'css');
 
 const createHashedCssFile = function (folder, srcFile, destFile, styles) {
   // Get the 8 first chars of the md5 hash of these styles
@@ -143,7 +145,7 @@ export default [
     plugins: plugins_additional_es,
   },
   {
-    input: 'src/service-worker.js',
+    input: path.join(config.dir.src, 'service-worker.js'),
     plugins: [
       resolve(),
       replace({
@@ -165,7 +167,7 @@ export default [
       terser(),
     ],
     output: {
-      file: '_site/service-worker.js',
+      file: path.join(config.dir.dist, 'service-worker.js'),
       format: 'iife',
     },
   },

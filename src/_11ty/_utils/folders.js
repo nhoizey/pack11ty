@@ -1,8 +1,10 @@
 const fs = require('fs');
+const config = require('../../../pack11ty.config.js');
+
 const folders = [];
 
 const getFolders = () => {
-  fs.readdirSync('./src', {
+  fs.readdirSync(config.dir.src, {
     encoding: 'utf8',
     withFileTypes: true,
   }).forEach((item) => {

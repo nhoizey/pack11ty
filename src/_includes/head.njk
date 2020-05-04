@@ -2,12 +2,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 {% set criticalCss %}
-{% include_raw "_site/ui/css/" + hashes_css['critical.css'] %}
+{% include_raw config.dir.dist + "/css/" + hashes_css['critical.css'] %}
 {% endset %}
 <style>{{ criticalCss | safe }}</style>
 
 {% set criticalJs %}
-{% include_raw "_site/ui/js/" + hashes_critical['src/_assets/js/critical.js'] %}
+{% include_raw config.dir.dist + "/js/" + hashes_critical[config.dir.src + '/_assets/js/critical.js'] %}
 {% endset %}
 <script>{{ criticalJs | safe }}</script>
 

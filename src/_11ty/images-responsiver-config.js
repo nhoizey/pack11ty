@@ -2,14 +2,17 @@ const pkg = require('../../package.json');
 const imageSize = require('image-size');
 const markdownIt = require('markdown-it');
 const md = new markdownIt();
+const config = require('../../pack11ty.config.js');
 
 const runBeforeHook = (image, document) => {
   let documentBody = document.querySelector('body');
   let srcPath = documentBody.getAttribute('data-img-src');
-  // TODO: get "_site/" from config
+
+  let distRegex = new RegExp(`^${config.dir.dist}`);
+
   let distPath = documentBody
     .getAttribute('data-img-dist')
-    .replace(/^_site/, '');
+    .replace(distRegex, '');
 
   let imageSrc = image.getAttribute('src');
 
@@ -22,9 +25,8 @@ const runBeforeHook = (image, document) => {
   } else {
     let imageDimensions;
     if (imageSrc[0] === '/') {
-      // TODO: get "src/" from Eleventy config
       imageDimensions = imageSize(
-        './src' + imageSrc.replace('/images/', '/_assets/images/')
+        config.dir.src + imageSrc.replace('/images/', '/_assets/images/')
       );
       imageUrl = pkg.url.replace(/\/$/, '') + imageSrc;
     } else {
