@@ -17,7 +17,7 @@ const type = (data) => {
 const config = require('../pack11ty.config.js');
 
 module.exports = {
-  lang: 'en',
+  lang: config.defaultLang || 'en',
   eleventyComputed: {
     layout: (data) => type(data),
     permalink: (data) => {
