@@ -8,8 +8,12 @@ code {
   margin: 0;
   padding: 0.1em 0.3em;
   border-radius: 0.3em;
-  background-color: #fff4d1;
+  background-color: #fff9e7;
   color: currentColor;
+
+  .warning & {
+    background-color: #ffefbc;
+  }
 }
 
 pre code {
