@@ -1,6 +1,7 @@
 [build]
-command = "npm run build"
-publish = "_site"
+  ignore = "git log -1 --pretty=%B | grep dependabot"
+  command = "npm run build"
+  publish = "_site"
 
 [[redirects]]
   from = "https://pack11ty.netlify.com"
