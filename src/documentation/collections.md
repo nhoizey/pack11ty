@@ -10,7 +10,7 @@ Every root sub-folder in the source folder (default `src/`) which name doesn't s
 
 Any `permalink` property set directly in a content's Front Matter will not be overriden by the global one here after.
 
-For all pages at once, you can decide with the `permalinkFolders` property in [the configuration file](./configuration/) how you want permalinks to behave:
+For all pages at once, you can decide with the `permalinkFolders` property in [the configuration file](../configuration/) how you want permalinks to behave:
 
 - to preserve Eleventy's default behavior where every Markdown file becomes a folder and an `index.html` file, set it to`true` (default)
 - to generate less folders, set it to `false`
