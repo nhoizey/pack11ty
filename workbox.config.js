@@ -4,7 +4,8 @@ const config = require('./pack11ty.config.js');
 module.exports = {
   globDirectory: config.dir.dist,
   globPatterns: [
-    './{js,css}/**/*.*',
+    './css/additional.*.css',
+    './js/additional-*.*.js',
     './',
     './offline-fallback.html',
     './manifest.webmanifest',
