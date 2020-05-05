@@ -25,9 +25,7 @@ const runBeforeHook = (image, document) => {
   } else {
     let imageDimensions;
     if (imageSrc[0] === '/') {
-      imageDimensions = imageSize(
-        config.dir.src + imageSrc.replace('/images/', '/_assets/images/')
-      );
+      imageDimensions = imageSize(config.dir.src + imageSrc);
       imageUrl = pkg.url.replace(/\/$/, '') + imageSrc;
     } else {
       // This is a relative URL
