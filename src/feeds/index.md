@@ -4,6 +4,6 @@ title: Feeds
 
 ![RSS logo](/images/feed.png){.logo}
 
-You can follow Pack11ty new with this Atom feed:
+You can follow Pack11ty news with this Atom feed:
 
-<{{ pkg.url }}feeds/news.xml>
+[/feeds/news.xml](/feeds/news.xml)
