@@ -1,8 +1,8 @@
 // TODO: understand why the full path is needed here but not in critical
-@import 'src/_assets/sass/06_components/footer.scss';
-@import 'src/_assets/sass/content_parts/prism-onedark.scss';
-@import 'src/_assets/sass/content_parts/code.scss';
-@import 'src/_assets/sass/content_parts/markdown-classes.scss';
+@import '06_components/footer.scss';
+@import 'content_parts/prism-onedark.scss';
+@import 'content_parts/code.scss';
+@import 'content_parts/markdown-classes.scss';
 
 /* external links */
 a[href^="http://"]:not([href^="https://pack11ty.dev"]):after,
