@@ -24,12 +24,12 @@
     "clean": "rimraf _site",
     "assets:build": "rollup -c",
     "assets:watch": "rollup -c --watch",
-    "eleventy:build": "cross-env NODE_ENV=production eleventy",
-    "eleventy:watch": "cross-env NODE_ENV=development eleventy --serve",
+    "eleventy:build": "eleventy",
+    "eleventy:watch": "eleventy --serve",
     "serviceworker": "workbox injectManifest workbox.config.js",
-    "build": "npm-run-all --sequential clean assets:build eleventy:build serviceworker",
+    "build": "cross-env NODE_ENV=production npm-run-all --sequential clean assets:build eleventy:build serviceworker",
     "debug:build": "DEBUG=Eleventy* npm run build",
-    "start": "npm-run-all --sequential clean assets:build --parallel *:watch",
+    "start": "cross-env NODE_ENV=development npm-run-all --sequential clean assets:build --parallel *:watch",
     "debug:start": "DEBUG=Eleventy* npm start"
   },
   "devDependencies": {
