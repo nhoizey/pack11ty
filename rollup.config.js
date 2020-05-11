@@ -48,6 +48,9 @@ const createHashedCssFile = function (folder, srcFile, destFile, styles) {
 const plugins_critical = [
   commonjs(),
   resolve(),
+  replace({
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+  }),
   babel({
     exclude: 'node_modules/**',
   }),
@@ -73,6 +76,9 @@ const plugins_critical = [
 const plugins_additional_iife = [
   commonjs(),
   resolve(),
+  replace({
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+  }),
   babel({
     exclude: 'node_modules/**',
   }),
@@ -98,6 +104,9 @@ const plugins_additional_iife = [
 const plugins_additional_es = [
   commonjs(),
   resolve(),
+  replace({
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+  }),
   babel({
     exclude: 'node_modules/**',
   }),
@@ -149,7 +158,7 @@ export default [
     plugins: [
       resolve(),
       replace({
-        'process.env.NODE_ENV': JSON.stringify('production'),
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
       }),
       babel({
         presets: [
