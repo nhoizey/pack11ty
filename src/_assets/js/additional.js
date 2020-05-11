@@ -16,9 +16,11 @@ window.addEventListener('load', () => {
   });
 });
 
-// Install Service Worker
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js');
-  });
+if (process.env.NODE_ENV === 'production') {
+  // Install Service Worker
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js');
+    });
+  }
 }
