@@ -7,7 +7,7 @@
 <style>{{ criticalCss | safe }}</style>
 
 {% set criticalJs %}
-{% include_raw config.dir.dist + "/js/" + hashes_critical[config.dir.src + '/_assets/js/critical.js'] %}
+{% include_raw config.dir.dist + "/js/" + hashes_critical[config.dir.assets + '/js/critical.js'] %}
 {% endset %}
 <script>{{ criticalJs | replace('//# sourceMappingURL=', '//# sourceMappingURL=/js/') | safe }}</script>
 

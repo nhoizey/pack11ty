@@ -54,7 +54,7 @@ const plugins_critical = [
   babel({
     exclude: 'node_modules/**',
   }),
-  terser(),
+  process.env.NODE_ENV === 'production' && terser(),
   scss({
     failOnError: true,
     outputStyle: 'compressed',
@@ -82,7 +82,7 @@ const plugins_additional_iife = [
   babel({
     exclude: 'node_modules/**',
   }),
-  terser(),
+  process.env.NODE_ENV === 'production' && terser(),
   scss({
     failOnError: true,
     outputStyle: 'compressed',
@@ -110,7 +110,7 @@ const plugins_additional_es = [
   babel({
     exclude: 'node_modules/**',
   }),
-  terser(),
+  process.env.NODE_ENV === 'production' && terser(),
   scss({
     // just here to clean the CSS import from the JS
     output: false,
@@ -173,7 +173,7 @@ export default [
           ],
         ],
       }),
-      terser(),
+      process.env.NODE_ENV === 'production' && terser(),
     ],
     output: {
       file: path.join(config.dir.dist, 'service-worker.js'),

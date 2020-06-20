@@ -51,8 +51,8 @@
 https://buzut.net/configurer-rollup-bundles-esm-cjs/
 https://v8.dev/features/modules#browser
 #}
-<script async type="module" src="/js/{{ hashes_additional_es['src/_assets/js/additional.js']}}"></script>
-<script async nomodule src="/js/{{ hashes_additional_iife['src/_assets/js/additional.js']}}"></script>
+<script async type="module" src="/js/{{ hashes_additional_es[config.dir.assets + '/js/additional.js']}}"></script>
+<script async nomodule src="/js/{{ hashes_additional_iife[config.dir.assets + '/js/additional.js']}}"></script>
 </body>
 
 </html>
