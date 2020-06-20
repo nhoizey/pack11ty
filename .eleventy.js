@@ -191,7 +191,7 @@ module.exports = function (eleventyConfig) {
     .addPassthroughCopy(path.join(config.dir.src, 'favicon.ico'));
 
   eleventyConfig.setDataDeepMerge(true);
-  // eleventyConfig.setQuietMode(true);
+  eleventyConfig.setQuietMode(true);
 
   eleventyConfig.setBrowserSyncConfig({
     ui: false,
