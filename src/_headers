@@ -6,3 +6,4 @@
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
   Feature-Policy: accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'
   Accept-CH: Downlink,RTT,Device-Memory,Save-Data,DPR,Width
+  Link: <https://res.cloudinary.com>; rel=preconnect; crossorigin
