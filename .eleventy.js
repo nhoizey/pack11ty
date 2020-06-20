@@ -7,12 +7,14 @@ module.exports = function (eleventyConfig) {
   // Collections
   // ------------------------------------------------------------------------
 
-  glob.sync(path.join(config.dir.src, '_11ty/collections/*.js')).forEach((file) => {
-    let collectionList = require('./' + file);
-    Object.keys(collectionList).forEach((name) => {
-      eleventyConfig.addCollection(name, collectionList[name]);
+  glob
+    .sync(path.join(config.dir.src, '_11ty/collections/*.js'))
+    .forEach((file) => {
+      let collectionList = require('./' + file);
+      Object.keys(collectionList).forEach((name) => {
+        eleventyConfig.addCollection(name, collectionList[name]);
+      });
     });
-  });
 
   // ------------------------------------------------------------------------
   // Filters
@@ -29,29 +31,33 @@ module.exports = function (eleventyConfig) {
   // Shortcodes
   // ------------------------------------------------------------------------
 
-  glob.sync(path.join(config.dir.src, '_11ty/shortcodes/*.js')).forEach((file) => {
-    let shortcodes = require('./' + file);
-    Object.keys(shortcodes).forEach((name) => {
-      eleventyConfig.addNunjucksShortcode(name, shortcodes[name]);
+  glob
+    .sync(path.join(config.dir.src, '_11ty/shortcodes/*.js'))
+    .forEach((file) => {
+      let shortcodes = require('./' + file);
+      Object.keys(shortcodes).forEach((name) => {
+        eleventyConfig.addNunjucksShortcode(name, shortcodes[name]);
+      });
     });
-  });
 
-  glob.sync(path.join(config.dir.src, '_11ty/pairedShortcodes/*.js')).forEach((file) => {
-    let pairedShortcodes = require('./' + file);
-    Object.keys(pairedShortcodes).forEach((name) => {
-      eleventyConfig.addPairedShortcode(name, pairedShortcodes[name]);
+  glob
+    .sync(path.join(config.dir.src, '_11ty/pairedShortcodes/*.js'))
+    .forEach((file) => {
+      let pairedShortcodes = require('./' + file);
+      Object.keys(pairedShortcodes).forEach((name) => {
+        eleventyConfig.addPairedShortcode(name, pairedShortcodes[name]);
+      });
     });
-  });
 
   // ------------------------------------------------------------------------
   // Plugins
   // ------------------------------------------------------------------------
 
-    const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-    eleventyConfig.addPlugin(syntaxHighlight);
+  const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+  eleventyConfig.addPlugin(syntaxHighlight);
 
-    const rss = require('@11ty/eleventy-plugin-rss');
-    eleventyConfig.addPlugin(rss);
+  const rss = require('@11ty/eleventy-plugin-rss');
+  eleventyConfig.addPlugin(rss);
 
   // ------------------------------------------------------------------------
   // Transforms
@@ -59,14 +65,22 @@ module.exports = function (eleventyConfig) {
 
   if (process.env.NODE_ENV === 'production') {
     const imagesResponsiver = require('eleventy-plugin-images-responsiver');
-    const imagesResponsiverConfig = require(path.join(__dirname, config.dir.src, '_11ty/images-responsiver-config.js'));
+    const imagesResponsiverConfig = require(path.join(
+      __dirname,
+      config.dir.src,
+      '_11ty/images-responsiver-config.js'
+    ));
     eleventyConfig.addPlugin(imagesResponsiver, imagesResponsiverConfig);
 
-    const htmlMinTransform = require(path.join(__dirname, config.dir.src, '_11ty/transforms/html-min-transform.js'));
+    const htmlMinTransform = require(path.join(
+      __dirname,
+      config.dir.src,
+      '_11ty/transforms/html-min-transform.js'
+    ));
     eleventyConfig.addTransform('htmlmin', htmlMinTransform);
   }
 
-    // ------------------------------------------------------------------------
+  // ------------------------------------------------------------------------
   // Markdown plugins
   // ------------------------------------------------------------------------
 
@@ -79,7 +93,11 @@ module.exports = function (eleventyConfig) {
 
   const markdownItFootnote = require('markdown-it-footnote');
 
-  const slugify = require(path.join(__dirname, config.dir.src, '_11ty/_utils/slugify.js'));
+  const slugify = require(path.join(
+    __dirname,
+    config.dir.src,
+    '_11ty/_utils/slugify.js'
+  ));
   const markdownItAnchor = require('markdown-it-anchor');
   // https://www.toptal.com/designers/htmlarrows/punctuation/section-sign/
   const markdownItAnchorOptions = {
