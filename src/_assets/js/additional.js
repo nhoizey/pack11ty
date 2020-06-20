@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
 });
 
 if (process.env.NODE_ENV === 'production') {
-  // Install Service Worker
+  // Install Service Worker only on production
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/service-worker.js');
