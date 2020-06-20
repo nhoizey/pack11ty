@@ -188,7 +188,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig
     .addPassthroughCopy(path.join(config.dir.src, '**/*.{jpg,jpeg,png,gif}'))
     .addPassthroughCopy(path.join(config.dir.src, 'robots.txt'))
-    .addPassthroughCopy(path.join(config.dir.src, 'favicon.ico'));
+    .addPassthroughCopy(path.join(config.dir.src, 'favicon.ico'))
+    .addPassthroughCopy(path.join(config.dir.src, '_headers'));
 
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.setQuietMode(true);
