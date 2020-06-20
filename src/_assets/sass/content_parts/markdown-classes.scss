@@ -13,14 +13,19 @@
   color: #fff;
 }
 
+// Buttons are a bit darker than official colors for accessibility
 .github-button {
-  background-color: #269f42;
-  background-image: linear-gradient(-180deg, #2fcb53, #269f42 90%);
+  // background-color: #269f42;
+  // background-image: linear-gradient(-180deg, #2fcb53, #269f42 90%);
+  background-color: #1e7b33;
+  background-image: linear-gradient(-180deg, #1e7b33, #19672a 90%);
 }
 
 .netlify-button {
-  background-color: #35b1bb;
-  background-image: linear-gradient(-180deg, #35b1bb, #2a8b93 90%);
+  // background-color: #35b1bb;
+  // background-image: linear-gradient(-180deg, #35b1bb, #2a8b93 90%);
+  background-color: #227177;
+  background-image: linear-gradient(-180deg, #227177, #1c5e63 90%);
 }
 
 .center {
