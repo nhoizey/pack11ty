@@ -14,13 +14,11 @@ window.addEventListener('load', () => {
     // move table into wrapper
     wrapper.appendChild(table);
   });
-});
 
-if (process.env.NODE_ENV === 'production') {
   // Install Service Worker only on production
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
+  if (process.env.NODE_ENV === 'production') {
+    if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/service-worker.js');
-    });
+    }
   }
-}
+});
