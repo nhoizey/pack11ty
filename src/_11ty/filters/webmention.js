@@ -1,6 +1,6 @@
-const pkg = require('../../../package.json');
-const rootUrl = pkg.url;
-const twitterUrl = `https://twitter.com/${pkg.author.twitter}`;
+const site = require('../../_data/site');
+const rootUrl = site.url;
+const twitterUrl = `https://twitter.com/${site.author.twitter}`;
 
 function isSelf(entry) {
   return (

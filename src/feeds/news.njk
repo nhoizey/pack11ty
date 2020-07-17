@@ -4,17 +4,17 @@ layout: null
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>News from {{ pkg.title }}</title>
-  <link href="{{ pkg.url }}/feeds/news.xml" rel="self"/>
-  <link href="{{ pkg.url }}/"/>
+  <title>News from {{ site.title }}</title>
+  <link href="{{ site.url }}/feeds/news.xml" rel="self"/>
+  <link href="{{ site.url }}/"/>
   <updated>{{ collections.news | rssLastUpdatedDate }}</updated>
-  <id>{{ pkg.url }}</id>
+  <id>{{ site.url }}</id>
   <author>
-    <name>{{ pkg.author.name }}</name>
-    <email>{{ pkg.author.email }}</email>
+    <name>{{ site.author.name }}</name>
+    <email>{{ site.author.email }}</email>
   </author>
   {% for entry in collections.news | limit(20) %}
-    {% set absoluteEntryUrl %}{{ entry.url | url | absoluteUrl(pkg.url) }}{% endset %}
+    {% set absoluteEntryUrl %}{{ entry.url | url | absoluteUrl(site.url) }}{% endset %}
     {% set readableDate = entry.date | date("Do MMMM YYYY") %}
     <entry>
       <title>{{ entry.data.title or entry.data.layout + ' from ' + readableDate }}</title>

@@ -1,0 +1,12 @@
+{
+  "title": "Pack11ty",
+  "description": "an heavily opinionated Eleventy template project",
+  "url": "https://pack11ty.dev/",
+  "author": {
+    "name": "Nicolas Hoizey",
+    "email": "nicolas@hoizey.com",
+    "url": "https://nicolas-hoizey.com/",
+    "twitter": "nhoizey",
+    "facebook": "nhoizey"
+  }
+}

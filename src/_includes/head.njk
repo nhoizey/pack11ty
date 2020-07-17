@@ -13,11 +13,11 @@
 
 {% block title %}
   {% if page.url == '/' %}
-    <title>{{ pkg.title }}, {{ pkg.description }}</title>
-    <meta property="og:title" content="{{ pkg.title }}, {{ pkg.description }}" />
+    <title>{{ site.title }}, {{ site.description }}</title>
+    <meta property="og:title" content="{{ site.title }}, {{ site.description }}" />
   {% else %}
-    <title>{{ title }} — {{ pkg.title }}</title>
-    <meta property="og:title" content="{{ title }} — {{ pkg.title }}" />
+    <title>{{ title }} — {{ site.title }}</title>
+    <meta property="og:title" content="{{ title }} — {{ site.title }}" />
   {% endif %}
 {% endblock %}
 
@@ -26,13 +26,13 @@
 <meta property="og:description" content="{{ page.description or page.content | excerpt }}" />
 {% endblock %}
 
-<link rel="canonical" href="{{ pkg.url + page.url }}" itemprop="url" />
-<meta property="og:url" content="{{ pkg.url + page.url }}" />
+<link rel="canonical" href="{{ site.url + page.url }}" itemprop="url" />
+<meta property="og:url" content="{{ site.url + page.url }}" />
 
 {% if page.layout != "pages" %}
   <meta property="og:type" content="article" />
   <meta property="article:published_time" content="{{ page.date | attributeDate }}" />
-  <meta property="article:author" content="https://www.facebook.com/{{ pkg.author.facebook }}" />
+  <meta property="article:author" content="https://www.facebook.com/{{ site.author.facebook }}" />
   {% for tag in tags %}
     <meta property="article:tag" content="{{ tag }}" />
   {% endfor %}
@@ -42,15 +42,15 @@
 <link rel="webmention" href="https://webmention.io/pack11ty.dev/webmention" />
 <link rel="pingback" href="https://webmention.io/pack11ty.dev/xmlrpc" />
 
-<link rel="alternate" type="application/rss+xml" title="Feed for all content on {{ pkg.name }}" href="/feeds/all.xml" />
+<link rel="alternate" type="application/rss+xml" title="Feed for all content on {{ site.title }}" href="/feeds/all.xml" />
 <link rel="icon" type="image/jpeg" href="/images/logo-192px.png" />
 
 {# ########################################################
  # opengraph and Twitter 
  # ########################################################}
-<meta property="og:site_name" content="{{ pkg.name }}" />
-<meta name="twitter:creator" content="@{{ pkg.author.twitter }}" />
-<meta name="twitter:site" content="@{{ pkg.author.twitter }}" />
+<meta property="og:site_name" content="{{ site.title }}" />
+<meta name="twitter:creator" content="@{{ site.author.twitter }}" />
+<meta name="twitter:site" content="@{{ site.author.twitter }}" />
 {# https://dev.twitter.com/web/overview/widgets-webpage-properties#csp #}
 <meta name="twitter:widgets:csp" content="on" />
 {#
@@ -72,7 +72,7 @@ https://developers.facebook.com/tools/debug/sharing/
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <link rel="apple-touch-icon" href="/images/logo-192px.png" />
-<meta name="apple-mobile-web-app-title" content="{{ pkg.name }}" />
+<meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
 {# https://timkadlec.com/remembers/2018-06-06-web-watch/ #}
 <meta name="disabled-adaptations" content="watch" />
 
@@ -86,7 +86,7 @@ Theme color: https://developers.google.com/web/updates/2014/11/Support-for-theme
 <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials" />
 
 {# rel-me (should be in visible links) #}
-<link rel="me" href="https://twitter.com/{{ pkg.author.twitter }}" />
+<link rel="me" href="https://twitter.com/{{ site.author.twitter }}" />
 
 {% block morehead %}
 {% endblock %}

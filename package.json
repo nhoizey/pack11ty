@@ -1,17 +1,13 @@
 {
   "name": "pack11ty",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.7",
   "title": "Pack11ty",
   "description": "an heavily opinionated Eleventy template project",
-  "url": "https://pack11ty.dev/",
+  "homepage": "https://pack11ty.dev/",
   "author": {
     "name": "Nicolas Hoizey",
-    "email": "nicolas@hoizey.com",
-    "url": "https://nicolas-hoizey.com/",
-    "twitter": "nhoizey",
-    "facebook": "nhoizey"
+    "url": "https://nicolas-hoizey.com/"
   },
-  "homepage": "https://pack11ty.dev/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nhoizey/pack11ty.git"
