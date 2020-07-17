@@ -25,7 +25,7 @@
     "serviceworker": "workbox injectManifest workbox.config.js",
     "build": "cross-env NODE_ENV=production npm-run-all --sequential clean assets:build eleventy:build serviceworker",
     "debug:build": "DEBUG=Eleventy* npm run build",
-    "start": "cross-env NODE_ENV=development npm-run-all --sequential clean --parallel *:watch",
+    "start": "cross-env NODE_ENV=development npm-run-all --sequential clean assets:build --parallel *:watch",
     "debug:start": "DEBUG=Eleventy* npm start"
   },
   "devDependencies": {
