@@ -13,17 +13,17 @@
 
 {% block title %}
   {% if page.url == '/' %}
-    <title>{{ site.title }}, {{ site.description }}</title>
-    <meta property="og:title" content="{{ site.title }}, {{ site.description }}" />
+    {% set page_title %}{{ site.title }}, {{ site.description }}{% endset %}
   {% else %}
-    <title>{{ title }} — {{ site.title }}</title>
-    <meta property="og:title" content="{{ title }} — {{ site.title }}" />
+    {% set page_title %}{{ title }} — {{ site.title }}{% endset %}
   {% endif %}
+  <title>{{ page_title }}</title>
+  <meta property="og:title" content="{{ page_title }}" />
 {% endblock %}
 
 {% block description %}
-<meta name="description" content="{{ page.description or page.content | excerpt }}" />
-<meta property="og:description" content="{{ page.description or page.content | excerpt }}" />
+  <meta name="description" content="{{ description or content | excerpt | striptags }}" />
+  <meta property="og:description" content="{{ description or content | excerpt | striptags }}" />
 {% endblock %}
 
 <link rel="canonical" href="{{ site.url + page.url }}" itemprop="url" />
