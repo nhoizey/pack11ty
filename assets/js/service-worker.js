@@ -114,9 +114,5 @@ googleAnalytics.initialize({
   },
 });
 
-self.addEventListener('message', event => {
-  console.log(`[SW] Receiving a message: ${event.data.type}`);
-});
-
 skipWaiting();
 clientsClaim();
