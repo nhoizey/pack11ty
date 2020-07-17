@@ -9,6 +9,7 @@ module.exports = {
     './',
     './offline-fallback.html',
     './manifest.webmanifest',
+    './images/logo-192px.png',
   ],
   swSrc: path.join(config.dir.dist, 'service-worker.js'),
   swDest: path.join(config.dir.dist, 'service-worker.js'),
