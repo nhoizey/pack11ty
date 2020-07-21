@@ -33,3 +33,7 @@ If you're in a hurry, install your own version of [Pack11ty]{.pack11ty} for free
 # Would you like to know more?
 
 Read the [full documentation](documentation/)!
+
+# Do you have different needs?
+
+No problem, there are [many other Eleventy starters available](https://www.11ty.dev/docs/starter/).
