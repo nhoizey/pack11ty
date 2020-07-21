@@ -4,7 +4,7 @@ title: Collections
 
 # Auto-collections
 
-Every root sub-folder in the source folder (default `src/`) which name doesn't start with an underscore (`_`) automaticaly becomes a collection.
+Every root sub-folder in the source folder (default `src/`) which name doesn't start with an underscore (`_`) **automaticaly becomes a collection**.
 
 # Permalinks
 
@@ -12,8 +12,8 @@ Any `permalink` property set directly in a content's Front Matter will not be ov
 
 For all pages at once, you can decide with the `permalinkFolders` property in [the configuration file](../configuration/) how you want permalinks to behave:
 
-- to preserve Eleventy's default behavior where every Markdown file becomes a folder and an `index.html` file, set it to`true` (default)
-- to generate less folders, set it to `false`
+- set it to`true` to preserve Eleventy's default behavior where every Markdown file becomes a folder and an `index.html` file (default)
+- set it to `false` to generate less folders
 
 Examples:
 
@@ -33,9 +33,9 @@ As you can see, you can't have both `/about.md` and `/about/index.md` with Eleve
 
 Any `layout` property set directly in a content's Front Matter will not be overriden by the global ones here after.
 
-If the content comes from a collection and a layout with the name of the collection exists, it is used. Else, the `pages` layout is used.
+If the content comes from one of the collections above and a layout exists with the same name as the collection, it is used. The `pages` layout is used as a fallback.
 
-Examples with existing `articles` and `notes` layouts:
+Examples if there are `articles` and `notes` layouts:
 
 | source                                    | layout     |
 | ----------------------------------------- | ---------- |
