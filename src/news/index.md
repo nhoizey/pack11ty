@@ -1,6 +1,7 @@
 ---
 title: News
-navorder: 2
+nav:
+  order: 3
 ---
 
 These are latest news from [Pack11ty]{.pack11ty} :

@@ -3,8 +3,9 @@ module.exports = {
   navigation: (collection) =>
     collection
       .getAll()
-      .filter((item) => 'navorder' in item.data)
+      .filter((item) => 'nav' in item.data && 'order' in item.data.nav)
       .sort(
-        (a, b) => parseInt(a.data.navorder, 10) - parseInt(b.data.navorder, 10)
+        (a, b) =>
+          parseInt(a.data.nav.order, 10) - parseInt(b.data.nav.order, 10)
       ),
 };

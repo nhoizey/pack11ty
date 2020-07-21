@@ -1,6 +1,7 @@
 ---
 title: Github
-navorder: 3
-redirect: https://github.com/nhoizey/pack11ty
+nav:
+  order: 4
+nav_away: https://github.com/nhoizey/pack11ty
 permalink: false
 ---

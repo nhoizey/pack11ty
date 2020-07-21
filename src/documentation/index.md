@@ -1,6 +1,7 @@
 ---
 title: Documentation
-navorder: 2
+nav:
+  order: 2
 ---
 
 # Installation
@@ -21,6 +22,7 @@ You will then be able to [develop your site](development/) and [create content](
 - [JavaScript and CSS assets](assets/)
   - inline critical JavaScript and CSS for performance
   - external and asynchronous JavaScript and CSS, with hashes for cache busting
+- [Navigation](navigation/) configuration
   - JavaScript, CSS and HTML built separately
   - Dev mode with live reload
 - [Responsive Layout](layout/) without any Media Query, thanks to CSS Flexible Box Layout (Flexbox) and layouts from Every Layout
