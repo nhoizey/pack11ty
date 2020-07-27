@@ -14,11 +14,11 @@ You can even add links to other sites in the navigation by creating a file with 
 
 [^permalink]: Don't forget to also set the `permalink` to `false` to prevent Eleventy from generating an HTML file.
 
-Look at [the example linking to the project's page on Github](https://github.com/nhoizey/pack11ty/blob/master/src/github.md):
+Look at [the example linking to the project's page on GitHub](https://github.com/nhoizey/pack11ty/blob/master/src/github.md):
 
 ```yaml
 ---
-title: Github
+title: GitHub
 nav:
   order: 4
   away: https://github.com/nhoizey/pack11ty
