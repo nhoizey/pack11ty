@@ -9,20 +9,14 @@ Feel free to use it, enhance it, and share your ideas/comments with [issues](htt
 ## Key features
 
 - **Collections** built automatically from root folders, with pagination for yearly and monthly archives
-- **JavaScript and CSS assets**
-  - inline critical JavaScript and CSS for performance
-  - external and asynchronous JavaScript and CSS, with hashes for cache busting
-  - JavaScript, CSS and HTML built separately
-  - Dev mode with live reload
-- **Responsive Layout** without any Media Query, thanks to CSS Flexible Box Layout (Flexbox) and layouts from [Every Layout](https://every-layout.dev/)
+- **JavaScript and CSS assets** optimized for performance
+- **Responsive Layout** without any Media Query, thanks to CSS Flexible Box Layout (Flexbox) and layouts from Every Layout
 - **Responsive images** built from simple Markdown and presets
-- **PWA** for performance and offline support
-  - Service Worker with pre-caching of UI assets, auto caching of visited pages and offline fallback
-  - Manifest for installation
+- **PWA** for performance, installation and offline support
 - **Indieweb**
   - Support for receiving Webmentions
   - Atom feed for all collections combined
-- Extensive set of Markdown-it plugins for enhanced contribution: footnotes, attributes, headings anchors, abbreviations, containers
+- **Enhanced Markdown** for better contribution: footnotes, attributes, headings anchors, abbreviations, containers
 - A set of Eleventy filters and shortcodes are provided, including a better `slugify`
 
 # Want to try it?
