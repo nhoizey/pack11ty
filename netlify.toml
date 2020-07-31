@@ -1,5 +1,4 @@
 [build]
-  ignore = "git log -1 --pretty=%B | grep dependabot"
   command = "npm run build"
   publish = "_site"
 
