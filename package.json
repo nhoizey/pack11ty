@@ -69,7 +69,7 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-entrypoint-hashmanifest": "^0.1.2",
-    "rollup-plugin-scss": "^2.5.0",
+    "rollup-plugin-scss": "^2.6.0",
     "rollup-plugin-terser": "^6.1.0",
     "sanitize-html": "^1.27.2",
     "truncate-html": "^1.0.3",
