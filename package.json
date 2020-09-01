@@ -32,7 +32,7 @@
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-plugin-rss": "^1.0.9",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
-    "@babel/core": "^7.11.0",
+    "@babel/core": "^7.11.5",
     "@babel/preset-env": "^7.11.0",
     "@jlengstorf/get-share-image": "^0.7.1",
     "@rollup/plugin-node-resolve": "^8.4.0",
