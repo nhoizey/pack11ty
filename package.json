@@ -76,7 +76,7 @@
     "twitter-text": "^3.1.0",
     "workbox-broadcast-update": "5.1.3",
     "workbox-cacheable-response": "5.1.3",
-    "workbox-cli": "^5.1.3",
+    "workbox-cli": "^5.1.4",
     "workbox-core": "5.1.3",
     "workbox-expiration": "5.1.3",
     "workbox-google-analytics": "5.1.3",
