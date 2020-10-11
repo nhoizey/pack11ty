@@ -82,6 +82,7 @@
     "workbox-google-analytics": "5.1.3",
     "workbox-precaching": "5.1.4",
     "workbox-routing": "5.1.3",
-    "workbox-strategies": "5.1.4"
+    "workbox-strategies": "5.1.4",
+    "sass": "~1.26.12"
   }
 }
