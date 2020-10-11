@@ -95,12 +95,7 @@ setCatchHandler(({ event }) => {
       );
 
     default:
-      // If we don't have a fallback, just return an error response.
-      return new Response('Service Temporarily Unavailable', {
-        status: 503,
-        statusText: 'Service Temporarily Unavailable',
-        contentType: 'text/plain',
-      });
+      return Response.error();
   }
 });
 

@@ -1,5 +1,4 @@
-// TODO: understand why the full path is needed here but not in critical
-@import '06_components/footer.scss';
-@import 'content_parts/prism-onedark.scss';
-@import 'content_parts/code.scss';
-@import 'content_parts/markdown-classes.scss';
+@import 'functions';
+@import '06_components/footer';
+@import 'content_parts/prism-onedark';
+@import 'content_parts/code';
