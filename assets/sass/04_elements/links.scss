@@ -20,11 +20,11 @@ h4 {
   }
 }
 
-/* external links */
+// external links
 a[href^="http://"]:not([href^="https://pack11ty.dev"]):after,
 a[href^="https://"]:not([href^="https://pack11ty.dev"]):after
 {
-  content: ' \2197\FE0E';
+  content: #{ unicode("2197")unicode("FE0E")};
   font-size: 75%;
   line-height: 0;
   position: relative;

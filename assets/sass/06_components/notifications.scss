@@ -33,7 +33,7 @@
   border-color: #d6c6e9;
 
   &::before {
-    content: '\2139\FE0E '; // ℹ
+    content: #{unicode("2139")unicode("FE0E") }; // ℹ
   }
 
   a:link,
@@ -48,7 +48,7 @@
   border-color: #d6e9c6;
 
   &::before {
-    content: '\263A\FE0E '; // ☺︎
+    content: #{unicode("263A")unicode("FE0E") }; // ☺︎
   }
 
   a:link,
@@ -63,7 +63,7 @@
   border-color: #faebcc;
 
   &::before {
-    content: '\26A0\FE0E '; // ⚠
+    content: #{unicode("26A0")unicode("FE0E") }; // ⚠
   }
 
   a:link,
@@ -78,7 +78,7 @@
   border-color: #ebccd1;
 
   &::before {
-    content: '\2639\FE0E '; // ☹︎
+    content: #{unicode("2639")unicode("FE0E") }; // ☹︎
   }
 
   a:link,
