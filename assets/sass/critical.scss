@@ -1,10 +1,10 @@
 @import 'functions';
 @import 'global_properties';
 
-@import '03_generic/reset';
-
 @import 'layout';
 
+@import '04_elements/body';
+@import '04_elements/paragraphs';
 @import '04_elements/headings';
 @import '04_elements/links';
 @import '04_elements/lists';
@@ -20,10 +20,3 @@
 @import '06_components/video';
 
 @import 'content_parts/markdown-classes';
-
-body {
-  font-size: calc(0.9em + 0.3vw);
-  line-height: 1.5;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}

@@ -5,3 +5,7 @@ ul {
     padding-left: calc(1rem + 1vw);
   }
 }
+
+:not(ul) + ul {
+  margin-top: calc(var(--gap) / 2);
+}

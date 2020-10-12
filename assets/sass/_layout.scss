@@ -32,27 +32,9 @@ main {
   max-width: var(--maxcontent);
 }
 
-// Lobotomized owl vs the reset
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-blockquote,
-p,
-pre,
-dl,
-dd,
-ol,
-ul,
-figure,
-hr,
-fieldset,
-legend {
-  main > * + & {
-    margin-top: var(--gap);
-  }
+// Lobotomized owl
+main > * + * {
+  margin-top: var(--gap);
 }
 
 header > * {
