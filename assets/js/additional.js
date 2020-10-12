@@ -1,6 +1,3 @@
-// Get additional CSS for Rollup
-import '../sass/additional.scss';
-
 window.addEventListener('load', () => {
   // Add horizontal scroll to overflowing content tables
   document.querySelectorAll('main table').forEach((table) => {
