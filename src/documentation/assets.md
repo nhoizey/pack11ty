@@ -34,7 +34,12 @@ For production build, CSS is then processed with a few PostCSS plugins:
 
 # Dev mode with Live Reload
 
-_WIP_
+In development mode, when Sass code is modified, the resulting CSS is automatically updated in the browser with Eleventy's `browsersync` instance.
+
+::: warning
+The same behavior for JavaScript is still [WIP](https://github.com/nhoizey/pack11ty/issues/4).
+:::
 
 <!-- prettier-ignore -->
 *[CLI]: Command Line Interface
+*[WIP]: Work In Progress
