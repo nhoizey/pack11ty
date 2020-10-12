@@ -197,6 +197,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setBrowserSyncConfig({
     ui: false,
     ghostMode: false,
+    files: ['_site/css/*.css'],
   });
 
   return {

@@ -1,15 +1,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% set criticalCss %}
-{% include_raw config.dir.dist + "/css/" + hashes_css['critical.css'] %}
-{% endset %}
-<style>{{ criticalCss | safe }}</style>
+{% if build.env == 'production' %}
+  {% set criticalCss %}
+  {% include_raw config.dir.dist + "/css/" + hashes_css['critical.css'] %}
+  {% endset %}
+  <style>
+    {{criticalCss | safe}}
+  </style>
+{% else %}
+  <link rel="stylesheet" href="/css/critical.css" />
+{% endif %}
 
 {% set criticalJs %}
 {% include_raw config.dir.dist + "/js/" + hashes_critical[config.dir.assets + '/js/critical.js'] %}
 {% endset %}
-<script>{{ criticalJs | replace('//# sourceMappingURL=', '//# sourceMappingURL=/js/') | safe }}</script>
+<script>
+  {{ criticalJs | replace('//# sourceMappingURL=', '//# sourceMappingURL=/js/') | safe }}
+</script>
 
 {% block title %}
   {% if page.url == '/' %}
@@ -88,5 +96,4 @@ Theme color: https://developers.google.com/web/updates/2014/11/Support-for-theme
 {# rel-me (should be in visible links) #}
 <link rel="me" href="https://twitter.com/{{ site.author.twitter }}" />
 
-{% block morehead %}
-{% endblock %}
+{% block morehead %}{% endblock %}

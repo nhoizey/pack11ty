@@ -20,16 +20,21 @@ JavaScript is compiled with [Rollup](https://rollupjs.org/), with a few plugins:
 
 # CSS
 
-CSS is compiled from [Sass](https://sass-lang.com/) code, also with Rollup, thanks to the [rollup-plugin-scss](https://github.com/thgh/rollup-plugin-scss) plugin.
+CSS is compiled from [Sass](https://sass-lang.com/) code with [Dart Sass](https://sass-lang.com/dart-sass) CLI.
 
-Critical and additional CSS are thus a little tied to their JavaScript counterparts, which are entries for Rollup. Not ideal, but it allows using one single bundler.
+For production build, CSS is then processed with a few PostCSS plugins:
 
-The Rollup configuration for CSS also includes generation of a hashed filename for cache busting.
+- [autoprefixer](https://github.com/postcss/autoprefixer) adds vendor prefixes to some rules, depending on targeted browsers. See the `/.browserslistrc` file.
+- [cssnano](https://cssnano.co/) "runs the CSS through many focused optimisations, to ensure that the final result is as small as possible for a production environment".
+- [postcss-hash](https://github.com/dacodekid/postcss-hash) then creates copies of the CSS files with hashed filenames, for cache busting.
 
 ::: info
-[Pack11ty]{.pack11ty} initialy used `postcss` and a few plugins to generate CSS, but it was not as complete as full Sass, and the npm scripts were a mess. Look at [the Pull Request that changed this to Rollup and Sass](https://github.com/nhoizey/pack11ty/pull/13) if you want to compare.
+[Pack11ty]{.pack11ty} previously used `postcss` and a few plugins to generate CSS, but it was not as complete as full Sass, and the npm scripts were a mess. It then used [Rollup and Sass](https://github.com/nhoizey/pack11ty/pull/13), which was not ideal because critical and additional CSS were tied to their JavaScript counterparts.
 :::
 
 # Dev mode with Live Reload
 
 _WIP_
+
+<!-- prettier-ignore -->
+*[CLI]: Command Line Interface

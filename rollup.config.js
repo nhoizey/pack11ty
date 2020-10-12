@@ -3,12 +3,8 @@ import commonjs from 'rollup-plugin-commonjs';
 import replace from '@rollup/plugin-replace';
 import resolve from '@rollup/plugin-node-resolve';
 import { terser } from 'rollup-plugin-terser';
-import scss from 'rollup-plugin-scss';
-import sass from 'sass';
 import entrypointHashmanifest from 'rollup-plugin-entrypoint-hashmanifest';
 import path from 'path';
-import fs from 'fs';
-import crypto from 'crypto';
 const config = require('./pack11ty.config.js');
 
 const SRC_DIR = config.dir.src;
@@ -17,37 +13,7 @@ const DIST_DIR = config.dir.dist;
 
 const JS_SRC = path.join(ASSETS_DIR, 'js');
 const JS_DIST = path.join(DIST_DIR, 'js');
-const CSS_SRC = path.join(ASSETS_DIR, 'sass');
-const CSS_DIST = path.join(DIST_DIR, 'css');
 const HASH = path.join(SRC_DIR, '_data');
-
-const createHashedCssFile = function (folder, srcFile, destFile, styles) {
-  // Get the 8 first chars of the md5 hash of these styles
-  const hash = crypto
-    .createHash('md5')
-    .update(styles)
-    .digest('hex')
-    .substring(0, 8);
-  const hashedDestFile = destFile.replace('[hash]', hash);
-  fs.mkdirSync(folder, { recursive: true });
-  fs.writeFileSync(path.join(folder, hashedDestFile), styles);
-
-  // create or update the JSON file listing hashed CSS files
-  const hashesFile = path.join(HASH, 'hashes_css.json');
-  let hashes = {};
-  if (fs.existsSync(hashesFile)) {
-    hashes = JSON.parse(
-      fs.readFileSync(hashesFile, {
-        encoding: 'utf8',
-      })
-    );
-  }
-  hashes[srcFile] = hashedDestFile;
-  fs.writeFileSync(hashesFile, JSON.stringify(hashes, null, ' '));
-
-  // Make sure Rollup removes the "import" from the JavaScript
-  return false;
-};
 
 const plugins_critical = [
   commonjs(),
@@ -59,20 +25,6 @@ const plugins_critical = [
     exclude: 'node_modules/**',
   }),
   process.env.NODE_ENV === 'production' && terser(),
-  scss({
-    sass: sass,
-    failOnError: true,
-    outputStyle: 'compressed',
-    output: function (styles, styleNodes) {
-      createHashedCssFile(
-        CSS_DIST,
-        'critical.css',
-        'critical.[hash].css',
-        styles
-      );
-    },
-    watch: CSS_SRC,
-  }),
   entrypointHashmanifest({
     manifestName: path.join(HASH, 'hashes_critical.json'),
   }),
@@ -88,20 +40,6 @@ const plugins_additional_iife = [
     exclude: 'node_modules/**',
   }),
   process.env.NODE_ENV === 'production' && terser(),
-  scss({
-    sass: sass,
-    failOnError: true,
-    outputStyle: 'compressed',
-    output: function (styles, styleNodes) {
-      createHashedCssFile(
-        CSS_DIST,
-        'additional.css',
-        'additional.[hash].css',
-        styles
-      );
-    },
-    watch: CSS_SRC,
-  }),
   entrypointHashmanifest({
     manifestName: path.join(HASH, 'hashes_additional_iife.json'),
   }),
@@ -117,11 +55,6 @@ const plugins_additional_es = [
     exclude: 'node_modules/**',
   }),
   process.env.NODE_ENV === 'production' && terser(),
-  scss({
-    // just here to clean the CSS import from the JS
-    sass: sass,
-    output: false,
-  }),
   entrypointHashmanifest({
     manifestName: path.join(HASH, 'hashes_additional_es.json'),
   }),
