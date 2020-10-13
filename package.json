@@ -21,9 +21,10 @@
 
     "sass": "sass --no-source-map assets/sass:_site/css",
     "postcss": "postcss _site/css/*.css --no-map --replace",
+    "build:sass": "npm-run-all --sequential sass postcss",
     "watch:sass": "sass --source-map-urls=absolute --watch assets/sass:_site/css",
 
-    "js": "rollup -c",
+    "build:js": "rollup -c",
     "watch:js": "rollup -c --watch",
 
     "build:eleventy": "eleventy",
@@ -31,9 +32,9 @@
 
     "serviceworker": "workbox injectManifest workbox.config.js",
 
-    "start": "cross-env NODE_ENV=development npm-run-all --sequential clean js --parallel watch:*",
+    "start": "cross-env NODE_ENV=development npm-run-all --sequential clean build:js --parallel watch:*",
     "debug:start": "DEBUG=Eleventy* npm start",
-    "build": "cross-env NODE_ENV=production npm-run-all --sequential clean --parallel js sass --sequential postcss build:eleventy serviceworker",
+    "build": "cross-env NODE_ENV=production npm-run-all --sequential clean --parallel build:js build:sass --sequential build:eleventy serviceworker",
     "debug:build": "DEBUG=Eleventy* npm run build"
   },
   "devDependencies": {
