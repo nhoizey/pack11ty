@@ -1,11 +1,8 @@
 ul {
-  padding-left: 1rem;
-
-  ul {
-    padding-left: calc(1rem + 1vw);
-  }
+  margin-top: 0;
+  padding-left: calc(1rem + 1vw);
 }
 
-:not(ul) + ul {
-  margin-top: calc(var(--gap) / 2);
+li {
+  margin-top: calc(var(--gap) / 4);
 }
