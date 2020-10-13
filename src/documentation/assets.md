@@ -32,13 +32,15 @@ For production build, CSS is then processed with a few PostCSS plugins:
 [Pack11ty]{.pack11ty} previously used `postcss` and a few plugins to generate CSS, but it was not as complete as full Sass, and the npm scripts were a mess. It then used [Rollup and Sass](https://github.com/nhoizey/pack11ty/pull/13), which was not ideal because critical and additional CSS were tied to their JavaScript counterparts.
 :::
 
-# Dev mode with Live Reload
+# Dev mode with Live Reload and Source Maps
 
 In development mode, when Sass code is modified, the resulting CSS is automatically updated in the browser with Eleventy's `browsersync` instance.
 
 ::: warning
 The same behavior for JavaScript is still [WIP](https://github.com/nhoizey/pack11ty/issues/4).
 :::
+
+There are also Source Maps to ease understanding of the styles origin.
 
 <!-- prettier-ignore -->
 *[CLI]: Command Line Interface
