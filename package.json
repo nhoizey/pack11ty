@@ -18,18 +18,23 @@
   "license": "MIT",
   "scripts": {
     "clean": "rimraf _site",
+
     "sass": "sass --no-source-map assets/sass:_site/css",
     "postcss": "postcss _site/css/*.css --no-map --replace",
     "watch:sass": "sass --source-map-urls=absolute --watch assets/sass:_site/css",
+
     "js": "rollup -c",
     "watch:js": "rollup -c --watch",
+
     "build:eleventy": "eleventy",
     "watch:eleventy": "eleventy --serve",
+
     "serviceworker": "workbox injectManifest workbox.config.js",
-    "build": "cross-env NODE_ENV=production npm-run-all --sequential clean --parallel js sass --sequential postcss build:eleventy serviceworker",
-    "debug:build": "DEBUG=Eleventy* npm run build",
+
     "start": "cross-env NODE_ENV=development npm-run-all --sequential clean js --parallel watch:*",
-    "debug:start": "DEBUG=Eleventy* npm start"
+    "debug:start": "DEBUG=Eleventy* npm start",
+    "build": "cross-env NODE_ENV=production npm-run-all --sequential clean --parallel js sass --sequential postcss build:eleventy serviceworker",
+    "debug:build": "DEBUG=Eleventy* npm run build"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
