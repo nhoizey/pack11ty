@@ -1,6 +1,8 @@
 .github-button,
 .netlify-button {
   display: inline-block;
+  margin-top: var(--gap);
+  margin-bottom: var(--gap);
   padding: 0.2em 0.7em;
 
   font-size: smaller;
