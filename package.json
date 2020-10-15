@@ -18,20 +18,15 @@
   "license": "MIT",
   "scripts": {
     "clean": "rimraf _site",
-
     "sass": "sass --no-source-map assets/sass:_site/css",
     "postcss": "postcss _site/css/*.css --no-map --replace",
     "build:sass": "npm-run-all --sequential sass postcss",
     "watch:sass": "sass --source-map-urls=absolute --watch assets/sass:_site/css",
-
     "build:js": "rollup -c",
     "watch:js": "rollup -c --watch",
-
     "build:eleventy": "eleventy",
     "watch:eleventy": "eleventy --serve",
-
     "serviceworker": "workbox injectManifest workbox.config.js",
-
     "start": "cross-env NODE_ENV=development npm-run-all --sequential clean build:js --parallel watch:*",
     "debug:start": "DEBUG=Eleventy* npm start",
     "build": "cross-env NODE_ENV=production npm-run-all --sequential clean --parallel build:js build:sass --sequential build:eleventy serviceworker",
@@ -82,7 +77,6 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-entrypoint-hashmanifest": "^0.1.2",
-    "rollup-plugin-scss": "^2.6.1",
     "rollup-plugin-terser": "^7.0.2",
     "sanitize-html": "^2.1.0",
     "sass": "~1.27.0",
