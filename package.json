@@ -35,7 +35,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-plugin-rss": "^1.0.9",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.3",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
     "@babel/core": "^7.12.1",
     "@babel/preset-env": "^7.12.0",
     "@jlengstorf/get-share-image": "^0.7.1",
@@ -73,7 +73,7 @@
     "prettier": "2.1.2",
     "require-dir": "^1.2.0",
     "rimraf": "^3.0.2",
-    "rollup": "^2.31.0",
+    "rollup": "^2.32.0",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-entrypoint-hashmanifest": "^0.1.2",
