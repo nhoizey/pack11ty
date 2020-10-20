@@ -29,8 +29,6 @@ If you're in a hurry, try this:
 
 Read the full documentation on [pack11ty.dev](https://pack11ty.dev/)!
 
-# A few other great Eleventy starters/templates
+# Do you have different needs?
 
-| **name**                                                | **demo**                          | **features**            | **build tool(s)** |
-| ------------------------------------------------------- | --------------------------------- | ----------------------- | ----------------- |
-| [Smix](https://github.com/hirusi/smix-eleventy-starter) | [demo](https://smix.netlify.app/) | Forestry, microformats2 | Gulp, PostCSS     |
+No problem, there are [many other Eleventy starters available](https://www.11ty.dev/docs/starter/).
