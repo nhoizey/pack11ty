@@ -28,3 +28,9 @@ If you're in a hurry, try this:
 # Would you like to know more?
 
 Read the full documentation on [pack11ty.dev](https://pack11ty.dev/)!
+
+# A few other great Eleventy starters/templates
+
+| **name**                                                | **demo**                          | **features**            | **build tool(s)** |
+| ------------------------------------------------------- | --------------------------------- | ----------------------- | ----------------- |
+| [Smix](https://github.com/hirusi/smix-eleventy-starter) | [demo](https://smix.netlify.app/) | Forestry, microformats2 | Gulp, PostCSS     |
