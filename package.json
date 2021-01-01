@@ -87,7 +87,7 @@
     "workbox-cli": "^6.0.0",
     "workbox-core": "6.0.2",
     "workbox-expiration": "5.1.4",
-    "workbox-google-analytics": "6.0.0",
+    "workbox-google-analytics": "6.0.2",
     "workbox-precaching": "6.0.2",
     "workbox-routing": "5.1.4",
     "workbox-strategies": "6.0.0"
