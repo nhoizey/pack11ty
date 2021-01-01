@@ -44,7 +44,7 @@
     "@sindresorhus/slugify": "~1.1",
     "autoprefixer": "~10.0.4",
     "babel-loader": "^8.1.0",
-    "cheerio": "~1.0.0-rc.3",
+    "cheerio": "~1.0.0-rc.5",
     "cross-env": "^7.0.3",
     "cssnano": "~4.1.10",
     "dotenv": "^8.2.0",
