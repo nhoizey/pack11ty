@@ -52,12 +52,12 @@
     "eslint": "7.16.0",
     "eslint-config-prettier": "7.2.0",
     "eslint-plugin-prettier": "3.3.0",
-    "fast-glob": "^3.2.4",
+    "fast-glob": "^3.2.5",
     "html-entities": "^2.0.2",
     "html-minifier": "^4.0.0",
     "image-size": "^0.9.3",
     "lodash": "^4.17.20",
-    "markdown-it": "~11.0",
+    "markdown-it": "~12.0",
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-anchor": "~6.0",
     "markdown-it-attrs": "^4.0.0",
@@ -85,11 +85,11 @@
     "workbox-broadcast-update": "6.0.2",
     "workbox-cacheable-response": "6.0.2",
     "workbox-cli": "^6.0.2",
-    "workbox-core": "6.0.2",
+    "workbox-core": "6.1.0",
     "workbox-expiration": "5.1.4",
-    "workbox-google-analytics": "6.0.2",
+    "workbox-google-analytics": "6.1.0",
     "workbox-precaching": "6.0.2",
     "workbox-routing": "5.1.4",
-    "workbox-strategies": "6.0.2"
+    "workbox-strategies": "6.1.0"
   }
 }
