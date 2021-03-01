@@ -40,7 +40,7 @@
     "@babel/preset-env": "^7.12.11",
     "@jlengstorf/get-share-image": "^0.8.0",
     "@rollup/plugin-node-resolve": "^11.1.1",
-    "@rollup/plugin-replace": "^2.3.4",
+    "@rollup/plugin-replace": "^2.4.1",
     "@sindresorhus/slugify": "~1.1",
     "autoprefixer": "~10.2.4",
     "babel-loader": "^8.1.0",
@@ -83,13 +83,13 @@
     "truncate-html": "^1.0.3",
     "twitter-text": "^3.1.0",
     "workbox-broadcast-update": "6.1.0",
-    "workbox-cacheable-response": "6.0.2",
+    "workbox-cacheable-response": "6.1.1",
     "workbox-cli": "^6.0.2",
     "workbox-core": "6.1.0",
     "workbox-expiration": "5.1.4",
     "workbox-google-analytics": "6.1.0",
     "workbox-precaching": "6.0.2",
-    "workbox-routing": "5.1.4",
+    "workbox-routing": "6.1.1",
     "workbox-strategies": "6.1.0"
   }
 }
