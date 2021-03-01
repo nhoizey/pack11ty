@@ -83,13 +83,13 @@
     "truncate-html": "^1.0.3",
     "twitter-text": "^3.1.0",
     "workbox-broadcast-update": "6.1.0",
-    "workbox-cacheable-response": "6.0.2",
+    "workbox-cacheable-response": "6.1.1",
     "workbox-cli": "^6.0.2",
     "workbox-core": "6.1.0",
     "workbox-expiration": "5.1.4",
     "workbox-google-analytics": "6.1.0",
     "workbox-precaching": "6.0.2",
-    "workbox-routing": "5.1.4",
+    "workbox-routing": "6.1.1",
     "workbox-strategies": "6.1.0"
   }
 }
