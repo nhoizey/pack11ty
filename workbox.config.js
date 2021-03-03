@@ -14,5 +14,4 @@ module.exports = {
   dontCacheBustURLsMatching: new RegExp('.+.[a-f0-9]{8}..+'),
   swSrc: path.join(config.dir.dist, 'service-worker.js'),
   swDest: path.join(config.dir.dist, 'service-worker.js'),
-  mode: 'production',
 };
