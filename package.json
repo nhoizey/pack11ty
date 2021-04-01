@@ -82,7 +82,7 @@
     "sass": "~1.32.8",
     "truncate-html": "^1.0.3",
     "twitter-text": "^3.1.0",
-    "workbox-broadcast-update": "6.1.0",
+    "workbox-broadcast-update": "6.1.2",
     "workbox-cacheable-response": "6.1.1",
     "workbox-cli": "^6.1.2",
     "workbox-core": "6.1.2",
