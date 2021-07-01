@@ -52,7 +52,7 @@
     "eslint": "7.27.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-prettier": "3.4.0",
-    "fast-glob": "^3.2.5",
+    "fast-glob": "^3.2.6",
     "html-entities": "^2.3.2",
     "html-minifier": "^4.0.0",
     "image-size": "^1.0.0",
