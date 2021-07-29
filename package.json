@@ -28,9 +28,9 @@
     "watch:eleventy": "eleventy --serve",
     "serviceworker": "workbox injectManifest workbox.config.js",
     "start": "cross-env NODE_ENV=development npm-run-all --sequential clean build:js --parallel watch:*",
-    "debug:start": "DEBUG=Eleventy* npm start",
+    "start:debug": "DEBUG=Eleventy* npm start",
     "build": "cross-env NODE_ENV=production npm-run-all --sequential clean --parallel build:js build:sass --sequential build:eleventy serviceworker",
-    "debug:build": "DEBUG=Eleventy* npm run build"
+    "build:debug": "DEBUG=Eleventy* npm run build"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
