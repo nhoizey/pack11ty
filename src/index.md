@@ -7,10 +7,6 @@ nav:
 
 [Pack11ty]{.pack11ty} is an heavily opinionated [Eleventy](https://www.11ty.dev/) template project created by [Nicolas Hoizey](https://nicolas-hoizey.com/).
 
-::: warning
-**WARNING: This is Work In Progress, not ready for production!**
-:::
-
 Feel free to use it, enhance it, and share your ideas/comments with [issues](https://github.com/nhoizey/pack11ty/issues/new/choose), or (even better) [pull requests](https://github.com/nhoizey/pack11ty/compare)!
 
 If you're in a hurry, install your own version of [Pack11ty]{.pack11ty} for free on Netlify:
