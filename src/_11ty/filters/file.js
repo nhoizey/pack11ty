@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  dirname: (filePath) => {
-    return path.dirname(filePath);
-  },
+	dirname: (filePath) => {
+		return path.dirname(filePath);
+	},
 };

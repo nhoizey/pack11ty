@@ -1,4 +1,4 @@
 module.exports = {
-  tags: require('../getTags'),
-  mainTags: require('../getMainTags'),
+	tags: require('../getTags'),
+	mainTags: require('../getMainTags'),
 };

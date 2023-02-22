@@ -1,38 +1,38 @@
 .github-button,
 .netlify-button {
-  display: inline-block;
-  margin-top: var(--gap);
-  margin-bottom: var(--gap);
-  padding: 0.2em 0.7em;
+	display: inline-block;
+	margin-top: var(--gap);
+	margin-bottom: var(--gap);
+	padding: 0.2em 0.7em;
 
-  font-size: smaller;
-  font-weight: bolder;
-  white-space: nowrap;
-  text-decoration: none;
+	font-size: smaller;
+	font-weight: bolder;
+	white-space: nowrap;
+	text-decoration: none;
 
-  border: 1px solid rgba(27, 31, 35, 0.2);
-  border-radius: 0.25em;
-  color: #fff;
+	border: 1px solid rgba(27, 31, 35, 0.2);
+	border-radius: 0.25em;
+	color: #fff;
 }
 
 // Buttons are a bit darker than official colors for accessibility
 .github-button {
-  // background-color: #269f42;
-  // background-image: linear-gradient(-180deg, #2fcb53, #269f42 90%);
-  background-color: #1e7b33;
-  background-image: linear-gradient(-180deg, #1e7b33, #19672a 90%);
+	// background-color: #269f42;
+	// background-image: linear-gradient(-180deg, #2fcb53, #269f42 90%);
+	background-color: #1e7b33;
+	background-image: linear-gradient(-180deg, #1e7b33, #19672a 90%);
 }
 
 .netlify-button {
-  // background-color: #35b1bb;
-  // background-image: linear-gradient(-180deg, #35b1bb, #2a8b93 90%);
-  background-color: #227177;
-  background-image: linear-gradient(-180deg, #227177, #1c5e63 90%);
+	// background-color: #35b1bb;
+	// background-image: linear-gradient(-180deg, #35b1bb, #2a8b93 90%);
+	background-color: #227177;
+	background-image: linear-gradient(-180deg, #227177, #1c5e63 90%);
 }
 
 .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: max-content;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: max-content;
 }

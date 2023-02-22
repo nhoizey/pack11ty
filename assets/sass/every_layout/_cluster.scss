@@ -4,17 +4,17 @@ https://absolutely.every-layout.dev/layouts/cluster/
 */
 
 .cluster {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .cluster > * {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  margin: calc(var(--gap) / 2 * -1);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	margin: calc(var(--gap) / 2 * -1);
 }
 
 .cluster > * > * {
-  margin: calc(var(--gap) / 2);
+	margin: calc(var(--gap) / 2);
 }

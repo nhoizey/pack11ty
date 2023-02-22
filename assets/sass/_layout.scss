@@ -5,38 +5,38 @@
 // Box sizing:
 // http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 html {
-  box-sizing: border-box;
-  text-size-adjust: 100%;
-  // https://twitter.com/TimVereecke/status/1239454788116533248
-  // https://twitter.com/lfredolo/status/1240301405325361152
-  overflow-y: scroll;
+	box-sizing: border-box;
+	text-size-adjust: 100%;
+	// https://twitter.com/TimVereecke/status/1239454788116533248
+	// https://twitter.com/lfredolo/status/1240301405325361152
+	overflow-y: scroll;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 // container for the whole page
 .page {
-  margin: var(--gap);
+	margin: var(--gap);
 
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-  min-height: calc(100vh - 2 * var(--gap));
+	min-height: calc(100vh - 2 * var(--gap));
 }
 
 main {
-  max-width: var(--maxcontent);
+	max-width: var(--maxcontent);
 }
 
 // Lobotomized owl
 main > * + * {
-  margin-top: var(--gap);
+	margin-top: var(--gap);
 }
 
 header > * {
-  align-items: baseline;
+	align-items: baseline;
 }

@@ -1,33 +1,33 @@
 .deeplink {
-  font-size: 0.8em;
-  padding: 0 0.2em;
-  border-radius: 0.1em;
-  text-decoration: none;
-  color: rgba(0, 0, 255, 0.7);
+	font-size: 0.8em;
+	padding: 0 0.2em;
+	border-radius: 0.1em;
+	text-decoration: none;
+	color: rgba(0, 0, 255, 0.7);
 }
 
 .deeplink:hover {
-  background-color: var(--theme-color);
-  color: var(--theme-color-contrast);
+	background-color: var(--theme-color);
+	color: var(--theme-color-contrast);
 }
 
 h2,
 h3,
 h4 {
-  &:hover .deeplink {
-    background-color: var(--theme-color);
-    color: var(--theme-color-contrast);
-  }
+	&:hover .deeplink {
+		background-color: var(--theme-color);
+		color: var(--theme-color-contrast);
+	}
 }
 
 // external links
 a[href^="http://"]:not([href^="https://pack11ty.dev"]):after,
 a[href^="https://"]:not([href^="https://pack11ty.dev"]):after
 {
-  content: #{ unicode("2197")unicode("FE0E")};
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  top: -0.5em;
-  vertical-align: baseline;
+	content: #{unicode('2197') unicode('FE0E')};
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	top: -0.5em;
+	vertical-align: baseline;
 }

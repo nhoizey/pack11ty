@@ -1,10 +1,10 @@
 [
-  {
-    "name": "Home",
-    "url": "/"
-  },
-  {
-    "name": "News",
-    "url": "/news/"
-  }
+	{
+		"name": "Home",
+		"url": "/"
+	},
+	{
+		"name": "News",
+		"url": "/news/"
+	}
 ]
