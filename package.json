@@ -37,7 +37,7 @@
 		"start": "cross-env NODE_ENV=development npm-run-all --sequential clean build:js --parallel watch:*",
 		"start:debug": "DEBUG=Eleventy* npm start",
 		"build": "cross-env NODE_ENV=production npm-run-all --sequential clean --parallel build:js build:sass --sequential build:eleventy serviceworker",
-		"build:debug": "DEBUG=Eleventy* npm run build",
+		"build:debug": "DEBUG=Eleventy* npm run build"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^2.0.0",
@@ -52,6 +52,7 @@
 		"cross-env": "^7.0.3",
 		"cssnano": "^5.0.7",
 		"dotenv": "^10.0.0",
+		"eleventy-plugin-pack11ty": "^1.1.0",
 		"eslint": "^7.32.0",
 		"eslint-config-prettier": "^8.1.0",
 		"eslint-plugin-prettier": "^3.4.0",
