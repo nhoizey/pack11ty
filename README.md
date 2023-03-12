@@ -6,7 +6,7 @@ Pack11ty is an heavily opinionated [Eleventy](https://www.11ty.dev/) template pr
 
 Feel free to use it, enhance it, and share your ideas/comments with [issues](https://github.com/nhoizey/pack11ty/issues/new/choose), or (even better) [pull requests](https://github.com/nhoizey/pack11ty/compare).
 
-## Key features
+# Key features
 
 - **Collections** built automatically from root folders, with pagination for yearly and monthly archives
 - **JavaScript and CSS assets** optimized for performance

@@ -4,7 +4,7 @@ title: Development
 
 If you want to run [Pack11ty]{.pack11ty} on your local machine for development, run this command:
 
-```bash
+```shell
 npm start
 ```
 
