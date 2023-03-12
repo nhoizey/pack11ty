@@ -8,6 +8,13 @@
 		"name": "Nicolas Hoizey",
 		"url": "https://nicolas-hoizey.com/"
 	},
+	"keywords": [
+		"eleventy",
+		"starter",
+		"template",
+		"eleventy-website",
+		"eleventy-sample"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/nhoizey/pack11ty.git"
