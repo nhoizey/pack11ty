@@ -1,10 +1,4 @@
 module.exports = {
-	youtube: (id) => {
-		return `<figure class="video"><iframe width="784" height="441" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></figure>`;
-	},
-	vimeo: (id) => {
-		return `<figure class="video"><iframe width="784" height="441" src="https://player.vimeo.com/video/${id}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></figure>`;
-	},
 	giphy: (id) => {
 		const cloudinaryPrefix = 'https://res.cloudinary.com/nho/image/fetch';
 		const giphyImage = `https://media.giphy.com/media/${id}/giphy.gif`;
