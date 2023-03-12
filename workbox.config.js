@@ -2,7 +2,7 @@ const path = require('path');
 const config = require('./pack11ty.config.js');
 
 module.exports = {
-	globDirectory: config.dir.dist,
+	globDirectory: '_site',
 	globPatterns: [
 		'./css/additional.*.css',
 		'./js/additional-*.*.js',
@@ -12,6 +12,6 @@ module.exports = {
 		'./images/logo-192px.png',
 	],
 	dontCacheBustURLsMatching: new RegExp('.+.[a-f0-9]{8}..+'),
-	swSrc: path.join(config.dir.dist, 'service-worker.js'),
-	swDest: path.join(config.dir.dist, 'service-worker.js'),
+	swSrc: '_site/service-worker.js',
+	swDest: '_site/service-worker.js',
 };

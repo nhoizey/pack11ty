@@ -2,7 +2,7 @@ const fs = require('fs');
 const config = require('../pack11ty.config.js');
 
 module.exports = {
-	lang: config.defaultLang || 'en',
+	lang: 'en',
 	eleventyComputed: {
 		layout: (data) => {
 			if (data.layout !== undefined && data.layout !== '') {
@@ -15,12 +15,12 @@ module.exports = {
 
 			// Let's find if this content is in a collection folder
 			// (a root folder without a '_' prefix)
-			const folderRegex = new RegExp(`^./${config.dir.src}/([^_][^/]+)/.*$`);
+			const folderRegex = new RegExp(`^./src/([^_][^/]+)/.*$`);
 			let matches = data.page.inputPath.match(folderRegex);
 
 			if (matches) {
 				folder = matches[1];
-				if (fs.existsSync(`${config.dir.src}/_layouts/${folder}.njk`)) {
+				if (fs.existsSync(`src/_layouts/${folder}.njk`)) {
 					layout = folder;
 				}
 			}

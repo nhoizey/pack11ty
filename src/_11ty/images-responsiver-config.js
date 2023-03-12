@@ -8,11 +8,9 @@ const runBeforeHook = (image, document) => {
 	let documentBody = document.querySelector('body');
 	let srcPath = documentBody.getAttribute('data-img-src');
 
-	let distRegex = new RegExp(`^${config.dir.dist}`);
-
 	let distPath = documentBody
 		.getAttribute('data-img-dist')
-		.replace(distRegex, '');
+		.replace(/^_site/, '');
 
 	let imageSrc = image.getAttribute('src');
 
@@ -25,7 +23,7 @@ const runBeforeHook = (image, document) => {
 	} else {
 		let imageDimensions;
 		if (imageSrc[0] === '/') {
-			imageDimensions = imageSize(config.dir.src + imageSrc);
+			imageDimensions = imageSize('src' + imageSrc);
 			imageUrl = site.url.replace(/\/$/, '') + imageSrc;
 		} else {
 			// This is a relative URL

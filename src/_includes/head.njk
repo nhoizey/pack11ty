@@ -3,7 +3,7 @@
 
 {% if build.env == 'production' %}
   {% set criticalCss %}
-  {% include_raw config.dir.dist + "/css/" + hashes_css['critical.css'] %}
+  {% include_raw "_site/css/" + hashes_css['critical.css'] %}
   {% endset %}
   <style>
     {{criticalCss | safe}}
@@ -13,7 +13,7 @@
 {% endif %}
 
 {% set criticalJs %}
-{% include_raw config.dir.dist + "/js/" + hashes_critical[config.dir.assets + '/js/critical.js'] %}
+{% include_raw "_site/js/" + hashes_critical['assets/js/critical.js'] %}
 {% endset %}
 <script>
   {{ criticalJs | replace('//# sourceMappingURL=', '//# sourceMappingURL=/js/') | safe }}
@@ -54,7 +54,7 @@
 <link rel="icon" type="image/jpeg" href="/images/logo-192px.png" />
 
 {# ########################################################
- # opengraph and Twitter 
+ # opengraph and Twitter
  # ########################################################}
 <meta property="og:site_name" content="{{ site.title }}" />
 <meta name="twitter:creator" content="@{{ site.author.twitter }}" />

@@ -7,9 +7,9 @@ import entrypointHashmanifest from 'rollup-plugin-entrypoint-hashmanifest';
 import path from 'path';
 const config = require('./pack11ty.config.js');
 
-const SRC_DIR = config.dir.src;
-const ASSETS_DIR = config.dir.assets;
-const DIST_DIR = config.dir.dist;
+const SRC_DIR = 'src';
+const ASSETS_DIR = 'assets';
+const DIST_DIR = '_site';
 
 const JS_SRC = path.join(ASSETS_DIR, 'js');
 const JS_DIST = path.join(DIST_DIR, 'js');
