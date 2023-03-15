@@ -2,7 +2,6 @@ const site = require('../_data/site');
 const imageSize = require('image-size');
 const markdownIt = require('markdown-it');
 const md = new markdownIt();
-const config = require('../../pack11ty.config.js');
 
 const runBeforeHook = (image, document) => {
 	let documentBody = document.querySelector('body');

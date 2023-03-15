@@ -1,6 +1,3 @@
-const path = require('path');
-const config = require('./pack11ty.config.js');
-
 module.exports = {
 	globDirectory: '_site',
 	globPatterns: [

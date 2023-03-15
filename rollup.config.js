@@ -5,7 +5,6 @@ import resolve from '@rollup/plugin-node-resolve';
 import { terser } from 'rollup-plugin-terser';
 import entrypointHashmanifest from 'rollup-plugin-entrypoint-hashmanifest';
 import path from 'path';
-const config = require('./pack11ty.config.js');
 
 const SRC_DIR = 'src';
 const ASSETS_DIR = 'assets';

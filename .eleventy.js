@@ -1,6 +1,5 @@
 const glob = require('fast-glob');
 const path = require('path');
-const config = require('./pack11ty.config.js');
 
 module.exports = function (eleventyConfig) {
 	// ------------------------------------------------------------------------
