@@ -1,0 +1,20 @@
+// Visually hidden (but screen reader friendly) content
+.visually-hidden:not(:focus):not(:active) {
+	/* elementProperties */
+	position: absolute;
+
+	/* Box Model */
+	width: 1px;
+	height: 1px;
+
+	/* Typography */
+	// https://www.24a11y.com/2018/accessible-svg-icons-with-inline-sprites/#div-comment-267
+	white-space: nowrap;
+
+	/* Visual */
+	overflow: hidden;
+
+	/* Clip */
+	// https://www.matuzo.at/blog/2023/css-wish-list/#visually-hidden-content 🤔
+	clip-path: inset(50%);
+}

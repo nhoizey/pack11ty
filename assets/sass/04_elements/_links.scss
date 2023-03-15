@@ -1,25 +1,3 @@
-.deeplink {
-	font-size: 0.8em;
-	padding: 0 0.2em;
-	border-radius: 0.1em;
-	text-decoration: none;
-	color: rgba(0, 0, 255, 0.7);
-}
-
-.deeplink:hover {
-	background-color: var(--theme-color);
-	color: var(--theme-color-contrast);
-}
-
-h2,
-h3,
-h4 {
-	&:hover .deeplink {
-		background-color: var(--theme-color);
-		color: var(--theme-color-contrast);
-	}
-}
-
 // external links
 a[href^="http://"]:not([href^="https://pack11ty.dev"]):after,
 a[href^="https://"]:not([href^="https://pack11ty.dev"]):after
