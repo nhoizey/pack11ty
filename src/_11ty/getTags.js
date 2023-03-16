@@ -8,7 +8,7 @@ module.exports = function (collection) {
 	collection.getAll().forEach(function (item) {
 		if ('tags' in item.data) {
 			for (const tag of item.data.tags) {
-				let number = (tagsCollection.get(tag) || 0) + 1;
+				let number = (tagsCollection.get(tag) ?? 0) + 1;
 				max = Math.max(max, number);
 				tagsCollection.set(tag, number);
 			}
