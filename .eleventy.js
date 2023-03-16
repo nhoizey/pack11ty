@@ -29,7 +29,10 @@ module.exports = function (eleventyConfig) {
 	// ------------------------------------------------------------------------
 
 	const pack11tyPluginOptions = {
-		markdown: { firstLevel: 2, containers: ['new'] },
+		markdown: {
+			firstLevel: 2,
+			containers: ['success', 'warning', 'error'],
+		},
 	};
 
 	if (process.env.NODE_ENV === 'production') {
