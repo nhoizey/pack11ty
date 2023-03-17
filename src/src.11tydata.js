@@ -33,7 +33,11 @@ module.exports = {
 			}
 			if (config.permalinkFolders) {
 				// Keep Eleventy default behavior for permalinks
-				return data.page.filePathStem.replace(/\/index$/, '') + '/index.html';
+				return (
+					data.page.filePathStem
+						.replace(/^\/(pages|collections)/, '')
+						.replace(/\/index$/, '') + '/index.html'
+				);
 			} else {
 				return data.page.filePathStem + '.html';
 			}

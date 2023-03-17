@@ -3,11 +3,11 @@ const fs = require('fs');
 const folders = [];
 
 const getFolders = () => {
-	fs.readdirSync('src', {
+	fs.readdirSync('src/collections', {
 		encoding: 'utf8',
 		withFileTypes: true,
 	}).forEach((item) => {
-		if (item.isDirectory() && !item.name.match(/^_/)) {
+		if (item.isDirectory()) {
 			folders.push(item.name);
 		}
 	});

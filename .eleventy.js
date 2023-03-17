@@ -51,11 +51,12 @@ module.exports = function (eleventyConfig) {
 	// Eleventy configuration
 	// ------------------------------------------------------------------------
 
-	eleventyConfig
-		.addPassthroughCopy('src/**/*.{jpg,jpeg,png,gif}')
-		.addPassthroughCopy('src/robots.txt')
-		.addPassthroughCopy('src/favicon.ico')
-		.addPassthroughCopy('src/_headers');
+	eleventyConfig.addPassthroughCopy('src/', {
+		filter: ['**/*.{jpg,jpeg,png,gif}'],
+		rename: (file) => file.replace(/(collections|pages)\//, ''),
+	});
+
+	eleventyConfig.addPassthroughCopy({ 'src/static/*': '/' });
 
 	eleventyConfig.setDataDeepMerge(true);
 	eleventyConfig.setQuietMode(true);

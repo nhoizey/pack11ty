@@ -8,9 +8,11 @@ const getFilteredCollection = (collection, folder) => {
 		return filteredCollectionsMemoization[folder];
 	} else {
 		let filteredCollection = collection
-			.getFilteredByGlob(`src/${folder}/**/*.md`)
-			.filter((item) => !item.filePathStem.match(/^\/[^\/]+\/index$/))
-			.sort((a, b) => b.date - a.date);
+			.getFilteredByGlob(`src/collections/${folder}/**/*.md`)
+			.filter(
+				(item) => !item.filePathStem.match(/^\/collections\/[^\/]+\/index$/)
+			)
+			.sort((a, b) => b.date - a.date); // TODO: deal with different sorts
 
 		if (
 			process.env.NODE_ENV !== 'production' &&
