@@ -1,6 +1,8 @@
 const glob = require('fast-glob');
 const path = require('path');
 
+const isProd = process.env.NODE_ENV === 'production';
+
 module.exports = function (eleventyConfig) {
 	// ------------------------------------------------------------------------
 	// Collections
@@ -28,20 +30,19 @@ module.exports = function (eleventyConfig) {
 	// Plugins
 	// ------------------------------------------------------------------------
 
+	const responsiverConfig = require(path.join(
+		__dirname,
+		'src/_11ty/images-responsiver-config.js'
+	));
+
 	const pack11tyPluginOptions = {
+		responsiver: isProd && responsiverConfig,
+		minifyHtml: isProd,
 		markdown: {
 			firstLevel: 2,
 			containers: ['success', 'warning', 'error'],
 		},
 	};
-
-	if (process.env.NODE_ENV === 'production') {
-		pack11tyPluginOptions.responsiver = require(path.join(
-			__dirname,
-			'src/_11ty/images-responsiver-config.js'
-		));
-		pack11tyPluginOptions.minifyHtml = true;
-	}
 
 	const pack11ty = require('eleventy-plugin-pack11ty');
 	eleventyConfig.addPlugin(pack11ty, pack11tyPluginOptions);
