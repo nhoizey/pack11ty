@@ -48,15 +48,24 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(pack11ty, pack11tyPluginOptions);
 
 	// ------------------------------------------------------------------------
-	// Eleventy configuration
+	// Copy static files: images, etc.
 	// ------------------------------------------------------------------------
 
 	eleventyConfig.addPassthroughCopy('src/', {
-		filter: ['**/*.{jpg,jpeg,png,gif}'],
+		debug: true,
+		filter: ['**/*.{jpg,jpeg,png,gif}', '!static/**/*'],
 		rename: (file) => file.replace(/(collections|pages)\//, ''),
 	});
 
-	eleventyConfig.addPassthroughCopy({ 'src/static/*': '/' });
+	eleventyConfig.addPassthroughCopy('src/', {
+		debug: true,
+		filter: ['static/**/*'],
+		rename: (file) => file.replace(/static\//, ''),
+	});
+
+	// ------------------------------------------------------------------------
+	// Global Eleventy configuration
+	// ------------------------------------------------------------------------
 
 	eleventyConfig.setDataDeepMerge(true);
 	eleventyConfig.setQuietMode(true);
