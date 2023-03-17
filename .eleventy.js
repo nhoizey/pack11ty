@@ -52,13 +52,11 @@ module.exports = function (eleventyConfig) {
 	// ------------------------------------------------------------------------
 
 	eleventyConfig.addPassthroughCopy('src/', {
-		debug: true,
 		filter: ['**/*.{jpg,jpeg,png,gif}', '!static/**/*'],
 		rename: (file) => file.replace(/(collections|pages)\//, ''),
 	});
 
 	eleventyConfig.addPassthroughCopy('src/', {
-		debug: true,
 		filter: ['static/**/*'],
 		rename: (file) => file.replace(/static\//, ''),
 	});
