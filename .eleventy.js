@@ -5,17 +5,6 @@ const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = function (eleventyConfig) {
 	// ------------------------------------------------------------------------
-	// Collections
-	// ------------------------------------------------------------------------
-
-	glob.sync('src/_11ty/collections/*.js').forEach((file) => {
-		let collectionList = require('./' + file);
-		Object.keys(collectionList).forEach((name) => {
-			eleventyConfig.addCollection(name, collectionList[name]);
-		});
-	});
-
-	// ------------------------------------------------------------------------
 	// Shortcodes
 	// ------------------------------------------------------------------------
 
@@ -42,6 +31,7 @@ module.exports = function (eleventyConfig) {
 			firstLevel: 2,
 			containers: ['success', 'warning', 'error'],
 		},
+		collectionsLimit: isProd ? false : 10,
 	};
 
 	const pack11ty = require('eleventy-plugin-pack11ty');
