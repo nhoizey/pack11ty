@@ -1,5 +1,4 @@
 const fs = require('fs');
-const config = require('../pack11ty.config.js');
 
 module.exports = {
 	lang: 'en',
