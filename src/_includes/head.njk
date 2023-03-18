@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% if build.env == 'production' %}
+{% if eleventy.env.runMode == 'build' %}
   {% set criticalCss %}
   {% include_raw "_site/css/" + hashes_css['critical.css'] %}
   {% endset %}
