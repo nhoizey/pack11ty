@@ -1,8 +1,8 @@
 {
 	"name": "pack11ty",
-	"version": "1.0.1",
+	"version": "2.0.0",
 	"title": "Pack11ty",
-	"description": "An heavily opinionated Eleventy template project",
+	"description": "an heavily opinionated Eleventy template project",
 	"homepage": "https://pack11ty.dev/",
 	"author": {
 		"name": "Nicolas Hoizey",
