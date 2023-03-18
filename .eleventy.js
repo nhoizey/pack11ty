@@ -37,26 +37,6 @@ module.exports = function (eleventyConfig) {
 	const pack11ty = require('eleventy-plugin-pack11ty');
 	eleventyConfig.addPlugin(pack11ty, pack11tyPluginOptions);
 
-	// ------------------------------------------------------------------------
-	// Copy static files: images, etc.
-	// ------------------------------------------------------------------------
-
-	// Copy all images from "collections" and "pages" folders
-	eleventyConfig.addPassthroughCopy('src/', {
-		filter: ['**/*.{jpg,jpeg,png,gif}', '!static/**/*'],
-		rename: (file) => file.replace(/(collections|pages)\//, ''),
-	});
-
-	// Copy all files (not just images) from "static" folder
-	eleventyConfig.addPassthroughCopy('src/', {
-		filter: ['static/**/*'],
-		rename: (file) => file.replace(/static\//, ''),
-	});
-
-	// ------------------------------------------------------------------------
-	// Global Eleventy configuration
-	// ------------------------------------------------------------------------
-
 	eleventyConfig.setDataDeepMerge(true);
 	eleventyConfig.setQuietMode(true);
 
