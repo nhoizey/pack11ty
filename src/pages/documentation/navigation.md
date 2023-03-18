@@ -8,9 +8,9 @@ First, add a `nav` property to the Front Matter of the page you want to add to t
 
 Then, set the `order` sub-property to the position it should have in the navigation.
 
-Additionnaly, you can set the `title` sub-property if the main `title` of the page is not relevant enough for the navigation.
+Additionnaly, you can set the `nav.title` sub-property if the main `title` of the page is not relevant enough or too long for the navigation.
 
-You can even add links to other sites in the navigation by creating a file with just the navigation informations[^permalink], including a `away` sub-property for the URL.
+You can even add links to other sites in the navigation by creating a file with just the navigation informations[^permalink], including a `nav.away` sub-property for the URL.
 
 [^permalink]: Don't forget to also set the `permalink` to `false` to prevent Eleventy from generating an HTML file.
 
