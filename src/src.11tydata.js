@@ -30,16 +30,13 @@ module.exports = {
 				// A permalink has been set in the content Front Matter
 				return data.permalink;
 			}
-			if (config.permalinkFolders) {
-				// Keep Eleventy default behavior for permalinks
-				return (
-					data.page.filePathStem
-						.replace(/^\/(pages|collections)/, '')
-						.replace(/\/index$/, '') + '/index.html'
-				);
-			} else {
-				return data.page.filePathStem + '.html';
-			}
+			// Keep Eleventy default behavior for permalinks
+			// BREAKING CHANGE in v2.0.0
+			return (
+				data.page.filePathStem
+					.replace(/^\/(pages|collections)/, '')
+					.replace(/\/index$/, '') + '/index.html'
+			);
 		},
 	},
 };
