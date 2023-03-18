@@ -1,11 +1,13 @@
 // external links
-a[href^="http://"]:not([href^="https://pack11ty.dev"]):after,
-a[href^="https://"]:not([href^="https://pack11ty.dev"]):after
+a[href^="https://"]:not([href^="https://pack11ty.dev"]):not(.button)
 {
-	content: #{unicode('2197') unicode('FE0E')};
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	top: -0.5em;
-	vertical-align: baseline;
+	padding-right: 15px;
+	background-position: top 0.1em right;
+	background-size: 12px 12px;
+	background-repeat: no-repeat;
+
+	background-image: url('/images/external-link-blue.svg');
+	footer & {
+		background-image: url('/images/external-link-white.svg');
+	}
 }

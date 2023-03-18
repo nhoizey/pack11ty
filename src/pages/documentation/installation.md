@@ -10,7 +10,7 @@ There are multiple ways you can use [Pack11ty]{.pack11ty}, depending on where yo
 
 If you're in a hurry, try this:
 
-[Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.netlify-button}{.center}
+[Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.button}{.netlify}
 
 The button above will:
 
@@ -23,7 +23,7 @@ Each time you push changes to your GitHub repository (or add/modify files direct
 
 If you prefer to start without Netlify hosting, create your own repository on GitHub from this template:
 
-[Use this template](https://github.com/nhoizey/pack11ty/generate){.github-button}{.center}
+[Use this GitHub template](https://github.com/nhoizey/pack11ty/generate){.button}{.github}
 
 # Local installation on a personal computer
 

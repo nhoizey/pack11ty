@@ -11,7 +11,7 @@ Feel free to use it, enhance it, and share your ideas/comments with [issues](htt
 
 If you're in a hurry, install your own version of [Pack11ty]{.pack11ty} for free on Netlify:
 
-[Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.netlify-button}{.center}
+[Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.button}{.netlify}
 
 # Key features
 
