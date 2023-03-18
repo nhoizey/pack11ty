@@ -21,9 +21,9 @@
 
 {% block title %}
   {% if page.url == '/' %}
-    {% set page_title %}{{ site.title }}, {{ site.description }}{% endset %}
+    {% set page_title %}{{ pkg.title }}, {{ pkg.description }}{% endset %}
   {% else %}
-    {% set page_title %}{{ title }} — {{ site.title }}{% endset %}
+    {% set page_title %}{{ title }} — {{ pkg.title }}{% endset %}
   {% endif %}
   <title>{{ page_title }}</title>
   <meta property="og:title" content="{{ page_title }}" />
@@ -34,8 +34,8 @@
   <meta property="og:description" content="{{ description or content | excerpt | striptags }}" />
 {% endblock %}
 
-<link rel="canonical" href="{{ site.url + page.url }}" itemprop="url" />
-<meta property="og:url" content="{{ site.url + page.url }}" />
+<link rel="canonical" href="{{ pkg.homepage + page.url }}" itemprop="url" />
+<meta property="og:url" content="{{ pkg.homepage + page.url }}" />
 
 {% if page.layout != "pages" %}
   <meta property="og:type" content="article" />
@@ -50,15 +50,15 @@
 <link rel="webmention" href="https://webmention.io/pack11ty.dev/webmention" />
 <link rel="pingback" href="https://webmention.io/pack11ty.dev/xmlrpc" />
 
-<link rel="alternate" type="application/rss+xml" title="Feed for all content on {{ site.title }}" href="/feeds/all.xml" />
+<link rel="alternate" type="application/rss+xml" title="Feed for all content on {{ pkg.title }}" href="/feeds/all.xml" />
 <link rel="icon" type="image/jpeg" href="/images/logo-192px.png" />
 
 {# ########################################################
  # opengraph and Twitter
  # ########################################################}
-<meta property="og:site_name" content="{{ site.title }}" />
-<meta name="twitter:creator" content="@{{ site.author.twitter }}" />
-<meta name="twitter:site" content="@{{ site.author.twitter }}" />
+<meta property="og:site_name" content="{{ pkg.title }}" />
+<meta name="twitter:creator" content="@nhoizey" />
+<meta name="twitter:site" content="@nhoizey" />
 {# https://dev.twitter.com/web/overview/widgets-webpage-properties#csp #}
 <meta name="twitter:widgets:csp" content="on" />
 {#
@@ -80,7 +80,7 @@ https://developers.facebook.com/tools/debug/sharing/
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <link rel="apple-touch-icon" href="/images/logo-192px.png" />
-<meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
+<meta name="apple-mobile-web-app-title" content="{{ pkg.title }}" />
 {# https://timkadlec.com/remembers/2018-06-06-web-watch/ #}
 <meta name="disabled-adaptations" content="watch" />
 

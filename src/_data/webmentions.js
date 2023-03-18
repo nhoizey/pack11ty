@@ -3,7 +3,7 @@
 const fs = require('fs');
 const fetch = require('node-fetch');
 const unionBy = require('lodash/unionBy');
-const domain = new URL(require('./site').url).hostname;
+const domain = new URL(require('../../package.json').homepage).hostname;
 const sanitizeHTML = require('sanitize-html');
 
 // Load .env variables with dotenv

@@ -1,4 +1,4 @@
-const site = require('../_data/site');
+const pkg = require('../../package.json');
 const imageSize = require('image-size');
 const markdownIt = require('markdown-it');
 const md = new markdownIt();
@@ -7,9 +7,7 @@ const runBeforeHook = (image, document) => {
 	let documentBody = document.querySelector('body');
 	let srcPath = documentBody.getAttribute('data-img-src');
 
-	let distPath = documentBody
-		.getAttribute('data-img-dist')
-		.replace(/^_site/, '');
+	let distPath = documentBody.getAttribute('data-img-dist');
 
 	let imageSrc = image.getAttribute('src');
 
@@ -23,11 +21,11 @@ const runBeforeHook = (image, document) => {
 		let imageDimensions;
 		if (imageSrc[0] === '/') {
 			imageDimensions = imageSize('src' + imageSrc);
-			imageUrl = site.url.replace(/\/$/, '') + imageSrc;
+			imageUrl = pkg.homepage.replace(/\/$/, '') + imageSrc;
 		} else {
 			// This is a relative URL
 			imageDimensions = imageSize(srcPath + imageSrc);
-			imageUrl = site.url.replace(/\/$/, '') + distPath + imageSrc;
+			imageUrl = pkg.homepage.replace(/\/$/, '') + distPath + imageSrc;
 		}
 		image.setAttribute('width', imageDimensions.width);
 		image.setAttribute('height', imageDimensions.height);
