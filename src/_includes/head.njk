@@ -40,7 +40,6 @@
 {% if page.layout != "pages" %}
   <meta property="og:type" content="article" />
   <meta property="article:published_time" content="{{ page.date | attributeDate }}" />
-  <meta property="article:author" content="https://www.facebook.com/{{ site.author.facebook }}" />
   {% for tag in tags %}
     <meta property="article:tag" content="{{ tag }}" />
   {% endfor %}
@@ -97,6 +96,6 @@ Theme color: https://developers.google.com/web/updates/2014/11/Support-for-theme
 {# <meta name="monetization" content="ADD-YOUR-OWN-TOKEN-AND-UNCOMMENT" /> #}
 
 {# rel-me (should be in visible links) #}
-<link rel="me" href="https://twitter.com/{{ site.author.twitter }}" />
+<link rel="me" href="https://twitter.com/nhoizey" />
 
 {% block morehead %}{% endblock %}
