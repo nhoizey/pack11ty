@@ -17,7 +17,7 @@ Feel free to use it, enhance it, and share your ideas/comments with [issues](htt
   - Support for receiving Webmentions
   - Atom feed for all collections combined
 - **Enhanced Markdown** for better contribution: footnotes, attributes, headings anchors, abbreviations, containers
-- A set of Eleventy filters and shortcodes are provided, including a better `slugify`
+- A set of Eleventy filters and shortcodes are provided, including an enhanced `slugify`
 
 # Want to try it?
 

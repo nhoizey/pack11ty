@@ -24,7 +24,7 @@ If you're in a hurry, install your own version of [Pack11ty]{.pack11ty} for free
   - Support for receiving Webmentions
   - Atom feed for all collections combined
 - **Enhanced Markdown** for better contribution: footnotes, attributes, headings anchors, abbreviations, containers
-- A set of Eleventy filters and shortcodes are provided, including a better `slugify`
+- A set of Eleventy filters and shortcodes are provided, including an enhanced `slugify`
 
 # Would you like to know more?
 
