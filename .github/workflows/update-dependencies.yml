@@ -1,0 +1,75 @@
+# See tutorial:
+#   https://michaelcurrin.github.io/code-cookbook/recipes/ci-cd/github-actions/workflows/node/upgrade-packages.html
+name: Update dependencies
+
+on:
+  schedule:
+    # https://crontab.guru/#0_8_*_*_1
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  update-packages:
+    name: Update npm packages
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js ⚙️
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install dependencies ⬇️
+        run: npm ci
+
+      - name: Check for outdated packages 🔍
+        id: vars
+        run: |
+          OUTDATED=$(npm outdated) || true
+
+          if [[ -z "$OUTDATED" ]]; then
+            echo 'Nothing to update'
+          else
+            echo 'Found outdated packages:' >> $GITHUB_STEP_SUMMARY
+            echo "$OUTDATED" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          echo "::set-output name=outdated::$OUTDATED"
+
+      - name: Update packages ⏫
+        if: ${{ steps.vars.outputs.outdated != '' }}
+        run: npm update --save
+
+      # - name: Lint 🧐
+      #   if: ${{ steps.vars.outputs.outdated != '' }}
+      #   run: npm lint:check
+
+      # - name: Test 🚨
+      #   if: ${{ steps.vars.outputs.outdated != '' }}
+      #   run: npm test:unit
+
+      - name: Build 🏗️
+        if: ${{ steps.vars.outputs.outdated != '' }}
+        run: npm run build
+        env:
+          NODE_ENV: production
+
+      - name: Commit and create PR 🔀
+        if: ${{ steps.vars.outputs.outdated != '' }}
+        uses: peter-evans/create-pull-request@v3
+        with:
+          title: 'build(deps): update NPM packages (automated)'
+          branch: 'build-deps-update-npm-packages-automated'
+          commit-message: 'build(deps): update NPM packages (automated)'
+          labels: |
+            type: dependencies 🔗
+            automerge 🤞
