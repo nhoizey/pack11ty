@@ -38,7 +38,7 @@ jobs:
 
           delimiter="$(openssl rand -hex 8)"
           echo "outdated_result<<${delimiter}" >> "${GITHUB_OUTPUT"
-          echo "{OUTDATED}" >> $GITHUB_OUTPUT
+          echo "$OUTDATED" >> $GITHUB_OUTPUT
           echo "${delimiter}" >> "${GITHUB_OUTPUT}"
 
           if [[ -z "$OUTDATED" ]]; then
@@ -47,7 +47,7 @@ jobs:
           else
             echo 'Found outdated packages:' >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
-            echo $OUTDATED >> $GITHUB_STEP_SUMMARY
+            echo "$OUTDATED" >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
             echo "outdated=true" >> $GITHUB_OUTPUT
           fi
