@@ -47,7 +47,7 @@ jobs:
           else
             echo 'Found outdated packages:' >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
-            echo "$OUTDATED" >> $GITHUB_STEP_SUMMARY
+            echo $OUTDATED >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
             echo "outdated=true" >> $GITHUB_OUTPUT
           fi
