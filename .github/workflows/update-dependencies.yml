@@ -57,7 +57,11 @@ jobs:
         if: ${{ steps.vars.outputs.outdated }}
         run: |
           npm update --save
-          echo "diff_result=$(git diff package.json | grep "^+\s")" >> "${GITHUB_OUTPUT}"
+
+          delimiter="$(openssl rand -hex 8)"
+          echo "diff_result<<${delimiter}" >> "${GITHUB_OUTPUT}"
+          echo "$(git diff package.json | grep "^+\s")" >> "${GITHUB_OUTPUT}"
+          echo "${delimiter}" >> "${GITHUB_OUTPUT}"
 
       # - name: 🧐 Lint
       #   if: ${{ steps.vars.outputs.outdated }}
