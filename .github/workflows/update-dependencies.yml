@@ -37,19 +37,19 @@ jobs:
           OUTDATED=$(npm outdated) || true
 
           delimiter="$(openssl rand -hex 8)"
-          echo "outdated_result<<${delimiter}" >> "${GITHUB_OUTPUT"
-          echo "$OUTDATED" >> $GITHUB_OUTPUT
+          echo "outdated_result<<${delimiter}" >> "${GITHUB_OUTPUT}"
+          echo "$OUTDATED" >> "${GITHUB_OUTPUT}"
           echo "${delimiter}" >> "${GITHUB_OUTPUT}"
 
           if [[ -z "$OUTDATED" ]]; then
-            echo 'Nothing to update' >> $GITHUB_STEP_SUMMARY
-            echo "outdated=false" >> $GITHUB_OUTPUT
+            echo 'Nothing to update' >> "${GITHUB_STEP_SUMMARY}"
+            echo "outdated=false" >> "${GITHUB_OUTPUT}"
           else
-            echo 'Found outdated packages:' >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
-            echo $OUTDATED >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
-            echo "outdated=true" >> $GITHUB_OUTPUT
+            echo 'Found outdated packages:' >> "${GITHUB_STEP_SUMMARY}"
+            echo '```' >> "${GITHUB_STEP_SUMMARY}"
+            echo $OUTDATED >> "${GITHUB_STEP_SUMMARY}"
+            echo '```' >> "${GITHUB_STEP_SUMMARY}"
+            echo "outdated=true" >> "${GITHUB_OUTPUT}"
           fi
 
       - name: ⏫ Update packages
@@ -57,7 +57,7 @@ jobs:
         if: ${{ steps.vars.outputs.outdated }}
         run: |
           npm update --save
-          echo "diff_result=$(git diff package.json | grep "^+\s")" >> $GITHUB_OUTPUT
+          echo "diff_result=$(git diff package.json | grep "^+\s")" >> "${GITHUB_OUTPUT}"
 
       # - name: 🧐 Lint
       #   if: ${{ steps.vars.outputs.outdated }}
