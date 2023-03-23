@@ -76,7 +76,7 @@
 		"rollup-plugin-entrypoint-hashmanifest": "^0.1.2",
 		"rollup-plugin-terser": "^7.0.2",
 		"sanitize-html": "^2.10.0",
-		"sass": "^1.59.3",
+		"sass": "^1.60.0",
 		"workbox-broadcast-update": "^6.1.5",
 		"workbox-cacheable-response": "^6.2.4",
 		"workbox-cli": "^6.5.4",
