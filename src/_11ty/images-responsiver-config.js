@@ -3,39 +3,30 @@ const imageSize = require('image-size');
 const markdownIt = require('markdown-it');
 const md = new markdownIt();
 
-const runBeforeHook = (image, document) => {
-	let documentBody = document.querySelector('body');
-	let srcPath = documentBody.getAttribute('data-img-src');
-
-	let distPath = documentBody.getAttribute('data-img-dist');
-
+const runBeforeHook = (image, document, documentUrl) => {
 	let imageSrc = image.getAttribute('src');
 
 	let imageUrl = '';
 
-	if (imageSrc.match(/^(https?:)?\/\//)) {
-		// TODO: find a way to get a remote image's dimensions
-		// TODO: some images are local but have an absolute URL
-		imageUrl = imageSrc;
-	} else {
-		let imageDimensions;
+	// TODO: do this automatically in eleventy-plugin-images-responsiver
+	if (!imageSrc.match(/^(https?:)?\/\//)) {
 		if (imageSrc[0] === '/') {
-			imageDimensions = imageSize('src' + imageSrc);
+			// TODO: deal with this in markdown-it-image-size
+			let imageDimensions = imageSize('src' + imageSrc);
+			image.setAttribute('width', imageDimensions.width);
+			image.setAttribute('height', imageDimensions.height);
 			imageUrl = pkg.homepage.replace(/\/$/, '') + imageSrc;
 		} else {
 			// This is a relative URL
-			imageDimensions = imageSize(srcPath + imageSrc);
-			imageUrl = pkg.homepage.replace(/\/$/, '') + distPath + imageSrc;
+			imageUrl = pkg.homepage.replace(/\/$/, '') + documentUrl + imageSrc;
 		}
-		image.setAttribute('width', imageDimensions.width);
-		image.setAttribute('height', imageDimensions.height);
 		image.setAttribute('src', imageUrl);
 	}
 
 	image.dataset.responsiver = image.className;
 };
 
-const runAfterHook = (image, document) => {
+const runAfterHook = (image, document, documentUrl) => {
 	let imageUrl =
 		image.getAttribute('data-pristine') || image.getAttribute('src');
 	let caption = image.getAttribute('title');
