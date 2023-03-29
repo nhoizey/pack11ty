@@ -41,7 +41,7 @@
 		"build:debug": "DEBUG=Eleventy* npm run build"
 	},
 	"devDependencies": {
-		"@11ty/eleventy": "^2.0.0",
+		"@11ty/eleventy": "^2.0.1",
 		"@babel/core": "^7.21.3",
 		"@babel/preset-env": "^7.20.2",
 		"@jlengstorf/get-share-image": "^0.8.0",
