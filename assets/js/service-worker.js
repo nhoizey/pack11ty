@@ -17,6 +17,7 @@ pageCache({
 //
 // Also precache static assets with hashes in filenames
 // See the "serviceworker" npm script and "workbox.config.js" configuration
+// https://developer.chrome.com/docs/workbox/precaching-with-workbox/#precaching-with-injectmanifest
 staticResourceCache({
 	warmCache: self.__WB_MANIFEST,
 });
