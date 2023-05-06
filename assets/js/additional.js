@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
 		wrapper.appendChild(table);
 	});
 
-	// Install Service Worker only on production
+	// Install Service Worker, but only on production
 	if (process.env.NODE_ENV === 'production') {
 		if ('serviceWorker' in navigator) {
 			navigator.serviceWorker.register('/service-worker.js');

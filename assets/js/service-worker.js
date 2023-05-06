@@ -1,88 +1,35 @@
-import { clientsClaim, skipWaiting } from 'workbox-core';
+import { precacheAndRoute } from 'workbox-precaching';
 import {
-	cleanupOutdatedCaches,
-	precacheAndRoute,
-	matchPrecache,
-} from 'workbox-precaching';
-import {
-	registerRoute,
-	setDefaultHandler,
-	setCatchHandler,
-} from 'workbox-routing';
-import { CacheableResponsePlugin } from 'workbox-cacheable-response';
-import {
-	CacheFirst,
-	StaleWhileRevalidate,
-	NetworkFirst,
-	NetworkOnly,
-} from 'workbox-strategies';
-import { ExpirationPlugin } from 'workbox-expiration';
-import { BroadcastUpdatePlugin } from 'workbox-broadcast-update';
+	offlineFallback,
+	pageCache,
+	staticResourceCache,
+	imageCache,
+} from 'workbox-recipes';
 
-const OFFLINE_FALLBACK = '/offline-fallback.html';
+// precache static assets with hashes in filenames
+// See the "serviceworker" npm script and "workbox.config.js" configuration
+precacheAndRoute(self.__WB_MANIFEST);
 
-precacheAndRoute(self.__WB_MANIFEST, {
-	// Ignore all URL parameters:
-	// https://developers.google.com/web/tools/workbox/modules/workbox-precaching#ignore_url_parameters
-	ignoreURLParametersMatching: [/.*/],
+// Serve pages as network first, with 2 seconds timeout and cache fallback
+// https://developer.chrome.com/docs/workbox/modules/workbox-recipes/#page-cache
+pageCache({
+	networkTimoutSeconds: 2,
+	warmCache: ['/', '/documentation/', '/news/', '/offline/'],
 });
 
-cleanupOutdatedCaches();
-
-// default strategy
-setDefaultHandler(
-	new StaleWhileRevalidate({
-		cacheName: 'default',
-		plugins: [new BroadcastUpdatePlugin()],
-	})
-);
-
-// Never cache ranged requests (videos)
-registerRoute(({ request }) => request.headers.has('range'), new NetworkOnly());
-
-// Pages
-// Try to get fresh HTML from network, but don't wait for more than 2 seconds
-registerRoute(
-	({ request }) => request.destination === 'document',
-	new NetworkFirst({
-		cacheName: 'pages',
-		networkTimeoutSeconds: 2,
-		plugins: [new BroadcastUpdatePlugin()],
-	})
-);
-
-// Images
-registerRoute(
-	({ request }) => request.destination === 'image',
-	new StaleWhileRevalidate({
-		cacheName: 'images',
-		plugins: [
-			new CacheableResponsePlugin({
-				statuses: [0, 200],
-			}),
-			new ExpirationPlugin({
-				maxEntries: 200,
-				maxAgeSeconds: 90 * 24 * 60 * 60, // 90 Days
-			}),
-		],
-	})
-);
-
-setCatchHandler(({ event }) => {
-	switch (event.request.destination) {
-		case 'document':
-			return matchPrecache(OFFLINE_FALLBACK);
-
-		case 'image':
-			return new Response(
-				'<svg role="img" aria-labelledby="offline-title" viewBox="0 0 400 225" xmlns="https://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><title id="offline-title">Offline</title><path fill="rgba(145,145,145,0.5)" d="M0 0h400v225H0z" /><text fill="rgba(0,0,0,0.33)" font-family="Georgia,serif" font-size="27" text-anchor="middle" x="200" y="113" dominant-baseline="central">offline</text></svg>',
-				{ headers: { 'Content-Type': 'image/svg+xml' } }
-			);
-
-		default:
-			return Response.error();
-	}
+// Serve static assets from immediately from cache, and update (aka "Stale While Revalidate")
+// https://developer.chrome.com/docs/workbox/modules/workbox-recipes/#static-resources-cache
+staticResourceCache({
+	warmCache: ['./manifest.webmanifest', './images/logo-192px.png'],
 });
 
-skipWaiting();
-clientsClaim();
+// Cache a maximum of 100 images, for 90 days each at most
+// https://developer.chrome.com/docs/workbox/modules/workbox-recipes/#image-cache
+imageCache({ maxEntries: 100, maxAgeSeconds: 60 * 60 * 24 * 90 });
+
+// Provide offline fallbacks for HTML and images
+// https://developer.chrome.com/docs/workbox/modules/workbox-recipes/#offline-fallback
+offlineFallback({
+	pageFallback: '/offline/fallback.html',
+	imageFallback: '/offline/fallback.svg',
+});
