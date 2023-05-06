@@ -2,7 +2,10 @@ const cachedElement = document.querySelector('#cached');
 const pagesList = [];
 
 async function addPageToList(page) {
-	const pathname = new URL(page.url).pathname;
+	const pathname = new URL(page.url).pathname.replace(
+		/([0-9]{4})\/([0-9]{2})\/([0-9]{2})\//,
+		'$1-$2-$3-'
+	);
 
 	if (pathname !== '/offline/' && pathname.endsWith('/')) {
 		const pageHtml = await page.text();
