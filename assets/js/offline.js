@@ -12,22 +12,10 @@ async function addPageToList(page) {
 
 	let linkElement = document.createElement('a');
 	linkElement.href = pathname;
-	linkElement.className = 'u-url';
 	linkElement.textContent = pageTitle;
 
-	let pElement = document.createElement('p');
-	pElement.className = 'card__title p-name';
-	pElement.appendChild(linkElement);
-
 	let liElement = document.createElement('li');
-	liElement.className = 'list__item list__item--large';
-	liElement.appendChild(pElement);
-
-	if (pageDom.querySelector('.main footer')) {
-		let pageMeta = document.createElement('footer');
-		pageMeta.innerHTML = pageDom.querySelector('.main footer').innerHTML;
-		liElement.appendChild(pageMeta);
-	}
+	liElement.appendChild(linkElement);
 
 	pagesList.push({ pathname: pathname, element: liElement });
 }
