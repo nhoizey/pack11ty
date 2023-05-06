@@ -15,6 +15,7 @@ async function addPageToList(page) {
 	linkElement.textContent = pageTitle;
 
 	let liElement = document.createElement('li');
+	liElement.style.gridColumnStart = pathname.split('/').length - 1;
 	liElement.appendChild(linkElement);
 
 	pagesList.push({ pathname: pathname, element: liElement });

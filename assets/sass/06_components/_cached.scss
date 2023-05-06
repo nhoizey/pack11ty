@@ -1,0 +1,12 @@
+#cached {
+	list-style-type: none;
+	padding-left: 0;
+
+	display: grid;
+	grid-template-columns: repeat(25, 1fr);
+}
+
+#cached > * {
+	grid-column-start: 1;
+	grid-column-end: -1;
+}
