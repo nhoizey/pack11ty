@@ -29,6 +29,21 @@ const plugins_critical = [
 	}),
 ];
 
+const plugins_offline = [
+	commonjs(),
+	resolve(),
+	replace({
+		'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+	}),
+	babel({
+		exclude: 'node_modules/**',
+	}),
+	process.env.NODE_ENV === 'production' && terser(),
+	entrypointHashmanifest({
+		manifestName: path.join(HASH, 'hashes_offline.json'),
+	}),
+];
+
 const plugins_additional_iife = [
 	commonjs(),
 	resolve(),
@@ -70,6 +85,17 @@ export default [
 			sourcemap: true,
 		},
 		plugins: plugins_critical,
+	},
+	{
+		input: path.join(JS_SRC, 'offline.js'),
+		output: {
+			dir: JS_DIST,
+			entryFileNames: '[name]-[format].[hash].js',
+			format: 'iife',
+			name: 'offline',
+			sourcemap: true,
+		},
+		plugins: plugins_offline,
 	},
 	{
 		input: path.join(JS_SRC, 'additional.js'),
