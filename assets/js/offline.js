@@ -3,22 +3,25 @@ const pagesList = [];
 
 async function addPageToList(page) {
 	const pathname = new URL(page.url).pathname;
-	const pageHtml = await page.text();
 
-	let pageDom = document.createElement('html');
-	pageDom.innerHTML = pageHtml;
+	if (pathname !== '/offline/' && pathname.endsWith('/')) {
+		const pageHtml = await page.text();
 
-	let pageTitle = pageDom.querySelector('h1').innerText;
+		let pageDom = document.createElement('html');
+		pageDom.innerHTML = pageHtml;
 
-	let linkElement = document.createElement('a');
-	linkElement.href = pathname;
-	linkElement.textContent = pageTitle;
+		let pageTitle = pageDom.querySelector('h1').innerText;
 
-	let liElement = document.createElement('li');
-	liElement.style.gridColumnStart = pathname.split('/').length - 1;
-	liElement.appendChild(linkElement);
+		let linkElement = document.createElement('a');
+		linkElement.href = pathname;
+		linkElement.textContent = pageTitle;
 
-	pagesList.push({ pathname: pathname, element: liElement });
+		let liElement = document.createElement('li');
+		liElement.style.gridColumnStart = pathname.split('/').length - 1;
+		liElement.appendChild(linkElement);
+
+		pagesList.push({ pathname: pathname, element: liElement });
+	}
 }
 
 async function loadPagesFromCache() {
@@ -39,9 +42,7 @@ async function loadPagesFromCache() {
 	});
 
 	pagesList.forEach((page) => {
-		if (page.pathname !== '/offline/') {
-			cachedElement.appendChild(page.element);
-		}
+		cachedElement.appendChild(page.element);
 	});
 }
 
