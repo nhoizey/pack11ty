@@ -5,9 +5,10 @@ title: Pages available while offline
 <p>These pages are in your local browser cache so <strong>you can browse and read them even when you're offline</strong>.</p>
 <ul id="cached"></ul>
 
-{% set offlineJs %}
-{% include_raw "_site/js/" + hashes_offline['assets/js/offline.js'] %}
-{% endset %}
-<script>
-  {{ offlineJs | replace('//# sourceMappingURL=', '//# sourceMappingURL=/js/') | safe }}
-</script>
+{%- if eleventy.env.runMode === "serve" %}
+	<script src="{% getBundleFileUrl "js", "cached-content" %}"></script>
+{%- else  %}
+	<script>{% getBundle "js", "cached-content" %}</script>
+{%- endif %}
+
+{% js "cached-content" %}{% renderFile "src/assets/js/cached-content.js" %}{% endjs %}

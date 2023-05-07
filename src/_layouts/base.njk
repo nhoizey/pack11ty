@@ -43,18 +43,18 @@
       </div>
       {% include "components/footer.njk" %}
     </div>
-    {% if eleventy.env.runMode == 'build' %}
-      <link rel="stylesheet" href="/css/{{ hashes_css['additional.css'] }}" />
-    {% else %}
-      <link rel="stylesheet" href="/css/additional.css" />
-    {% endif %}
 
-    {#
-https://buzut.net/configurer-rollup-bundles-esm-cjs/
-https://v8.dev/features/modules#browser
-#}
-    <script async type="module" src="/js/{{ hashes_additional_es['assets/js/additional.js']}}"></script>
-    <script async nomodule src="/js/{{ hashes_additional_iife['assets/js/additional.js']}}"></script>
+		{%- if eleventy.env.runMode === "serve" %}
+			{# External CSS file (local dev live reload will refresh without page reload) #}
+			<link rel="stylesheet" href="{% getBundleFileUrl "css", "additional" %}">
+		{%- else  %}
+			{# Inlined CSS (fastest site performance in production) #}
+			<style>{% getBundle "css", "additional" %}</style>
+		{%- endif %}
+		<script type="module" src="{% getBundleFileUrl "js", "additional" %}"></script>
+
+		{%- css "additional" %}{% renderFile "src/assets/sass/additional.scss" %}{% endcss %}
+		{%- js "additional" %}{% renderFile "src/assets/js/additional.js" %}{% endjs %}
   </body>
 
 </html>
