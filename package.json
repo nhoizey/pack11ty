@@ -42,7 +42,7 @@
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^2.0.1",
-		"@babel/core": "^7.21.5",
+		"@babel/core": "^7.21.8",
 		"@babel/preset-env": "^7.21.5",
 		"@jlengstorf/get-share-image": "^0.8.0",
 		"@rollup/plugin-node-resolve": "^13.3.0",
