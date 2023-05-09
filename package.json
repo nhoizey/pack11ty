@@ -26,7 +26,6 @@
 	"license": "MIT",
 	"scripts": {
 		"clean": "rimraf _site",
-		"postcss": "postcss _site/css/*.css --no-map --replace",
 		"build:eleventy": "eleventy",
 		"watch:eleventy": "eleventy --serve",
 		"build:serviceworker": "workbox injectManifest workbox.config.js",
