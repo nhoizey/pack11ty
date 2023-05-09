@@ -74,6 +74,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addTemplateFormats('js');
 	eleventyConfig.addExtension('js', {
 		outputFileExtension: 'js',
+		read: false,
 		compile: async function (inputContent, inputPath) {
 			if (!inputPath.includes('src/assets/')) return;
 			return async (data) => {
