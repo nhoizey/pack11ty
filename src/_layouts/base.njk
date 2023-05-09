@@ -54,7 +54,9 @@
 		<script type="module" src="{% getBundleFileUrl "js", "additional" %}"></script>
 
 		{%- css "additional" %}{% renderFile "src/assets/sass/additional.scss" %}{% endcss %}
+
 		{%- js "additional" %}{% renderFile "src/assets/js/additional.js" %}{% endjs %}
+		{%- js "additional" %}{% renderFile "src/assets/js/offline-events.js" %}{% endjs %}
   </body>
 
 </html>

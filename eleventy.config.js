@@ -58,7 +58,7 @@ module.exports = function (eleventyConfig) {
 			let parsed = path.parse(inputPath);
 			if (parsed.name.startsWith('_')) return;
 			let result = sass.compileString(inputContent, {
-				loadPaths: [parsed.dir || '.', 'src/assets/sass'],
+				loadPaths: [parsed.dir || '.', 'src/assets/sass', 'node_modules'],
 				style: 'compressed',
 				sourceMap: true,
 			});

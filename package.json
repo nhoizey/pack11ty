@@ -72,5 +72,8 @@
 		"sass": "^1.62.1",
 		"workbox-cli": "^6.5.4",
 		"workbox-recipes": "^6.5.4"
+	},
+	"dependencies": {
+		"toastify-js": "^1.12.0"
 	}
 }
