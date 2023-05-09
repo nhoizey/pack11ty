@@ -10,6 +10,14 @@
 
 	text-decoration: none;
 
+	.toast-close {
+		color: black;
+		opacity: 0.8;
+		position: absolute;
+		right: 0.2rem;
+		top: 0.1rem;
+	}
+
 	&::before {
 		font-size: 2rem;
 		line-height: 1;
@@ -76,10 +84,5 @@
 		a:visited {
 			color: #843534;
 		}
-	}
-
-	.toast-close {
-		color: black;
-		opacity: 0.8;
 	}
 }
