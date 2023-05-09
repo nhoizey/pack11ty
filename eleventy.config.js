@@ -77,6 +77,7 @@ module.exports = function (eleventyConfig) {
 		read: false,
 		compile: async function (inputContent, inputPath) {
 			if (!inputPath.includes('src/assets/')) return;
+			// TODO: _site/_11ty shouldn't be created
 			return async (data) => {
 				const output = await esbuild.build({
 					entryPoints: [inputPath],
