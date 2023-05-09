@@ -16,6 +16,7 @@ function updateConnectivityStatus() {
 	let notificationClass = '';
 	let notificationText = '';
 	let notificationDuration = 3000;
+	let notificationDestination = false;
 
 	if (typeof navigator.onLine !== 'undefined') {
 		if (!navigator.onLine) {
@@ -32,7 +33,8 @@ function updateConnectivityStatus() {
 				notificationClass = 'warning';
 				notificationText =
 					'It looks like <strong>the connection is lost</strong>.<br />Continue reading this page, or look at <a href="/offline/">other contents you can read while offline</a>.';
-				notificationDuration = 10000;
+				notificationDestination = '/offline/';
+				notificationDuration = 5000;
 			} else {
 				notificationClass = 'error';
 				notificationText =
@@ -55,6 +57,7 @@ function updateConnectivityStatus() {
 			Toastify({
 				text: notificationText,
 				escapeMarkup: false,
+				destination: notificationDestination,
 				className: notificationClass,
 				duration: notificationDuration,
 				close: true,
