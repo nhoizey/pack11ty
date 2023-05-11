@@ -40,6 +40,8 @@ module.exports = function (eleventyConfig) {
 	// **********************************************************************************
 	// TODO: move to the Pack11ty plugin
 	// **********************************************************************************
+	const postcss = require('postcss');
+
 	eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-bundle'));
 
 	// https://github.com/11ty/eleventy-plugin-bundle#bundle-sass-with-the-render-plugin
@@ -57,15 +59,28 @@ module.exports = function (eleventyConfig) {
 			if (!inputPath.includes('src/assets/')) return;
 			let parsed = path.parse(inputPath);
 			if (parsed.name.startsWith('_')) return;
-			let result = sass.compileString(inputContent, {
-				loadPaths: [parsed.dir || '.', 'src/assets/sass', 'node_modules'],
-				style: 'compressed',
-				sourceMap: true,
-			});
-			// TODO: add sourcemap files generation, see https://github.com/sass/dart-sass/issues/1594#issuecomment-1013208452
-			// TODO: Add PostCSS for Autoprefixer and cssnano
-			return (data) => {
-				return result.css;
+
+			return async (data) => {
+				let sassResult = sass.compileString(inputContent, {
+					loadPaths: [parsed.dir || '.', 'src/assets/sass', 'node_modules'],
+					style: 'compressed',
+					sourceMap: true,
+				});
+				// TODO: add sourcemap files generation, see https://github.com/sass/dart-sass/issues/1594#issuecomment-1013208452
+
+				if (data.eleventy.env.runMode === 'build') {
+					// Use PostCSS for Autoprefixer and cssnano when building for production
+					let postCssResult = await postcss([
+						require('autoprefixer'),
+						require('cssnano')({
+							preset: ['default', { discardComments: { removeAll: true } }],
+						}),
+					]).process(sassResult.css, { from: inputPath });
+
+					return postCssResult.css;
+				} else {
+					return sassResult.css;
+				}
 			};
 		},
 	});
