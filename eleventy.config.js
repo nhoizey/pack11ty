@@ -116,6 +116,9 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.setDataDeepMerge(true);
 	eleventyConfig.setQuietMode(true);
 
+	// Ignore JS files in _11ty
+	eleventyConfig.ignores.add('./src/_11ty');
+
 	return {
 		templateFormats: ['md', 'njk'],
 
