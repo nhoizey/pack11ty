@@ -10,6 +10,10 @@
 
 	text-decoration: none;
 
+	@media only screen and (max-width: 360px) {
+		max-width: 95vw;
+	}
+
 	.toast-close {
 		color: black;
 		opacity: 0.8;
