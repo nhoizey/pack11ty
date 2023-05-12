@@ -1,15 +1,6 @@
 @import 'toastify-js/src/toastify';
 
 .toastify {
-	padding: 0.4rem 0.7rem 0.4rem 2.4rem;
-
-	background: #ccc;
-	color: #222;
-	border: 2px solid #999;
-	border-radius: 0.3rem;
-
-	text-decoration: none;
-
 	@media only screen and (max-width: 360px) {
 		max-width: 95vw;
 	}
@@ -21,6 +12,26 @@
 		right: 0.2rem;
 		top: 0.1rem;
 	}
+}
+
+.info,
+.warning,
+.success,
+.error {
+	&:not(.toastify) {
+		position: relative;
+	}
+
+	padding: 0.4rem 0.7rem 0.4rem 2.4rem;
+	background: #ccc;
+	color: #222;
+	border: 2px solid #999;
+	border-radius: 0.3rem;
+	text-decoration: none;
+
+	& > * {
+		margin-top: 0;
+	}
 
 	&::before {
 		font-size: 2rem;
@@ -29,64 +40,64 @@
 		left: 0.2rem;
 		top: 0.1rem;
 	}
+}
 
-	&.info {
-		color: #3c3d76;
-		background: #dfd8f0;
-		border-color: #d6c6e9;
+.info {
+	color: #3c3d76;
+	background: #dfd8f0;
+	border-color: #d6c6e9;
 
-		&::before {
-			content: #{unicode('2139') unicode('FE0E')}; // ℹ
-		}
-
-		a:link,
-		a:visited {
-			color: #2b2c54;
-		}
+	&::before {
+		content: #{unicode('2139') unicode('FE0E')}; // ℹ
 	}
 
-	&.success {
-		color: #3c763d;
-		background: #dff0d8;
-		border-color: #d6e9c6;
+	a:link,
+	a:visited {
+		color: #2b2c54;
+	}
+}
 
-		&::before {
-			content: #{unicode('263A') unicode('FE0E')}; // ☺︎
-		}
+.success {
+	color: #3c763d;
+	background: #dff0d8;
+	border-color: #d6e9c6;
 
-		a:link,
-		a:visited {
-			color: #2b542c;
-		}
+	&::before {
+		content: #{unicode('263A') unicode('FE0E')}; // ☺︎
 	}
 
-	&.warning {
-		color: #8a6d3b;
-		background: #fcf8e3;
-		border-color: #faebcc;
+	a:link,
+	a:visited {
+		color: #2b542c;
+	}
+}
 
-		&::before {
-			content: #{unicode('26A0') unicode('FE0E')}; // ⚠
-		}
+.warning {
+	color: #8a6d3b;
+	background: #fcf8e3;
+	border-color: #faebcc;
 
-		a:link,
-		a:visited {
-			color: #66512c;
-		}
+	&::before {
+		content: #{unicode('26A0') unicode('FE0E')}; // ⚠
 	}
 
-	&.error {
-		color: #a94442;
-		background: #f2dede;
-		border-color: #ebccd1;
+	a:link,
+	a:visited {
+		color: #66512c;
+	}
+}
 
-		&::before {
-			content: #{unicode('2639') unicode('FE0E')}; // ☹︎
-		}
+.error {
+	color: #a94442;
+	background: #f2dede;
+	border-color: #ebccd1;
 
-		a:link,
-		a:visited {
-			color: #843534;
-		}
+	&::before {
+		content: #{unicode('2639') unicode('FE0E')}; // ☹︎
+	}
+
+	a:link,
+	a:visited {
+		color: #843534;
 	}
 }
