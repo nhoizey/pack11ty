@@ -8,7 +8,7 @@ Feel free to use it, enhance it, and share your ideas/comments with [issues](htt
 
 ## A plugin
 
-The [Pack11ty]{.pack11ty} plugin ([`eleventy-plugin-pack11ty`](https://github.com/nhoizey/eleventy-plugin-pack11ty)) provides many features out of the box, which you can enjoy on any Eleventy project:
+The **Pack11ty plugin** ([`eleventy-plugin-pack11ty`](https://github.com/nhoizey/eleventy-plugin-pack11ty)) provides many features out of the box, which you can enjoy on any Eleventy project:
 
 - **Collections** built automatically from root folders, with pagination for yearly and monthly archives
 - **Navigation** configuration
@@ -24,7 +24,7 @@ The [Pack11ty]{.pack11ty} plugin ([`eleventy-plugin-pack11ty`](https://github.co
 
 ## A template repository
 
-Additionnaly, the [Pack11ty]{.pack11ty} template repository ([`pack11ty`](https://github.com/nhoizey/pack11ty)) helps starting a new project from scratch with even more nice features:
+Additionnaly, the **Pack11ty template repository** ([`pack11ty`](https://github.com/nhoizey/pack11ty)) helps starting a new project from scratch with even more nice features:
 
 - **Responsive Layout** without any Media Query, thanks to CSS Flexible Box Layout (Flexbox) and layouts from Every Layout
 - A default configuration for responsive images
