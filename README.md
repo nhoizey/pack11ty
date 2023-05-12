@@ -2,22 +2,40 @@
 
 Pack11ty is an heavily opinionated [Eleventy](https://www.11ty.dev/) template project created by [Nicolas Hoizey](https://nicolas-hoizey.com/).
 
-**WARNING: This is Work In Progress, not ready for production!**
-
 Feel free to use it, enhance it, and share your ideas/comments with [issues](https://github.com/nhoizey/pack11ty/issues/new/choose), or (even better) [pull requests](https://github.com/nhoizey/pack11ty/compare).
 
 # Key features
 
+## A plugin
+
+The [Pack11ty]{.pack11ty} plugin ([`eleventy-plugin-pack11ty`](https://github.com/nhoizey/eleventy-plugin-pack11ty)) provides many features out of the box, which you can enjoy on any Eleventy project:
+
 - **Collections** built automatically from root folders, with pagination for yearly and monthly archives
-- **JavaScript and CSS assets** optimized for performance
-- **Responsive Layout** without any Media Query, thanks to CSS Flexible Box Layout (Flexbox) and layouts from Every Layout
+- **Navigation** configuration
+- **JavaScript and Sass/CSS assets** optimized for performance
+  - inline critical JavaScript and CSS
+  - external and asynchronous additional JavaScript and CSS, with hashes for cache busting
+  - JavaScript, CSS and HTML built separately
+  - Dev mode with live reload
 - **Responsive images** built from simple Markdown and presets
+- **Enhanced Markdown** thanks to an extensive set of Markdown-it plugins for better contribution: footnotes, attributes, headings anchors, abbreviations, containers
+- A set of Eleventy **filters** and shortcodes are provided, including an enhanced `slugify`
+- A simple and responsible way to share YouTube **videos**
+
+## A template repository
+
+Additionnaly, the [Pack11ty]{.pack11ty} template repository ([`pack11ty`](https://github.com/nhoizey/pack11ty)) helps starting a new project from scratch with even more nice features:
+
+- **Responsive Layout** without any Media Query, thanks to CSS Flexible Box Layout (Flexbox) and layouts from Every Layout
+- A default configuration for responsive images
 - **PWA** for performance, installation and offline support
+  - Service Worker with pre-caching of UI assets, auto caching of visited pages and offline fallback
+  - Manifest for PWA installation
 - **Indieweb**
   - Support for receiving Webmentions
   - Atom feed for all collections combined
-- **Enhanced Markdown** for better contribution: footnotes, attributes, headings anchors, abbreviations, containers
-- A set of Eleventy filters and shortcodes are provided, including an enhanced `slugify`
+- More default containers: `success`, `warning`, `error`
+- Etc.
 
 # Want to try it?
 
