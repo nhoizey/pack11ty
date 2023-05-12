@@ -1,23 +1,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% if eleventy.env.runMode == 'build' %}
-  {% set criticalCss %}
-  {% include_raw "_site/css/" + hashes_css['critical.css'] %}
-  {% endset %}
-  <style>
-    {{criticalCss | safe}}
-  </style>
-{% else %}
-  <link rel="stylesheet" href="/css/critical.css" />
-{% endif %}
+{%- if eleventy.env.runMode === "serve" %}
+	{# External files (local dev live reload will refresh without page reload) #}
+	<link rel="stylesheet" href="{% getBundleFileUrl "css", "critical" %}">
+	<script src="{% getBundleFileUrl "js", "critical" %}"></script>
+{%- else  %}
+	{# Inlined CSS (fastest site performance in production) #}
+	<style>{% getBundle "css", "critical" %}</style>
+	<script>{% getBundle "js", "critical" %}</script>
+{%- endif %}
 
-{% set criticalJs %}
-{% include_raw "_site/js/" + hashes_critical['assets/js/critical.js'] %}
-{% endset %}
-<script>
-  {{ criticalJs | replace('//# sourceMappingURL=', '//# sourceMappingURL=/js/') | safe }}
-</script>
+{%- css "critical" %}{% renderFile "src/assets/sass/critical.scss" %}{% endcss %}
+{%- js "critical" %}{% renderFile "src/assets/js/critical.js" %}{% endjs %}
 
 {% block title %}
   {% if page.url == '/' %}

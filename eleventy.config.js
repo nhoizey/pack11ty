@@ -1,5 +1,5 @@
 const glob = require('fast-glob');
-const path = require('path');
+const path = require('node:path');
 
 const isProd = process.env.NODE_ENV === 'production';
 

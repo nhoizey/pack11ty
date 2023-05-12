@@ -1,13 +1,16 @@
 ---
 title: Pages available while offline
+nav:
+  title: Offline
+  order: 5
 ---
 
 <p>These pages are in your local browser cache so <strong>you can browse and read them even when you're offline</strong>.</p>
+
+<link rel="stylesheet" href="{% getBundleFileUrl "css", "cached" %}">
+{%- css "cached" %}{% renderFile "src/assets/sass/06_components/cached.scss" %}{% endcss %}
 <ul id="cached"></ul>
 
-{% set offlineJs %}
-{% include_raw "_site/js/" + hashes_offline['assets/js/offline.js'] %}
-{% endset %}
-<script>
-  {{ offlineJs | replace('//# sourceMappingURL=', '//# sourceMappingURL=/js/') | safe }}
-</script>
+<script type="module" src="{% getBundleFileUrl "js", "cached-content" %}"></script>
+
+{% js "cached-content" %}{% renderFile "src/assets/js/cached-content.js" %}{% endjs %}

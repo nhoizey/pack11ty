@@ -3,7 +3,6 @@ node_modules
 
 # generated files
 _site
-hashes_*.json
 
 # secret data
 .env

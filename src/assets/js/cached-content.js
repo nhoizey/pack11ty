@@ -2,7 +2,8 @@ const cachedElement = document.querySelector('#cached');
 const pagesList = [];
 
 async function addPageToList(page) {
-	const pathname = new URL(page.url).pathname.replace(
+	const pathname = new URL(page.url).pathname;
+	const hierarchy = pathname.replace(
 		/([0-9]{4})\/([0-9]{2})\/([0-9]{2})\//,
 		'$1-$2-$3-'
 	);
@@ -20,7 +21,7 @@ async function addPageToList(page) {
 		linkElement.textContent = pageTitle;
 
 		let liElement = document.createElement('li');
-		liElement.style.gridColumnStart = pathname.split('/').length - 1;
+		liElement.style.gridColumnStart = hierarchy.split('/').length - 1;
 		liElement.appendChild(linkElement);
 
 		pagesList.push({ pathname: pathname, element: liElement });
