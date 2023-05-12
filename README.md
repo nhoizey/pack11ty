@@ -1,5 +1,7 @@
 # Pack11ty
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d480cb20-d9e7-46e4-924f-e4779953b4b9/deploy-status)](https://app.netlify.com/sites/pack11ty/deploys)
+
 Pack11ty is an heavily opinionated [Eleventy](https://www.11ty.dev/) template project created by [Nicolas Hoizey](https://nicolas-hoizey.com/).
 
 Feel free to use it, enhance it, and share your ideas/comments with [issues](https://github.com/nhoizey/pack11ty/issues/new/choose), or (even better) [pull requests](https://github.com/nhoizey/pack11ty/compare).
