@@ -34,7 +34,7 @@ function updateConnectivityStatus() {
 				notificationText =
 					'It looks like <strong>the connection is lost</strong>.<br />Continue reading this page, or look at <a href="/offline/">other contents you can read while offline</a>.';
 				notificationDestination = '/offline/';
-				notificationDuration = 10;
+				notificationDuration = 10000;
 			} else {
 				notificationClass = 'error';
 				notificationText =
