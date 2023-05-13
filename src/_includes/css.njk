@@ -1,0 +1,15 @@
+{# Critical CSS #}
+{%- if eleventy.env.runMode === "serve" %}
+	{# External files (local dev live reload will refresh without page reload) #}
+	<link rel="stylesheet" href="{% getBundleFileUrl "css", "critical" %}">
+{%- else  %}
+	{# Inlined CSS (fastest site performance in production) #}
+	<style>{% getBundle "css", "critical" %}</style>
+{%- endif %}
+
+{# Lazy loaded not critical CSS and JS #}
+<link rel="stylesheet" href="{% getBundleFileUrl 'css', 'not-critical' %}" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="{% getBundleFileUrl 'css', 'not-critical' %}"></noscript>
+
+{%- css "critical" %}{% renderFile "src/assets/sass/critical.scss" %}{% endcss %}
+{%- css "not-critical" %}{% renderFile "src/assets/sass/not-critical.scss" %}{% endcss %}

@@ -1,0 +1,17 @@
+{# Critical JS #}
+{%- if eleventy.env.runMode === "serve" %}
+	{# External files (local dev live reload will refresh without page reload) #}
+	<script src="{% getBundleFileUrl "js", "critical" %}"></script>
+{%- else  %}
+	{# Inlined (fastest site performance in production) #}
+	<script>{% getBundle "js", "critical" %}</script>
+{%- endif %}
+
+{# Lazy loaded not critical JS #}
+<script type="module" src="{% getBundleFileUrl "js", "not-critical" %}"></script>
+
+{%- js "critical" %}{% renderFile "src/assets/js/critical.js" %}{% endjs %}
+
+{%- js "not-critical" %}{% renderFile "src/assets/js/service-worker-install.js" %}{% endjs %}
+{%- js "not-critical" %}{% renderFile "src/assets/js/scrolling-tables.js" %}{% endjs %}
+{%- js "not-critical" %}{% renderFile "src/assets/js/offline-events.js" %}{% endjs %}

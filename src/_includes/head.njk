@@ -1,19 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{%- if eleventy.env.runMode === "serve" %}
-	{# External files (local dev live reload will refresh without page reload) #}
-	<link rel="stylesheet" href="{% getBundleFileUrl "css", "critical" %}">
-	<script src="{% getBundleFileUrl "js", "critical" %}"></script>
-{%- else  %}
-	{# Inlined CSS (fastest site performance in production) #}
-	<style>{% getBundle "css", "critical" %}</style>
-	<script>{% getBundle "js", "critical" %}</script>
-{%- endif %}
-
-{%- css "critical" %}{% renderFile "src/assets/sass/critical.scss" %}{% endcss %}
-{%- js "critical" %}{% renderFile "src/assets/js/critical.js" %}{% endjs %}
-
 {% block title %}
   {% if page.url == '/' %}
     {% set page_title %}{{ pkg.title }}, {{ pkg.description }}{% endset %}
@@ -23,6 +10,9 @@
   <title>{{ page_title }}</title>
   <meta property="og:title" content="{{ page_title }}" />
 {% endblock %}
+
+{% include "css.njk" %}
+{% include "js.njk" %}
 
 {% block description %}
   <meta name="description" content="{{ description or content | excerpt | striptags }}" />
