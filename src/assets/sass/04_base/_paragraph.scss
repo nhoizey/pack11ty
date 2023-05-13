@@ -1,3 +1,7 @@
 p {
 	margin-bottom: 0;
 }
+
+article > * + * {
+	margin-block-start: var(--gap);
+}
