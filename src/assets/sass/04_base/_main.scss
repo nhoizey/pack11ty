@@ -1,0 +1,8 @@
+main {
+	max-width: var(--maxcontent);
+}
+
+// Lobotomized owl
+main > * + * {
+	margin-top: var(--gap);
+}

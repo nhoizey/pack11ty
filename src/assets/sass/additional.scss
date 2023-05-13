@@ -1,5 +1,18 @@
-@import 'functions';
+// ITCSS Layer 1: Settings (global variables, config switches)
+
+// ITCSS Layer 2: Tools (default mixins and functions)
+@import '02_tools/functions';
+
+// ITCSS Layer 3: Generic (ground-zero styles, normalize.css, resets, box-sizing)
+
+// ITCSS Layer 4: Base (unclassed HTML elements, a.k.a. type selectors)
+@import '04_base/code';
+
+// ITCSS Layer 5: Objects (cosmetic-free design patterns)
+
+// ITCSS Layer 6: Components (designed components, chunks of UI)
 @import '06_components/footer';
 @import '06_components/notifications';
-@import 'content_parts/prism-onedark';
-@import 'content_parts/code';
+@import '06_components/prism-onedark';
+
+// ITCSS Layer 7: Trumps (helpers and overrides)

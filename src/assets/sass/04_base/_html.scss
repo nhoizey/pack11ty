@@ -1,0 +1,21 @@
+html {
+	// Enforce a scrollbar at first paint to prevent CLS
+	// https://twitter.com/TimVereecke/status/1239454788116533248
+	// https://twitter.com/lfredolo/status/1240301405325361152
+	overflow-y: scroll;
+	// https://twitter.com/TimVereecke/status/1523583123631804416
+	scrollbar-gutter: stable;
+
+	// Prevent text zoom on iOS landscape
+	// https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	// https://css-tricks.com/fixing-smooth-scrolling-with-find-on-page/
+	html:focus-within {
+		scroll-behavior: smooth;
+	}
+}

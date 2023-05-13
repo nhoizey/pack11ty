@@ -1,23 +1,34 @@
-@import 'functions';
-@import 'global_properties';
+// ITCSS Layer 1: Settings (global variables, config switches)
+@import '01_settings/global_custom_properties';
 
-@import 'layout';
+// ITCSS Layer 2: Tools (default mixins and functions)
+@import '02_tools/functions';
 
-@import '04_elements/body';
-@import '04_elements/paragraphs';
-@import '04_elements/headings';
-@import '04_elements/links';
-@import '04_elements/lists';
-@import '04_elements/tables';
-@import '04_elements/figures';
+// ITCSS Layer 3: Generic (ground-zero styles, normalize.css, resets, box-sizing)
+@import '03_generic/reset';
 
-@import '05_objects/pack11ty-logo';
-@import '05_objects/logo';
+// ITCSS Layer 4: Base (unclassed HTML elements, a.k.a. type selectors)
+@import '04_base/body';
+@import '04_base/paragraph';
+@import '04_base/heading';
+@import '04_base/link';
+@import '04_base/list';
+@import '04_base/table';
+@import '04_base/figure';
+@import '04_base/main';
+@import '04_base/mark';
+@import '04_base/sub_sup';
 
+// ITCSS Layer 5: Objects (cosmetic-free design patterns)
+@import '05_objects/layout';
+@import '05_objects/markdown-classes';
+
+// ITCSS Layer 6: Components (designed components, chunks of UI)
 @import '06_components/header';
+@import '06_components/pack11ty-logo';
+@import '06_components/logo';
 @import '06_components/news';
 @import '06_components/video';
 
+// ITCSS Layer 7: Trumps (helpers and overrides)
 @import '07_trumps/visually-hidden';
-
-@import 'content_parts/markdown-classes';
