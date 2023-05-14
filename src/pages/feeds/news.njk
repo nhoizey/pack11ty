@@ -15,9 +15,9 @@ layout: null
   </author>
   {% for entry in collections.news | limit(20) %}
     {% set absoluteEntryUrl %}{{ entry.url | url | absoluteUrl(pkg.homepage) }}{% endset %}
-    {% set readableDate = entry.date | date("Do MMMM YYYY") %}
+    {% set titleDate = entry.date | readableDate %}
     <entry>
-      <title>{{ entry.data.title or entry.data.layout + ' from ' + readableDate }}</title>
+      <title>{{ entry.data.title or entry.data.layout + ' from ' + titleDate }}</title>
       <link href="{{ absoluteEntryUrl }}"/>
       <updated>{{ entry.date | rssDate }}</updated>
       <id>{{ absoluteEntryUrl }}</id>
