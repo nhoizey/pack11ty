@@ -8,9 +8,9 @@ nav:
 
 Take some time to read the detailled documentation about:
 
-- [installation](installation/)
-- [site development](development/)
-- [content creation](content/).
+- [Installation](installation/)
+- [Site development](development/)
+- [Content creation](content/).
 
 # Key features
 

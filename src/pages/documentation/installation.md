@@ -4,26 +4,28 @@ title: Installation
 
 There are multiple ways you can use [Pack11ty]{.pack11ty}, depending on where you want to host your site.
 
+::: info
+There are multiple hosting options listed in [Eleventy's deployment documentation](https://www.11ty.dev/docs/deployment/).
+:::
+
 # Repository creation
 
 ## Fast creation and deployment
 
 If you just want to try it and you're in a hurry, try one of these quick options to run [Pack11ty]{.pack11ty} for free:
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.no-arrow}
-
-[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty){.no-arrow}
+[Deploy to **Netlify**](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.button}{.netlify} [Deploy to **Vercel**](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty){.button}{.vercel} [Deploy to **StackBlitz**](https://stackblitz.com/github/nhoizey/pack11ty){.button}{.stackblitz}
 
 Buttons above will:
 
 1. Create a new repository in your own GitHub account with [Pack11ty]{.pack11ty} code
-1. Deploy a copy of this new repository to your Netlify or Vercel account (you can create one during this process if you don't have one yet).
+1. Deploy a copy of this new repository to your hosting platform account (you can create one during this process if you don't have one yet).
 
-Each time you push changes to your GitHub repository (or add/modify files directly with GitHub's Web interface), Netlify or Vercel will build the new version of your site.
+Each time you push changes to your GitHub repository (or add/modify files directly with GitHub's Web interface), the hosting platform will build the new version of your site.
 
 ## Creation with Pack11ty template on GitHub
 
-If you prefer to start without Netlify hosting, create your own repository on GitHub from this template:
+If you prefer to start without Netlify or Vercel hosting, you can [generate a new repository with the same directory structure and files](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) as the existing [Pack11ty]{.pack11ty} repository:
 
 [Use this GitHub template](https://github.com/nhoizey/pack11ty/generate){.button}{.github}
 

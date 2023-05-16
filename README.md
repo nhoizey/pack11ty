@@ -47,6 +47,8 @@ If you're in a hurry, try one of these quick options:
 
 [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty)
 
+There are many [other options for installation/deployment](https://pack11ty.dev/documentation/installation/).
+
 # Would you like to know more?
 
 Read the full documentation on [pack11ty.dev](https://pack11ty.dev/)!
