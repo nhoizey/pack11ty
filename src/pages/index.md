@@ -11,9 +11,9 @@ Feel free to use it, enhance it, and share your ideas/comments with [issues](htt
 
 If you want to try it and you're in a hurry, try one of these quick options to run [Pack11ty]{.pack11ty} for free:
 
-[Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.button}{.netlify}
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.no-arrow}
 
-[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty)
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty){.no-arrow}
 
 # Key features
 

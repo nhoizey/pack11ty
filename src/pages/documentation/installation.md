@@ -10,9 +10,9 @@ There are multiple ways you can use [Pack11ty]{.pack11ty}, depending on where yo
 
 If you just want to try it and you're in a hurry, try one of these quick options to run [Pack11ty]{.pack11ty} for free:
 
-[Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.button}{.netlify}
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.no-arrow}
 
-[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty)
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty){.no-arrow}
 
 Buttons above will:
 
