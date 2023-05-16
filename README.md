@@ -47,7 +47,7 @@ If you're in a hurry, try one of these quick options:
 
 [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty)
 
-[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/nhoizey/pack11ty)
+[![Remix on Glitch](https://cdn.gomix.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/nhoizey/pack11ty)
 
 There are many [other options for installation/deployment](https://pack11ty.dev/documentation/installation/).
 
