@@ -13,7 +13,7 @@ If you want to try it and you're in a hurry, try one of these quick options to r
 
 [Deploy to **Netlify**](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.button}{.netlify} [Deploy to **Vercel**](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty){.button}{.vercel} [Deploy to **StackBlitz**](https://stackblitz.com/github/nhoizey/pack11ty){.button}{.stackblitz}
 
-There are many [other options for installation/deployment](/documentation/installation/).
+There are multiple [options for installation/deployment](/documentation/installation/).
 
 # Key features
 
