@@ -14,7 +14,7 @@ There are multiple hosting options listed in [Eleventy's deployment documentatio
 
 If you just want to try it and you're in a hurry, try one of these quick options to run [Pack11ty]{.pack11ty} for free:
 
-[![Deploy to Netlify](https://img.shields.io/badge/deploy_to-Netlify-%232e51ed.svg?style=flat&logo=netlify&logoColor=white)](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.no-arrow} [![Deploy to Vercel](https://img.shields.io/badge/deploy_to-Vercel-%23000000.svg?style=flat&logo=vercel&logoColor=white)](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty){.no-arrow} [![Remix on Glitch](https://img.shields.io/badge/remix_on-glitch-%233333FF.svg?style=flat&logo=glitch&logoColor=white)](https://glitch.com/edit/#!/import/github/nhoizey/pack11ty){.no-arrow}
+[![Deploy to Netlify](https://img.shields.io/badge/deploy_to-Netlify-%232e51ed.svg?style=flat&logo=netlify&logoColor=white)](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.install} [![Deploy to Vercel](https://img.shields.io/badge/deploy_to-Vercel-%23000000.svg?style=flat&logo=vercel&logoColor=white)](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty){.install} [![Remix on Glitch](https://img.shields.io/badge/remix_on-glitch-%233333FF.svg?style=flat&logo=glitch&logoColor=white)](https://glitch.com/edit/#!/import/github/nhoizey/pack11ty){.install}
 
 Buttons above will:
 

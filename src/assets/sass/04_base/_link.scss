@@ -1,5 +1,5 @@
 // external links
-a[href^="https://"]:not([href^="https://pack11ty.dev"]):not(.button):not(.no-arrow)
+a[href^="https://"]:not([href^="https://pack11ty.dev"]):not(.button):not(.install)
 {
 	padding-right: 15px;
 	background-position: top 0.1em right;
