@@ -1,12 +1,10 @@
 # Pack11ty
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d480cb20-d9e7-46e4-924f-e4779953b4b9/deploy-status)](https://app.netlify.com/sites/pack11ty/deploys)
-
 Pack11ty is an heavily opinionated [Eleventy](https://www.11ty.dev/) template project created by [Nicolas Hoizey](https://nicolas-hoizey.com/).
 
 If you're in a hurry, try one of these quick options:
 
-[![Deploy to Netlify](https://img.shields.io/badge/deploy_to-Netlify-%232e51ed.svg?style=for-the-badge&logo=netlify&logoColor=white)](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms) [![Deploy to Vercel](https://img.shields.io/badge/deploy_to-Vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty) [![Remix on Glitch](https://img.shields.io/badge/remix_on-glitch-%233333FF.svg?style=for-the-badge&logo=glitch&logoColor=white)](https://glitch.com/edit/#!/import/github/nhoizey/pack11ty)
+[![Deploy to Netlify](https://img.shields.io/badge/deploy_to-Netlify-%232e51ed.svg?style=flat&logo=netlify&logoColor=white)](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms) [![Deploy to Vercel](https://img.shields.io/badge/deploy_to-Vercel-%23000000.svg?style=flat&logo=vercel&logoColor=white)](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty) [![Remix on Glitch](https://img.shields.io/badge/remix_on-glitch-%233333FF.svg?style=flat&logo=glitch&logoColor=white)](https://glitch.com/edit/#!/import/github/nhoizey/pack11ty)
 
 There are many [other options for installation/deployment](https://pack11ty.dev/documentation/installation/).
 
