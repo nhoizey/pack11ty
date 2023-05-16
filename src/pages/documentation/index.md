@@ -10,7 +10,7 @@ Take some time to read the detailled documentation about:
 
 - [Installation](installation/)
 - [Site development](development/)
-- [Content creation](content/).
+- [Content creation](content/)
 
 # Key features
 
@@ -30,9 +30,9 @@ The [Pack11ty]{.pack11ty} plugin ([`eleventy-plugin-pack11ty`](https://github.co
 - A set of Eleventy [filters](/documentation/filters/) and shortcodes are provided, including an enhanced `slugify`
 - A simple and responsible way to share YouTube [videos](/documentation/videos/)
 
-## A template repository
+## A GitHub repository template
 
-Additionnaly, the [Pack11ty]{.pack11ty} template repository ([`pack11ty`](https://github.com/nhoizey/pack11ty)) helps starting a new project from scratch with even more nice features:
+Additionnaly, the [Pack11ty]{.pack11ty} GitHub repository template ([`pack11ty`](https://github.com/nhoizey/pack11ty)) helps starting a new project from scratch with even more nice features:
 
 - [Responsive Layout](/documentation/layout/) without any Media Query, thanks to CSS Flexible Box Layout (Flexbox) and layouts from Every Layout
 - [PWA](/documentation/pwa/) for performance, installation and offline support

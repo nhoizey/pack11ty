@@ -11,7 +11,7 @@ Feel free to use it, enhance it, and share your ideas/comments with [issues](htt
 
 If you want to try it and you're in a hurry, try one of these quick options to run [Pack11ty]{.pack11ty} for free:
 
-[![Deploy to Netlify](https://img.shields.io/badge/deploy_to-Netlify-%232e51ed.svg?style=flat&logo=netlify&logoColor=white)](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.install} [![Deploy to Vercel](https://img.shields.io/badge/deploy_to-Vercel-%23000000.svg?style=flat&logo=vercel&logoColor=white)](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty){.install} [![Remix on Glitch](https://img.shields.io/badge/remix_on-glitch-%233333FF.svg?style=flat&logo=glitch&logoColor=white)](https://glitch.com/edit/#!/import/github/nhoizey/pack11ty){.install}
+[Deploy to **Netlify**](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.button}{.netlify} [Deploy to **Vercel**](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty){.button}{.vercel} [Deploy to **StackBlitz**](https://stackblitz.com/github/nhoizey/pack11ty){.button}{.stackblitz}
 
 There are many [other options for installation/deployment](/documentation/installation/).
 
