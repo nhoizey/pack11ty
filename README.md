@@ -10,9 +10,9 @@ There are many [other options for installation/deployment](https://pack11ty.dev/
 
 Feel free to use it, enhance it, and share your ideas/comments with [issues](https://github.com/nhoizey/pack11ty/issues/new/choose), or (even better) [pull requests](https://github.com/nhoizey/pack11ty/compare).
 
-# Key features
+## Key features
 
-## A plugin
+### A plugin
 
 The **Pack11ty plugin** ([`eleventy-plugin-pack11ty`](https://github.com/nhoizey/eleventy-plugin-pack11ty)) provides many features out of the box, which you can enjoy on any Eleventy project:
 
@@ -28,7 +28,7 @@ The **Pack11ty plugin** ([`eleventy-plugin-pack11ty`](https://github.com/nhoizey
 - A set of Eleventy **filters** and shortcodes are provided, including an enhanced `slugify`
 - A simple and responsible way to share YouTube **videos**
 
-## A template repository
+### A template repository
 
 Additionnaly, the **Pack11ty template repository** ([`pack11ty`](https://github.com/nhoizey/pack11ty)) helps starting a new project from scratch with even more nice features:
 
@@ -43,10 +43,10 @@ Additionnaly, the **Pack11ty template repository** ([`pack11ty`](https://github.
 - More default containers: `success`, `warning`, `error`
 - Etc.
 
-# Would you like to know more?
+## Would you like to know more?
 
 Read the full documentation on [pack11ty.dev](https://pack11ty.dev/)!
 
-# Do you have different needs?
+## Do you have different needs?
 
 No problem, there are [many other Eleventy starters available](https://www.11ty.dev/docs/starter/).
