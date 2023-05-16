@@ -4,15 +4,13 @@ nav:
   order: 2
 ---
 
-# Installation
+# Usage
 
-If you're in a hurry, install your own version of [Pack11ty]{.pack11ty} for free on Netlify:
+Take some time to read the detailled documentation about:
 
-[Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.button}{.netlify}
-
-Otherwise, take some time to read [the detailled installation documentation](installation/).
-
-You will then be able to [develop your site](development/) and [create content](content/).
+- [installation](installation/)
+- [site development](development/)
+- [content creation](content/).
 
 # Key features
 

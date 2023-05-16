@@ -41,9 +41,11 @@ Additionnaly, the **Pack11ty template repository** ([`pack11ty`](https://github.
 
 # Want to try it?
 
-If you're in a hurry, try this:
+If you're in a hurry, try one of these quick options:
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms)
+
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty)
 
 # Would you like to know more?
 

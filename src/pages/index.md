@@ -9,9 +9,11 @@ nav:
 
 Feel free to use it, enhance it, and share your ideas/comments with [issues](https://github.com/nhoizey/pack11ty/issues/new/choose), or (even better) [pull requests](https://github.com/nhoizey/pack11ty/compare)!
 
-If you're in a hurry, install your own version of [Pack11ty]{.pack11ty} for free on Netlify:
+If you want to try it and you're in a hurry, try one of these quick options to run [Pack11ty]{.pack11ty} for free:
 
 [Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.button}{.netlify}
+
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty)
 
 # Key features
 

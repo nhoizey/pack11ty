@@ -6,18 +6,20 @@ There are multiple ways you can use [Pack11ty]{.pack11ty}, depending on where yo
 
 # Repository creation
 
-## Fast creation and deployment with Netlify
+## Fast creation and deployment
 
-If you're in a hurry, try this:
+If you just want to try it and you're in a hurry, try one of these quick options to run [Pack11ty]{.pack11ty} for free:
 
 [Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.button}{.netlify}
 
-The button above will:
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty)
+
+Buttons above will:
 
 1. Create a new repository in your own GitHub account with [Pack11ty]{.pack11ty} code
-1. Deploy a copy of this new repository to your Netlify account (you can create one during this process if you don't have one yet).
+1. Deploy a copy of this new repository to your Netlify or Vercel account (you can create one during this process if you don't have one yet).
 
-Each time you push changes to your GitHub repository (or add/modify files directly with GitHub's Web interface), Netlify will build the new version of your site.
+Each time you push changes to your GitHub repository (or add/modify files directly with GitHub's Web interface), Netlify or Vercel will build the new version of your site.
 
 ## Creation with Pack11ty template on GitHub
 
