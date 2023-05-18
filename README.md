@@ -1,13 +1,13 @@
 # Pack11ty
 
-[![GitHub stars](https://img.shields.io/github/stars/nhoizey/pack11ty.svg?style=social)](https://github.com/nhoizey/pack11ty/stargazers)
-[![Follow @nhoizey@mamot.fr](https://img.shields.io/mastodon/follow/000262395?domain=https%3A%2F%2Fmamot.fr&style=social)](https://mamot.fr/@nhoizey)
+[![GitHub stars](https://img.shields.io/github/stars/nhoizey/pack11ty.svg?style=for-the-badge&logo=github)](https://github.com/nhoizey/pack11ty/stargazers)
+[![Follow @nhoizey@mamot.fr](https://img.shields.io/mastodon/follow/000262395?domain=https%3A%2F%2Fmamot.fr&style=for-the-badge&logo=mastodon&logoColor=white&color=6364FF)](https://mamot.fr/@nhoizey)
 
 Pack11ty is an heavily opinionated [Eleventy](https://www.11ty.dev/) template project created by [Nicolas Hoizey](https://nicolas-hoizey.com/).
 
 If you're in a hurry, try one of these quick options:
 
-[![Deploy to Netlify](https://img.shields.io/badge/deploy_to-Netlify-%232e51ed.svg?style=flat&logo=netlify&logoColor=white)](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms) [![Deploy to Vercel](https://img.shields.io/badge/deploy_to-Vercel-%23000000.svg?style=flat&logo=vercel&logoColor=white)](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty) [![Remix on Glitch](https://img.shields.io/badge/remix_on-glitch-%233333FF.svg?style=flat&logo=glitch&logoColor=white)](https://glitch.com/edit/#!/import/github/nhoizey/pack11ty)
+[![Deploy to Netlify](https://img.shields.io/badge/deploy_to-Netlify-%232e51ed.svg?style=for-the-badge&logo=netlify&logoColor=white)](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms) [![Deploy to Vercel](https://img.shields.io/badge/deploy_to-Vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty) [![Remix on Glitch](https://img.shields.io/badge/remix_on-glitch-%233333FF.svg?style=for-the-badge&logo=glitch&logoColor=white)](https://glitch.com/edit/#!/import/github/nhoizey/pack11ty)
 
 There are many [other options for installation/deployment](https://pack11ty.dev/documentation/installation/).
 
