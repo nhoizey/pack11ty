@@ -1,9 +1,9 @@
-# Pack11ty
+# [ [Pack11ty](https://pack11ty.dev) ]
 
 [![GitHub stars](https://img.shields.io/github/stars/nhoizey/pack11ty.svg?style=for-the-badge&logo=github)](https://github.com/nhoizey/pack11ty/stargazers)
 [![Follow @nhoizey@mamot.fr](https://img.shields.io/mastodon/follow/000262395?domain=https%3A%2F%2Fmamot.fr&style=for-the-badge&logo=mastodon&logoColor=white&color=6364FF)](https://mamot.fr/@nhoizey)
 
-Pack11ty is an heavily opinionated [Eleventy](https://www.11ty.dev/) template project created by [Nicolas Hoizey](https://nicolas-hoizey.com/).
+[Pack11ty](https://pack11ty.dev) is an heavily opinionated **[Eleventy](https://www.11ty.dev/) starter** (aka "template project").
 
 If you're in a hurry, try one of these quick options:
 
