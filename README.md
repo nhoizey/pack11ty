@@ -1,5 +1,8 @@
 # Pack11ty
 
+[![GitHub stars](https://img.shields.io/github/stars/nhoizey/pack11ty.svg?style=social)](https://github.com/nhoizey/pack11ty/stargazers)
+[![Follow @nhoizey@mamot.fr](https://img.shields.io/mastodon/follow/000262395?domain=https%3A%2F%2Fmamot.fr&style=social)](https://mamot.fr/@nhoizey)
+
 Pack11ty is an heavily opinionated [Eleventy](https://www.11ty.dev/) template project created by [Nicolas Hoizey](https://nicolas-hoizey.com/).
 
 If you're in a hurry, try one of these quick options:
