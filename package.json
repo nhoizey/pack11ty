@@ -52,7 +52,7 @@
 		"prettier": "^2.8.8",
 		"rimraf": "^5.0.1",
 		"sanitize-html": "^2.10.0",
-		"workbox-cli": "^6.5.4",
+		"workbox-cli": "^6.6.0",
 		"workbox-recipes": "^6.5.4"
 	},
 	"dependencies": {
