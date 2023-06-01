@@ -5,6 +5,12 @@ import {
 	imageCache,
 } from 'workbox-recipes';
 
+// Enable navigation preload
+// https://web.dev/navigation-preload/
+// https://hachyderm.io/@jeffposnick/110466221983186607
+import { enable } from 'workbox-navigation-preload';
+enable();
+
 // Serve pages as network first, with 2 seconds timeout and cache fallback
 // https://developer.chrome.com/docs/workbox/modules/workbox-recipes/#page-cache
 pageCache({
