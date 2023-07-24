@@ -44,7 +44,7 @@
 		"eslint": "^7.32.0",
 		"eslint-config-prettier": "^8.8.0",
 		"eslint-plugin-prettier": "^3.4.1",
-		"fast-glob": "^3.3.0",
+		"fast-glob": "^3.3.1",
 		"image-size": "^1.0.2",
 		"lodash": "^4.17.21",
 		"modern-css-reset": "^1.4.0",
