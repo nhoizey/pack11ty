@@ -34,11 +34,12 @@ Any `permalink` property set directly in a content's Front Matter will not be ov
 | `index.md`                                | `index.html`                                |
 | `about.md`                                | `about/index.html` &#x26A0;&#xFE0E;         |
 | `about/index.md`                          | `about/index.html` &#x26A0;&#xFE0E;         |
+| `about/about.md`                          | `about/index.html` &#x26A0;&#xFE0E;         |
 | `about/other.md`                          | `about/other/index.html`                    |
 | `articles/2020/04/first-article/index.md` | `articles/2020/04/first-article/index.html` |
 
 ::: warning
-As you can see, you can't have both `/about.md` and `/about/index.md` in sources with Eleventy default behavior, as they would try to create the same HTML file.
+As you can see, you can't have both `/about.md` and either `/about/index.md` or `/about/about.md` in sources with [Eleventy default permalink behavior](https://www.11ty.dev/docs/permalinks/), as they would try to create the same HTML file.
 :::
 
 # Pagination
