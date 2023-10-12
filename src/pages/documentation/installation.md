@@ -35,6 +35,6 @@ You might need to configure a local development environment on your computer to 
 1. Create your [Pack11ty]{.pack11ty} project and install its dependencies with this single command in your terminal: `npm create pack11ty@latest my-project-name`
 1. Go into your new project folder (`cd my-project-name`) and start the project in development mode (`npm start`) or build the site (`npm run build`)
 
-[^lts]: The LTS (Long Time Support) version should be enough.
+[^lts]: The LTS (Long Term Support) version should be enough.
 
 You're ready to develop your new site and create content.
