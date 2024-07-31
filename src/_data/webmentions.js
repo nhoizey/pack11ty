@@ -2,8 +2,10 @@
 
 const fs = require('fs');
 const unionBy = require('lodash/unionBy');
-const domain = new URL(require('../../package.json').homepage).hostname;
 const sanitizeHTML = require('sanitize-html');
+
+import pkg from '../../package.json' with { type: 'json' };
+const domain = new URL(pkg.homepage).hostname;
 
 // Load .env variables with dotenv
 require('dotenv').config();

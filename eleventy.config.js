@@ -1,28 +1,20 @@
-const glob = require('fast-glob');
-const path = require('node:path');
+import glob from 'fast-glob';
+import path from 'node:path';
+
+import pack11ty from 'eleventy-plugin-pack11ty';
+
+import UpgradeHelper from '@11ty/eleventy-upgrade-help';
 
 const isProd = process.env.NODE_ENV === 'production';
 
-module.exports = function (eleventyConfig) {
-	// ------------------------------------------------------------------------
-	// Shortcodes
-	// ------------------------------------------------------------------------
-
-	glob.sync('src/_11ty/shortcodes/*.js').forEach((file) => {
-		let shortcodes = require('./' + file);
-		Object.keys(shortcodes).forEach((name) => {
-			eleventyConfig.addNunjucksShortcode(name, shortcodes[name]);
-		});
-	});
-
+export default async function (eleventyConfig) {
 	// ------------------------------------------------------------------------
 	// Plugins
 	// ------------------------------------------------------------------------
 
-	const responsiverConfig = require(path.join(
-		__dirname,
-		'src/_11ty/images-responsiver-config.js'
-	));
+	const responsiverConfig = await import(
+		path.join(import.meta.dirname, 'src/_11ty/images-responsiver-config.js')
+	);
 
 	const pack11tyPluginOptions = {
 		responsiver: isProd && responsiverConfig,
@@ -34,8 +26,9 @@ module.exports = function (eleventyConfig) {
 		collectionsLimit: isProd ? false : 10,
 	};
 
-	const pack11ty = require('eleventy-plugin-pack11ty');
 	eleventyConfig.addPlugin(pack11ty, pack11tyPluginOptions);
+
+	eleventyConfig.addPlugin(UpgradeHelper);
 
 	eleventyConfig.setDataDeepMerge(true);
 	eleventyConfig.setQuietMode(true);
@@ -54,4 +47,4 @@ module.exports = function (eleventyConfig) {
 			data: '_data',
 		},
 	};
-};
+}

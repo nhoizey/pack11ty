@@ -1,6 +1,7 @@
-const pkg = require('../../package.json');
-const imageSize = require('image-size');
-const markdownIt = require('markdown-it');
+import pkg from '../../package.json' with { type: 'json' };
+
+import imageSize from 'image-size';
+import markdownIt from 'markdown-it';
 const md = new markdownIt();
 
 const runBeforeHook = (image, document, documentUrl) => {
@@ -55,7 +56,7 @@ const runAfterHook = (image, document, documentUrl) => {
 	}
 };
 
-module.exports = {
+export const responsiverConfig = {
 	default: {
 		selector: ':not(picture) img[src]:not([srcset]):not([src*=".svg"])',
 		resizedImageUrl: (src, width) =>
