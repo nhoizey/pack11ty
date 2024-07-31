@@ -24,6 +24,7 @@
 		"url": "https://github.com/nhoizey/pack11ty/issues"
 	},
 	"license": "MIT",
+	"type": "module",
 	"scripts": {
 		"clean": "rimraf _site",
 		"build:eleventy": "eleventy",
