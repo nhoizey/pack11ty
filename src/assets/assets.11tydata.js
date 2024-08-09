@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	layout: false,
 	permalink: (data) => {
 		if (data.page.filePathStem.endsWith('service-worker')) {

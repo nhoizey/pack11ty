@@ -1,14 +1,15 @@
 // https://sia.codes/posts/webmentions-eleventy-in-depth/
 
-const fs = require('fs');
-const unionBy = require('lodash/unionBy');
-const sanitizeHTML = require('sanitize-html');
+import fs from 'node:fs';
+
+import { unionBy } from 'lodash-es';
+import sanitizeHTML from 'sanitize-html';
 
 import pkg from '../../package.json' with { type: 'json' };
 const domain = new URL(pkg.homepage).hostname;
 
 // Load .env variables with dotenv
-require('dotenv').config();
+import 'dotenv/config';
 
 // Define Cache Location and API Endpoint
 const CACHE_FILE_PATH = '_cache/webmentions.json';
@@ -130,7 +131,7 @@ function readFromCache() {
 	};
 }
 
-module.exports = async function () {
+export default async function () {
 	const cached = readFromCache();
 
 	// Only fetch new mentions in production
