@@ -3,8 +3,6 @@ import path from 'node:path';
 
 import pack11ty from 'eleventy-plugin-pack11ty';
 
-import UpgradeHelper from '@11ty/eleventy-upgrade-help';
-
 const isProd = process.env.NODE_ENV === 'production';
 
 export default async function (eleventyConfig) {
@@ -27,8 +25,6 @@ export default async function (eleventyConfig) {
 	};
 
 	eleventyConfig.addPlugin(pack11ty, pack11tyPluginOptions);
-
-	eleventyConfig.addPlugin(UpgradeHelper);
 
 	eleventyConfig.setDataDeepMerge(true);
 	eleventyConfig.setQuietMode(true);
