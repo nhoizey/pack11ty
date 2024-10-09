@@ -36,13 +36,12 @@
 		"build:debug": "DEBUG=Eleventy* npm run build"
 	},
 	"devDependencies": {
-		"@11ty/eleventy": "^3.0.0-beta.1",
+		"@11ty/eleventy": "^3.0.0",
 		"@jlengstorf/get-share-image": "^1.0.2",
 		"cross-env": "^7.0.3",
 		"dotenv": "^16.4.5",
-		"eleventy-plugin-pack11ty": "../../eleventy/eleventy-plugin-pack11ty",
-		"esbuild": "^0.20.2",
-		"eslint": "^8.57.0",
+		"eleventy-plugin-pack11ty": "https://github.com/nhoizey/eleventy-plugin-pack11ty#11ty3",
+		"eslint": "^9.12.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-prettier": "^5.2.1",
 		"fast-glob": "^3.3.2",
@@ -51,11 +50,11 @@
 		"modern-css-reset": "^1.4.0",
 		"npm-run-all": "^4.1.5",
 		"prettier": "^3.3.3",
-		"prettier-plugin-jinja-template": "^1.4.1",
-		"rimraf": "^5.0.9",
-		"sanitize-html": "^2.13.0",
+		"prettier-plugin-jinja-template": "^2.0.0",
+		"rimraf": "^6.0.1",
+		"sanitize-html": "^2.13.1",
 		"workbox-cli": "^7.1.0",
-		"workbox-recipes": "^7.0.0"
+		"workbox-recipes": "^7.1.0"
 	},
 	"dependencies": {
 		"toastify-js": "^1.12.0"
