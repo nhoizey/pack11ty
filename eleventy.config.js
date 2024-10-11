@@ -1,7 +1,6 @@
-import glob from 'fast-glob';
 import path from 'node:path';
 
-import pack11ty from 'eleventy-plugin-pack11ty';
+import eleventyPluginPack11ty from 'eleventy-plugin-pack11ty';
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -14,7 +13,7 @@ export default async function (eleventyConfig) {
 		path.join(import.meta.dirname, 'src/_11ty/images-responsiver-config.js')
 	);
 
-	const pack11tyPluginOptions = {
+	const pack11tyConfig = {
 		responsiver: isProd && responsiverConfig,
 		minifyHtml: isProd,
 		markdown: {
@@ -24,7 +23,7 @@ export default async function (eleventyConfig) {
 		collectionsLimit: isProd ? false : 10,
 	};
 
-	eleventyConfig.addPlugin(pack11ty, pack11tyPluginOptions);
+	eleventyConfig.addPlugin(eleventyPluginPack11ty, pack11tyConfig);
 
 	eleventyConfig.setDataDeepMerge(true);
 	eleventyConfig.setQuietMode(true);
