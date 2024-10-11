@@ -1,0 +1,1 @@
+// No critical JS
