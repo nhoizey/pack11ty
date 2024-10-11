@@ -7,7 +7,7 @@ layout: null
   <title>News from {{ pkg.title }}</title>
   <link href="{{ pkg.homepage }}/feeds/news.xml" rel="self"/>
   <link href="{{ pkg.homepage }}/"/>
-  <updated>{{ collections.news | rssLastUpdatedDate }}</updated>
+  <updated>{{ collections.news | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ pkg.homepage }}</id>
   <author>
     <name>{{ pkg.author.name }}</name>
@@ -19,7 +19,7 @@ layout: null
     <entry>
       <title>{{ entry.data.title or entry.data.layout + ' from ' + titleDate }}</title>
       <link href="{{ absoluteEntryUrl }}"/>
-      <updated>{{ entry.date | rssDate }}</updated>
+      <updated>{{ entry.date | dateToRfc3339 }}</updated>
       <id>{{ absoluteEntryUrl }}</id>
       <content type="html">{{ entry.templateContent | cleanDeepLinks | htmlToAbsoluteUrls(absoluteEntryUrl) }}</content>
     </entry>
