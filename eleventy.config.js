@@ -28,6 +28,8 @@ export default async function (eleventyConfig) {
 	eleventyConfig.setDataDeepMerge(true);
 	eleventyConfig.setQuietMode(true);
 
+	eleventyConfig.setWatchJavaScriptDependencies(false);
+
 	return {
 		templateFormats: ['md', 'njk'],
 
