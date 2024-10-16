@@ -5,7 +5,12 @@ import fs from 'node:fs';
 import { unionBy } from 'lodash-es';
 import sanitizeHTML from 'sanitize-html';
 
-import pkg from '../../package.json' with { type: 'json' };
+
+// import pkg from '../../package.json' with { type: 'json' };
+// Not supported, see https://github.com/11ty/eleventy/issues/3128#issuecomment-1878745864
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
+const pkg = require('../../package.json');
 const domain = new URL(pkg.homepage).hostname;
 
 // Load .env variables with dotenv
