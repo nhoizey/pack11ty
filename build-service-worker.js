@@ -13,7 +13,6 @@ esbuild
 		bundle: true,
 		minify: true,
 		sourcemap: true,
-		outdir: '_site',
 	})
 	.catch((err) => {
 		if (err) throw err;
