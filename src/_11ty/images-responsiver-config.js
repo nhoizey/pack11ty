@@ -5,8 +5,7 @@ import markdownIt from 'markdown-it';
 const md = new markdownIt();
 
 const runBeforeHook = (image, document, documentUrl) => {
-	let imageSrc = image.getAttribute('src');
-
+	const imageSrc = image.getAttribute('src');
 	let imageUrl = '';
 
 	// TODO: do this automatically in eleventy-plugin-images-responsiver
