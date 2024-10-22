@@ -1,6 +1,6 @@
-@import 'every_layout/sidebar';
-@import 'every_layout/cluster';
-@import 'every_layout/stack';
+@use 'every_layout/sidebar' as *;
+@use 'every_layout/cluster' as *;
+@use 'every_layout/stack' as *;
 
 // container for the whole page
 .page {
