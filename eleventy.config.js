@@ -2,7 +2,7 @@ import path from 'node:path';
 
 import eleventyPluginPack11ty from 'eleventy-plugin-pack11ty';
 
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.ELEVENTY_RUN_MODE === 'build';
 
 export default async function (eleventyConfig) {
 	// ------------------------------------------------------------------------
