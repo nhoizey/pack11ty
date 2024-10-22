@@ -1,11 +1,11 @@
-const pkg = require('../../package.json');
-const imageSize = require('image-size');
-const markdownIt = require('markdown-it');
+import pkg from '../../package.json' with { type: 'json' };
+
+import imageSize from 'image-size';
+import markdownIt from 'markdown-it';
 const md = new markdownIt();
 
 const runBeforeHook = (image, document, documentUrl) => {
-	let imageSrc = image.getAttribute('src');
-
+	const imageSrc = image.getAttribute('src');
 	let imageUrl = '';
 
 	// TODO: do this automatically in eleventy-plugin-images-responsiver
@@ -27,27 +27,26 @@ const runBeforeHook = (image, document, documentUrl) => {
 };
 
 const runAfterHook = (image, document, documentUrl) => {
-	let imageUrl =
-		image.getAttribute('data-pristine') || image.getAttribute('src');
-	let caption = image.getAttribute('title');
+	let caption = undefined;
 
-	if (caption !== null) {
-		caption = md.render(caption.trim());
+	// Extract `title` attribute of the image
+	const title = image.getAttribute('title');
+
+	// If there's a title value,
+	//   parse it for Markdown content
+	if (title !== null) {
+		caption = md.render(title.trim());
 	}
 
-	let zoom = [...image.classList].indexOf('zoom') !== -1;
-
-	if (caption || zoom) {
-		const figure = document.createElement('figure');
+	// If there's a caption,
+	//   add a `<figure>` around the image,
+	//   with the caption in a `<figcaption>`
+	if (caption) {
+		let figure = document.createElement('figure');
 		figure.classList.add(...image.classList);
-		// TODO: decide weither classes should be removed from the image or not
 		image.classList.remove(...image.classList);
 		let figCaption = document.createElement('figcaption');
-		figCaption.innerHTML =
-			(caption ? caption : '') +
-			(zoom
-				? `<p class="zoom">&#128269; See <a href="${imageUrl}">full size</a></p>`
-				: '');
+		figCaption.innerHTML = caption;
 		figure.appendChild(image.cloneNode(true));
 		figure.appendChild(figCaption);
 
@@ -55,7 +54,7 @@ const runAfterHook = (image, document, documentUrl) => {
 	}
 };
 
-module.exports = {
+export const responsiverConfig = {
 	default: {
 		selector: ':not(picture) img[src]:not([srcset]):not([src*=".svg"])',
 		resizedImageUrl: (src, width) =>

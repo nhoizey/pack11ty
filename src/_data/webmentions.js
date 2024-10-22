@@ -1,12 +1,20 @@
 // https://sia.codes/posts/webmentions-eleventy-in-depth/
 
-const fs = require('fs');
-const unionBy = require('lodash/unionBy');
-const domain = new URL(require('../../package.json').homepage).hostname;
-const sanitizeHTML = require('sanitize-html');
+import fs from 'node:fs';
+
+import { unionBy } from 'lodash-es';
+import sanitizeHTML from 'sanitize-html';
+
+
+// import pkg from '../../package.json' with { type: 'json' };
+// Not supported, see https://github.com/11ty/eleventy/issues/3128#issuecomment-1878745864
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
+const pkg = require('../../package.json');
+const domain = new URL(pkg.homepage).hostname;
 
 // Load .env variables with dotenv
-require('dotenv').config();
+import 'dotenv/config';
 
 // Define Cache Location and API Endpoint
 const CACHE_FILE_PATH = '_cache/webmentions.json';
@@ -128,11 +136,11 @@ function readFromCache() {
 	};
 }
 
-module.exports = async function () {
+export default async function () {
 	const cached = readFromCache();
 
 	// Only fetch new mentions in production
-	if (process.env.NODE_ENV === 'production') {
+	if (process.env.ELEVENTY_RUN_MODE === 'build') {
 		const fetchedAt = new Date().toISOString();
 		const newWebmentions = await fetchWebmentions(cached.lastFetched);
 		if (newWebmentions) {
