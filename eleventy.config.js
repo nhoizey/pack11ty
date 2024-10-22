@@ -9,7 +9,7 @@ export default async function (eleventyConfig) {
 	// Plugins
 	// ------------------------------------------------------------------------
 
-	const responsiverConfig = await import(
+	const { responsiverConfig } = await import(
 		path.join(import.meta.dirname, 'src/_11ty/images-responsiver-config.js')
 	);
 
