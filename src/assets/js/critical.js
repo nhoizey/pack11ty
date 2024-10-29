@@ -1,4 +1,4 @@
 // No critical JS
 (() => {
-	console.log('Critical JS loaded');
+	console.log("Critical JS loaded");
 })();

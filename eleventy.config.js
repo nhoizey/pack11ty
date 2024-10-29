@@ -1,8 +1,8 @@
-import path from 'node:path';
+import path from "node:path";
 
-import eleventyPluginPack11ty from 'eleventy-plugin-pack11ty';
+import eleventyPluginPack11ty from "eleventy-plugin-pack11ty";
 
-const isProd = process.env.ELEVENTY_RUN_MODE === 'build';
+const isProd = process.env.ELEVENTY_RUN_MODE === "build";
 
 export default async function (eleventyConfig) {
 	// ------------------------------------------------------------------------
@@ -10,7 +10,7 @@ export default async function (eleventyConfig) {
 	// ------------------------------------------------------------------------
 
 	const { responsiverConfig } = await import(
-		path.join(import.meta.dirname, 'src/_11ty/images-responsiver-config.js')
+		path.join(import.meta.dirname, "src/_11ty/images-responsiver-config.js")
 	);
 
 	const pack11tyConfig = {
@@ -18,7 +18,7 @@ export default async function (eleventyConfig) {
 		minifyHtml: isProd,
 		markdown: {
 			firstLevel: 2,
-			containers: ['success', 'warning', 'error'],
+			containers: ["success", "warning", "error"],
 		},
 		collectionsLimit: isProd ? false : 10,
 	};
@@ -31,17 +31,17 @@ export default async function (eleventyConfig) {
 	eleventyConfig.setWatchJavaScriptDependencies(false);
 
 	return {
-		templateFormats: ['md', 'njk'],
+		templateFormats: ["md", "njk"],
 
-		markdownTemplateEngine: 'njk',
-		htmlTemplateEngine: 'njk',
-		dataTemplateEngine: 'njk',
+		markdownTemplateEngine: "njk",
+		htmlTemplateEngine: "njk",
+		dataTemplateEngine: "njk",
 		dir: {
-			output: '_site',
-			input: 'src',
-			includes: '_includes',
-			layouts: '_layouts',
-			data: '_data',
+			output: "_site",
+			input: "src",
+			includes: "_includes",
+			layouts: "_layouts",
+			data: "_data",
 		},
 	};
 }

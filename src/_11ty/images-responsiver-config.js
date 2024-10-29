@@ -1,26 +1,26 @@
-import pkg from '../../package.json' with { type: 'json' };
+import pkg from "../../package.json" with { type: "json" };
 
-import imageSize from 'image-size';
-import markdownIt from 'markdown-it';
+import imageSize from "image-size";
+import markdownIt from "markdown-it";
 const md = new markdownIt();
 
 const runBeforeHook = (image, document, documentUrl) => {
-	const imageSrc = image.getAttribute('src');
-	let imageUrl = '';
+	const imageSrc = image.getAttribute("src");
+	let imageUrl = "";
 
-	// TODO: do this automatically in eleventy-plugin-images-responsiver
 	if (!imageSrc.match(/^(https?:)?\/\//)) {
-		if (imageSrc[0] === '/') {
+		// TODO: do this automatically in eleventy-plugin-images-responsiver
+		if (imageSrc[0] === "/") {
 			// TODO: deal with this in markdown-it-image-size
-			let imageDimensions = imageSize('src' + imageSrc);
-			image.setAttribute('width', imageDimensions.width);
-			image.setAttribute('height', imageDimensions.height);
-			imageUrl = pkg.homepage.replace(/\/$/, '') + imageSrc;
+			const imageDimensions = imageSize(`src${imageSrc}`);
+			image.setAttribute("width", imageDimensions.width);
+			image.setAttribute("height", imageDimensions.height);
+			imageUrl = pkg.homepage.replace(/\/$/, "") + imageSrc;
 		} else {
 			// This is a relative URL
-			imageUrl = pkg.homepage.replace(/\/$/, '') + documentUrl + imageSrc;
+			imageUrl = pkg.homepage.replace(/\/$/, "") + documentUrl + imageSrc;
 		}
-		image.setAttribute('src', imageUrl);
+		image.setAttribute("src", imageUrl);
 	}
 
 	image.dataset.responsiver = image.className;
@@ -30,7 +30,7 @@ const runAfterHook = (image, document, documentUrl) => {
 	let caption = undefined;
 
 	// Extract `title` attribute of the image
-	const title = image.getAttribute('title');
+	const title = image.getAttribute("title");
 
 	// If there's a title value,
 	//   parse it for Markdown content
@@ -42,10 +42,10 @@ const runAfterHook = (image, document, documentUrl) => {
 	//   add a `<figure>` around the image,
 	//   with the caption in a `<figcaption>`
 	if (caption) {
-		let figure = document.createElement('figure');
+		const figure = document.createElement("figure");
 		figure.classList.add(...image.classList);
 		image.classList.remove(...image.classList);
-		let figCaption = document.createElement('figcaption');
+		const figCaption = document.createElement("figcaption");
 		figCaption.innerHTML = caption;
 		figure.appendChild(image.cloneNode(true));
 		figure.appendChild(figCaption);
@@ -64,9 +64,9 @@ export const responsiverConfig = {
 		fallbackWidth: 800,
 		minWidth: 360,
 		maxWidth: 1600,
-		sizes: '(max-width: 67rem) 90vw, 60rem',
+		sizes: "(max-width: 67rem) 90vw, 60rem",
 		attributes: {
-			loading: 'lazy',
+			loading: "lazy",
 		},
 	},
 	logo: {
@@ -74,8 +74,8 @@ export const responsiverConfig = {
 		minWidth: 100,
 		maxWidth: 400,
 		sizes:
-			'(max-width: 20rem) 45vw, (max-width: 30rem) 30vw, (max-width: 67rem) 22.5vw, 15rem',
-		figure: 'never',
-		classes: ['logo'],
+			"(max-width: 20rem) 45vw, (max-width: 30rem) 30vw, (max-width: 67rem) 22.5vw, 15rem",
+		figure: "never",
+		classes: ["logo"],
 	},
 };

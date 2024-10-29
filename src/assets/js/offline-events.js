@@ -1,4 +1,4 @@
-import Toastify from 'toastify-js';
+import Toastify from "toastify-js";
 
 /*****************************************************************
  * Deal with offline/online events
@@ -8,37 +8,37 @@ import Toastify from 'toastify-js';
 // https://www.youtube.com/watch?v=7fnpsF9tMXc
 
 let isOffline = false;
-const bodyElement = document.querySelector('body');
+const bodyElement = document.querySelector("body");
 
 // check if we're online, set a class on <body> if offline
 function updateConnectivityStatus() {
 	let notificationToShow = false;
-	let notificationClass = '';
-	let notificationText = '';
+	let notificationClass = "";
+	let notificationText = "";
 	let notificationDuration = 3000;
 	let notificationDestination = false;
 
-	if (typeof navigator.onLine !== 'undefined') {
+	if (typeof navigator.onLine !== "undefined") {
 		if (!navigator.onLine) {
 			notificationToShow = true;
-			bodyElement.classList.add('offline');
+			bodyElement.classList.add("offline");
 
-			if ('serviceWorker' in navigator) {
+			if ("serviceWorker" in navigator) {
 				// If the browser supports Service Workers and the Cache API,
 				// getting offline should be less stressful. Use a "warning"
 				// message instead of an "error and provide a link to content
 				// available in cache.
 
 				// TODO: check if SW active and some content in cache
-				notificationClass = 'warning';
+				notificationClass = "warning";
 				notificationText =
 					'It looks like <strong>the connection is lost</strong>.<br />Continue reading this page, or look at <a href="/offline/">other contents you can read while offline</a>.';
-				notificationDestination = '/offline/';
+				notificationDestination = "/offline/";
 				notificationDuration = 10000;
 			} else {
-				notificationClass = 'error';
+				notificationClass = "error";
 				notificationText =
-					'It looks like <strong>the connection is lost</strong>.<br />Continue reading this page, until the connection is back.';
+					"It looks like <strong>the connection is lost</strong>.<br />Continue reading this page, until the connection is back.";
 			}
 			isOffline = true;
 			document;
@@ -46,10 +46,10 @@ function updateConnectivityStatus() {
 			if (isOffline) {
 				isOffline = false;
 				notificationToShow = true;
-				notificationClass = 'success';
+				notificationClass = "success";
 				notificationText =
-					'<strong>You are back online!</strong><br />You can resume your navigation on the website.';
-				bodyElement.classList.remove('offline');
+					"<strong>You are back online!</strong><br />You can resume your navigation on the website.";
+				bodyElement.classList.remove("offline");
 			}
 		}
 
@@ -61,7 +61,7 @@ function updateConnectivityStatus() {
 				className: notificationClass,
 				duration: notificationDuration,
 				close: true,
-				gravity: 'bottom',
+				gravity: "bottom",
 			}).showToast();
 		}
 	}
@@ -69,10 +69,10 @@ function updateConnectivityStatus() {
 
 // listen for future changes in connection
 function checkConnectivity() {
-	window.addEventListener('online', updateConnectivityStatus);
-	window.addEventListener('offline', updateConnectivityStatus);
+	window.addEventListener("online", updateConnectivityStatus);
+	window.addEventListener("offline", updateConnectivityStatus);
 	updateConnectivityStatus();
 }
 
 // when the page has finished loading,
-window.addEventListener('load', checkConnectivity);
+window.addEventListener("load", checkConnectivity);
