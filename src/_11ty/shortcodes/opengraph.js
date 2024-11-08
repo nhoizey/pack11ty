@@ -6,7 +6,7 @@ export const ogImage = (title) => {
 				imageWidth: 1200,
 				imageHeight: 630,
 				cloudName: "nho",
-				imagePublicID: "resources/opengraph-background",
+				imagePublicID: "resources/pack11ty-opengraph-background",
 				titleFont: "Noto Serif",
 				textAreaWidth: 1100,
 				textLeftOffset: 50,
