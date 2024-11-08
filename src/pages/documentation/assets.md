@@ -9,9 +9,7 @@ Both CSS and JavaScript are split (manually) in two parts:
 
 # JavaScript
 
-Additional JavaScript is loaded as [ECMAScript module](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) in modern browsers, and as [Immediately Invoked Function Expression](https://en.wikipedia.org/wiki/Immediately_invoked_function_expression) (IIFE) in older ones, using the `module`/`nomodule` pattern for [differential serving](https://css-tricks.com/differential-serving/)[^modules].
-
-[^modules]: You can watch [this hilarious video](https://www.youtube.com/watch?v=dAIckpwW9ds) by Heydon Pickering, about ES modules, for a few minutes of fun.
+Additional JavaScript is loaded as [ECMAScript module](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) in modern browsers, and as [Immediately Invoked Function Expression](https://en.wikipedia.org/wiki/Immediately_invoked_function_expression) (IIFE) in older ones, using the `module`/`nomodule` pattern for [differential serving](https://css-tricks.com/differential-serving/.
 
 JavaScript is compiled with [Rollup](https://rollupjs.org/), with a few plugins:
 

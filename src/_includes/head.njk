@@ -49,12 +49,6 @@ https://developers.facebook.com/tools/debug/sharing/
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 
-{# ########################################################
- # webmentions with webmention.io
- # ########################################################}
-<link rel="pingback" href="https://webmention.io/nicolas-hoizey.com/xmlrpc" />
-<link rel="webmention" href="https://webmention.io/nicolas-hoizey.com/webmention" />
-
 {# iOS features #}
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -72,10 +66,10 @@ Theme color: https://developers.google.com/web/updates/2014/11/Support-for-theme
 {# crossorigin: https://twitter.com/TimVereecke/status/1225547620791341062 #}
 <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials" />
 
-{# web monetization: https://webmonetization.org/ #}
-{# <meta name="monetization" content="ADD-YOUR-OWN-TOKEN-AND-UNCOMMENT" /> #}
-
 {# Eleventy generator: https://www.11ty.dev/docs/data-eleventy-supplied/#use-with-meta-namegenerator #}
 <meta name="generator" content="{{ eleventy.generator }}">
+
+{# Mastodon: https://blog.joinmastodon.org/2024/07/highlighting-journalism-on-mastodon/ #}
+<meta name="fediverse:creator" content="@nhoizey@mamot.fr" />
 
 {% block morehead %}{% endblock %}
