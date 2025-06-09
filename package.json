@@ -39,7 +39,7 @@
 		"lint": "npx @biomejs/biome check --write"
 	},
 	"devDependencies": {
-		"@11ty/eleventy": "^3.1.0",
+		"@11ty/eleventy": "^3.1.1",
 		"@biomejs/biome": "^1.9.4",
 		"@jlengstorf/get-share-image": "^1.0.2",
 		"cross-env": "^7.0.3",
