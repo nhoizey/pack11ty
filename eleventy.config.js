@@ -20,7 +20,6 @@ export default async function (eleventyConfig) {
 			firstLevel: 2,
 			containers: ["success", "warning", "error"],
 		},
-		collectionsLimit: isProd ? false : 10,
 	};
 
 	eleventyConfig.addPlugin(eleventyPluginPack11ty, pack11tyConfig);
