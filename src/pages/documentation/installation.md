@@ -8,7 +8,7 @@ There are multiple ways you can use [Pack11ty]{.pack11ty}, depending on where yo
 
 If you just want to try it and you're in a hurry, try one of these quick options to run [Pack11ty]{.pack11ty} for free:
 
-[Deploy to **Netlify**](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.button}{.netlify} [Deploy to **Vercel**](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty){.button}{.vercel} [Deploy to **StackBlitz**](https://stackblitz.com/github/nhoizey/pack11ty){.button}{.stackblitz}
+[Deploy to **Netlify**](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms){.button}{.netlify} [Deploy to **StackBlitz**](https://stackblitz.com/github/nhoizey/pack11ty){.button}{.stackblitz}
 
 Buttons above will:
 
@@ -23,7 +23,7 @@ There are multiple hosting options listed in [Eleventy's deployment documentatio
 
 # Pack11ty template on GitHub
 
-If you prefer to start without Netlify or Vercel hosting, you can [generate a new repository with the same directory structure and files](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) as the existing [Pack11ty]{.pack11ty} repository:
+If you prefer to start without Netlify or StackBlitz hosting, you can [generate a new repository with the same directory structure and files](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) as the existing [Pack11ty]{.pack11ty} repository:
 
 [Use this GitHub template](https://github.com/nhoizey/pack11ty/generate){.button}{.github}
 

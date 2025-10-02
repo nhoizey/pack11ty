@@ -5,9 +5,7 @@
 
 [Pack11ty](https://pack11ty.dev) is an heavily opinionated **[Eleventy](https://www.11ty.dev/) starter** (aka "template project").
 
-If you're in a hurry, try one of these quick options:
-
-[![Deploy to Netlify](https://img.shields.io/badge/deploy_to-Netlify-%232e51ed.svg?style=for-the-badge&logo=netlify&logoColor=white)](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms) [![Deploy to Vercel](https://img.shields.io/badge/deploy_to-Vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/new/clone?repository-url=https://github.com/nhoizey/pack11ty) [![Remix on Glitch](https://img.shields.io/badge/remix_on-glitch-%233333FF.svg?style=for-the-badge&logo=glitch&logoColor=white)](https://glitch.com/edit/#!/import/github/nhoizey/pack11ty)
+If you're in a hurry, you can easily [![deploy to Netlify](https://img.shields.io/badge/deploy_to-Netlify-%232e51ed.svg?style=for-the-badge&logo=netlify&logoColor=white)](https://app.netlify.com/start/deploy?repository=https://github.com/nhoizey/pack11ty&stack=cms)
 
 There are many [other options for installation/deployment](https://pack11ty.dev/documentation/installation/).
 
