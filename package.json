@@ -43,7 +43,7 @@
 		"@biomejs/biome": "^1.9.4",
 		"@jlengstorf/get-share-image": "^1.0.2",
 		"cross-env": "^7.0.3",
-		"dotenv": "^17.2.2",
+		"dotenv": "^17.2.3",
 		"eleventy-plugin-pack11ty": "^2.6.0",
 		"esbuild": "^0.24.2",
 		"image-size": "^1.2.1",
